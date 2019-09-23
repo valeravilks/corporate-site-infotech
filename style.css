@@ -44,6 +44,23 @@ table {
     border-spacing: 0;
 }
 
+/* Fonts */
+
+@font-face {
+    font-family: "Gordita";
+    src: url("fotns/Gordita-Regular.otf") format("otf");
+}
+
+/* End Fonts */
+
+/* Global */
+    body {
+        font-family: "Gordita", sans-serif;
+        font-weight: 500;
+    }
+/* End Global */
+
+
 /* Grid */
 
 .container {
@@ -631,6 +648,43 @@ table {
 
 /* Header */
 
+.header__container{
+    display: flex;
+    min-height: 80px;
+}
+
+.header__callback {
+    margin-right: 20px;
+}
+
+.header__logo{
+    margin-right: 70px;
+}
+
+.header__container > * {
+    align-self: center;
+}
+
+.header__phone {
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+    color: #15254B;
+    margin-right: 40px;
+}
+
+.header__menu {
+    flex-grow: 1;
+}
+
+.header__lang {
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 171%;
+    background: #F2F5F9;
+    border-radius: 4px;
+}
+
 /* Menu */
 
 .menu__list {
@@ -645,6 +699,26 @@ table {
 
 /* End Menu*/
 /* End Header */
+
+/* Button */
+
+.btn {
+    cursor: pointer;
+}
+
+.btn-primary {
+    font-size: 16px;
+    line-height: 23px;
+    font-weight: 500;
+    text-align: center;
+    color: #fff;
+    background: #0169FF;
+    border-radius: 4px;
+    border: none;
+    padding: 7px 20px;
+}
+
+/* End Button */
 
 
 
