@@ -663,8 +663,6 @@ table {
 
 .header__logo{
     margin-right: 70px;
-    height: 30px;
-    width: 96px;
 }
 
 .header__container > * {
@@ -691,6 +689,12 @@ table {
     border-radius: 4px;
 }
 
+
+/* Logo */
+.logo__img {
+    height: 30px;
+    width: 96px;
+}
 /* Menu */
 
 .menu__list {

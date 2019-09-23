@@ -248,25 +248,26 @@ Redux::setSection( $opt_name, array(
     'icon'             => 'el el-home'
 ) );
 
+
 Redux::setSection( $opt_name, array(
     'title'            => __( 'Шапка сайта', 'redux-framework-demo' ),
     'id'               => 'header-section',
     'subsection'       => true,
     'customizer_width' => '450px',
-    'desc'             => __( 'For full documentation on this field, visit: ', 'redux-framework-demo' ) . '<a href="//docs.reduxframework.com/core/fields/checkbox/" target="_blank">docs.reduxframework.com/core/fields/checkbox/</a>',
+    'desc'             => __( 'В данном разделе можно менять информацию в шапке сайта', 'redux-framework-demo' ),
     'fields'           => array(
         array(
             'id'       => 'header-logo',
             'type'     => 'media',
-            'url'      => true,
-            'title'    => __( 'Media w/ asdasdURL', 'redux-framework-demo' ),
+            'title'    => __( 'Изображение логотипа', 'redux-framework-demo' ),
             'compiler' => 'true',
             //'mode'      => false, // Can be set to false to allow any media type, or can also be set to any mime type.
-            'desc'     => __( 'Basic media uploader with disabled URL input field.', 'redux-framework-demo' ),
-            'subtitle' => __( 'Upload any media using the WordPress native uploader', 'redux-framework-demo' ),
+            'subtitle' => __( 'Загрузите изображение логотипа 30 на 96 пикселей', 'redux-framework-demo' ),
             'default'  => array( 'url' => $url . '/img/logo.svg' ),
         )
-) ));
+    ) ));
+
+
 
 Redux::setSection( $opt_name, array(
     'title'            => __( 'Checkbox', 'redux-framework-demo' ),
