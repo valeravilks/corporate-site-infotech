@@ -1,17 +1,9 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <title>Info-tech</title>
-    <link rel="stylesheet" href="css/owl.carousel.css">
-    <link rel="stylesheet" href="css/owl.theme.default.css">
-    <link rel="stylesheet" href="style.css">
-</head>
+<?php get_header(); ?>
 <body>
     <header class="header">
         <div class="container header__container">
             <a class="header__logo logo" href="https://google.com">
-                <img src="img/logo.svg" alt="" class="logo__img">
+                <img src="<?php echo get_template_directory_uri() ?>/img/logo.svg" alt="" class="logo__img">
             </a>
             <nav class="header__menu menu">
                 <ul class="menu__list">
@@ -56,25 +48,14 @@
     <section class="main-screen">
         <div class="js-main-slider owl-carousel">
             <div class="main-screen__container">
-1
-            </div><div class="main-screen__container">
-2
-            </div><div class="main-screen__container">
-3
+                <img src="<?php echo get_template_directory_uri() ?>/img/main/1.jpg" alt="" class="main-screen__bg">
+            </div>
+            <div class="main-screen__container">
+                2
+            </div>
+            <div class="main-screen__container">
+                3
             </div>
         </div>
     </section>
-    <div class="owl-carousel">
-        <div> Your Content </div>
-        <div> Your Content </div>
-        <div> Your Content </div>
-        <div> Your Content </div>
-        <div> Your Content </div>
-        <div> Your Content </div>
-        <div> Your Content </div>
-    </div>
-    <script src="js/jquery-3.4.1.js"></script>
-    <script src="js/owl.carousel.js"></script>
-    <script src="js/script.js"></script>
-</body>
-</html>
+<?php get_footer() ?>

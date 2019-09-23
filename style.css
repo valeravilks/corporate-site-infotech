@@ -1,3 +1,7 @@
+/*
+Theme Name: Info tech
+*/
+
 /* Reset Css*/
 
 html, body, div, span, applet, object, iframe,
@@ -719,6 +723,16 @@ table {
 }
 
 /* End Button */
+
+/* Main screen */
+
+.main-screen__container{
+    height: 600px;
+}
+
+/* End Main screen */
+
+
 
 
 
