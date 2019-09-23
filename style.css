@@ -630,3 +630,56 @@ table {
 }
 
 /* Header */
+
+/* Menu */
+
+.menu__list {
+    display: flex;
+}
+
+.menu__link{
+    margin-right: 20px;
+    text-decoration: none;
+    color: #3C5D72;
+}
+
+/* End Menu*/
+/* End Header */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
