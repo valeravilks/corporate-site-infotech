@@ -1,0 +1,12 @@
+{
+  "name": "infotech",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "html": "browser-sync start --server --files \"**/*.*\"",
+    "php": "browser-sync start --proxy \"http://testreload\" --files \"**/*.*\""
+  },
+  "author": "",
+  "license": "ISC"
+}
