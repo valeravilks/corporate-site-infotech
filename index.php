@@ -1,11 +1,16 @@
-<?php get_header(); ?>
+<?php get_header();
+global $redux_demo;
+?>
 <body>
     <header class="header">
         <div class="container header__container">
             <a class="header__logo logo" href="https://google.com">
-                <img src="<?php echo get_template_directory_uri() ?>/img/logo.svg" alt="" class="logo__img">
+                <img src="<?php echo $redux_demo['header-logo']['url'] ?>"
+                     alt=""
+                     class="logo__img">
             </a>
             <nav class="header__menu menu">
+             <!--   --><?php /*wp_nav_menu(); */?>
                 <ul class="menu__list">
                     <li class="menu_item">
                         <a href="" class="menu__link menu__link_lvl_1">
@@ -58,4 +63,6 @@
             </div>
         </div>
     </section>
-<?php get_footer() ?>
+
+<?php
+get_footer() ?>

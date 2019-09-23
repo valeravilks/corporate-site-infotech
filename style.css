@@ -663,6 +663,8 @@ table {
 
 .header__logo{
     margin-right: 70px;
+    height: 30px;
+    width: 96px;
 }
 
 .header__container > * {
