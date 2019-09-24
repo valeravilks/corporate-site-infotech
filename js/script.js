@@ -15,4 +15,6 @@ $(document).ready(function(){
     $('.lang__container').mouseleave(function(){
         $('.lang__second').stop().slideUp(300);
     });
+
+    $(".menu__sub_lvl_2").before("<div class='menu__helper'></div>");
 });
