@@ -7,4 +7,12 @@ $(document).ready(function(){
         autoplayTimeout:5000
     });
 
+    // Lang amination
+    $('.lang__container').mouseenter(function(){
+        $('.lang__second').stop().slideDown(300);
+    });
+
+    $('.lang__container').mouseleave(function(){
+        $('.lang__second').stop().slideUp(300);
+    });
 });

@@ -38,7 +38,8 @@
             Обратный звонок
         </button>
         <div class="header__lang lang">
-            RU
+            <?php get_template_part('templates/components/lang')?>
         </div>
+
     </div>
 </header>
