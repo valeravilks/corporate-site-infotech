@@ -675,6 +675,11 @@ table {
     text-decoration: none;
     color: #15254B;
     margin-right: 40px;
+    transition: color .3s ease;
+}
+
+.header__phone:hover {
+    color: #0169FF;
 }
 
 .header__menu {
@@ -701,10 +706,26 @@ table {
     display: flex;
 }
 
-.menu__link{
+.menu__link {
+    position: relative;
     margin-right: 20px;
     text-decoration: none;
     color: #3C5D72;
+    transition: color .3s ease;
+}
+
+.menu__link:hover {
+    color: #15254B;
+}
+
+.menu__link-active::before {
+    content: '';
+    height: 2px;
+    background: #0169FF;
+    position: absolute;
+    right: -10px;
+    left: -10px;
+    bottom: -25px;
 }
 
 /* End Menu*/

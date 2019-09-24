@@ -264,6 +264,13 @@ Redux::setSection( $opt_name, array(
             //'mode'      => false, // Can be set to false to allow any media type, or can also be set to any mime type.
             'subtitle' => __( 'Загрузите изображение логотипа 30 на 96 пикселей', 'redux-framework-demo' ),
             'default'  => array( 'url' => $url . '/img/logo.svg' ),
+        ),
+        array(
+            'id' => 'header-phone',
+            'type' => 'text',
+            'title' => __( 'Номер телефона' , 'redux_docs_generator' ),
+            'subtitle' => __( 'Введите номер телефона' , 'redux_docs_generator' ),
+            'default'  => '8(800)707-36-15',
         )
     ) ));
 
