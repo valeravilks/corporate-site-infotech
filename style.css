@@ -728,13 +728,30 @@ table {
     bottom: -25px;
 }
 
-/* End Menu*/
+.menu__arrow {
+    margin-left: 5px;
+}
+
+.menu__item > a:not(:only-child):after {
+    margin-left: 5px;
+    content: url(./img/main/arrow-menu.svg);
+    position: relative;
+    bottom: 1px;
+}
+
+.menu__sub {
+    display: none;
+}
+
+    /* End Menu*/
 /* End Header */
 
 /* Button */
 
 .btn {
     cursor: pointer;
+    transition: background .3s ease;
+    outline: none;
 }
 
 .btn-primary {
@@ -746,7 +763,15 @@ table {
     background: #0169FF;
     border-radius: 4px;
     border: none;
-    padding: 7px 20px;
+    padding: 9px 20px 8px;
+}
+
+.btn-primary:hover {
+    background: #2953D7;
+}
+
+.btn-primary:active {
+    background: #182280;
 }
 
 /* End Button */

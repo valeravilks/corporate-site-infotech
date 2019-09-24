@@ -6,4 +6,5 @@ $(document).ready(function(){
         autoplay:true,
         autoplayTimeout:5000
     });
+
 });

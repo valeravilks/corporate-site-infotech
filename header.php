@@ -37,7 +37,7 @@
         <button class="header__callback btn btn-primary">
             Обратный звонок
         </button>
-        <div class="header__lang">
+        <div class="header__lang lang">
             RU
         </div>
     </div>
