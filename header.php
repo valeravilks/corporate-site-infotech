@@ -8,7 +8,7 @@
 <?php global $redux_demo; ?>
 <body>
 <header class="header">
-    <div class="container header__container">
+    <div class="header__container">
         <a class="header__logo logo" href="<?php get_site_url() ?>">
             <img src="<?php echo $redux_demo['header-logo']['url'] ?>"
                  alt=""
@@ -40,6 +40,7 @@
         <div class="header__lang lang">
             <?php get_template_part('templates/components/lang')?>
         </div>
+        <img class="header__mobile" src="<?php echo get_template_directory_uri(); ?>/img/main/main-menu.svg">
 
     </div>
 </header>
