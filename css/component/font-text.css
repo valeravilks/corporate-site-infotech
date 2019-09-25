@@ -103,7 +103,6 @@
     font-size: 18px;
     text-decoration: none;
     color: var(--dark-90);
-    margin-right: 40px;
     transition: color .3s ease;
 }
 

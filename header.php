@@ -31,7 +31,10 @@
             'items_wrap'      => '<ul class="menu__list">%3$s</ul>',
             'depth'           => 0,
         ] ); ?>
-        <?php get_template_part('templates/components/phone-number') ?>
+        <a target="_blank" href="tel:<?php echo $redux_demo['header-phone']; ?>"
+           class="header__phone phone-18-bold">
+            <?php echo $redux_demo['header-phone']; ?>
+        </a>
         <button class="header__callback btn btn-small btn-blue">
             Обратный звонок
         </button>
@@ -39,6 +42,8 @@
             <?php get_template_part('templates/components/lang-up')?>
         </div>
         <img class="header__mobile" src="<?php echo get_template_directory_uri(); ?>/img/main/main-menu.svg">
+        <img class="header__close" src="<?php echo get_template_directory_uri(); ?>/img/main/close-menu.svg">
+
         <?php get_template_part('templates/components/tablet-menu'); ?>
     </div>
 </header>

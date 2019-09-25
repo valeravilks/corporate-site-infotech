@@ -22,4 +22,32 @@ $(document).ready(function(){
 
     // Manu helper
     $(".menu__sub_lvl_2").before("<div class='menu__helper'></div>");
+
+    //Mobile menu open and close
+    $('.header__mobile').click(function(){
+        $('.header__menu').hide();
+        $('.header__phone').hide();
+        $('.header__lang').hide();
+        $('.header__mobile').hide();
+        $('.header__close').show();
+        $('.tablet-l').addClass('d-flex');
+    });
+
+    $('.header__close').click(function(){
+        $('.header__menu').show();
+        $('.header__phone').show();
+        $('.header__lang').show();
+        $('.header__mobile').show();
+        $('.header__close').hide();
+        $('.tablet-l').removeClass('d-flex');
+    });
+
+    $(window).resize(function(){
+        $('.header__menu').show();
+        $('.header__phone').show();
+        $('.header__lang').show();
+        $('.header__mobile').show();
+        $('.header__close').hide();
+        $('.tablet-l').removeClass('d-flex');
+    });
 });

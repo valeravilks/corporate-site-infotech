@@ -101,6 +101,12 @@ function filter_nav_menu_link_attributes1( $atts, $item, $args, $depth ) {
         if ( $item->current ) {
             $atts['class'] .= ' menu-tablet__link-active';
         }
+        if( $depth === 0) {
+            $atts['class'] .= ' section-12-medium';
+        }
+        if( $depth === 1) {
+            $atts['class'] .= ' menu-16-medium';
+        }
     }
     return $atts;
 }

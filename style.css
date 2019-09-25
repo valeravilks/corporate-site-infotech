@@ -20,6 +20,9 @@ a {
     text-decoration: none;
 }
 
+.d-flex {
+    display: flex;
+}
 
 
 

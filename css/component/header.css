@@ -38,6 +38,14 @@
     display: none;
     margin-left: 47px;
     margin-right: 10px;
+    cursor: pointer;
+}
+
+.header__close{
+    display: none;
+    margin-left: auto;
+    margin-right: 15px;
+    cursor: pointer;
 }
 
 @media (max-width: 992px) {

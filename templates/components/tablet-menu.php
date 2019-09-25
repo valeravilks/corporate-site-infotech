@@ -24,14 +24,15 @@
     </div>
     <div class="tablet-l__but">
         <div class="tablet-l__container tablet-l__container-flex">
-            <button class="btn btn-primary">
+            <button class="btn btn-blue btn-small">
                 Обратный звонок
             </button>
-            <a target="_blank" href="tel:<?php echo $redux_demo['header-phone']; ?>" class="header__phone">
+            <a target="_blank" href="tel:<?php echo $redux_demo['header-phone']; ?>"
+               class="tablet-1__phone phone-18-bold">
                 <?php echo $redux_demo['header-phone']; ?>
             </a>
-            <div class="header__lang lang">
-                <?php get_template_part('templates/components/lang')?>
+            <div class="tablet-1__lang lang">
+                <?php get_template_part('templates/components/lang-down')?>
             </div>
         </div>
     </div>

@@ -23,9 +23,7 @@
     <div class="container-photo">
         sasdasd
         <br><br><br><br><br><br><br><br>
-        <div class="lang">
-            <?php get_template_part('templates/components/lang-down')?>
-        </div>
+        
 
     </div>
 <?php
