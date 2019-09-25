@@ -111,7 +111,7 @@
     color: var(--blue);
 }
 
-.section-12-medium {
+.section-12-medium, .lang-first-12-medium {
     font-family: Gordita, sans-serif;
     font-style: normal;
     font-weight: bold;
@@ -119,4 +119,8 @@
     line-height: 171%;
     text-transform: uppercase;
     color: var(--black-blue-50);
+}
+
+.lang-first-12-medium:hover {
+    color: var(--dark-90);
 }

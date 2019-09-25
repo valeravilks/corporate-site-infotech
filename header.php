@@ -36,7 +36,7 @@
             Обратный звонок
         </button>
         <div class="header__lang lang">
-            <?php get_template_part('templates/components/lang')?>
+            <?php get_template_part('templates/components/lang-up')?>
         </div>
         <img class="header__mobile" src="<?php echo get_template_directory_uri(); ?>/img/main/main-menu.svg">
         <?php get_template_part('templates/components/tablet-menu'); ?>

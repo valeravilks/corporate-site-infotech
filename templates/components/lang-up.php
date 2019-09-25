@@ -5,7 +5,7 @@ if (function_exists('pll_the_languages')) {
 
     foreach ($translations as $lang) {
         if($lang['current_lang']) {
-            echo '<div class="lang__item lang_item-current">' . $lang["slug"]. '</div>';
+            echo '<div class="lang__item lang_item-current lang-first-12-medium">' . $lang["slug"]. '</div>';
         }
     }
 
@@ -13,7 +13,7 @@ if (function_exists('pll_the_languages')) {
 
     foreach ($translations as $lang) {
         if(!$lang['current_lang']) {
-            echo '<div class="lang__item lang__item-second"><a class="lang__link" href="' . $lang["url"] . '">' . $lang["slug"]. '</a></div>';
+            echo '<div class="lang__item lang__item-second section-12-medium"><a class="lang__link" href="' . $lang["url"] . '">' . $lang["slug"]. '</a></div>';
         }
     }
     echo '</div>';
