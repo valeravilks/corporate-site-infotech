@@ -98,6 +98,19 @@
     color: var(--black-blue-50);
 }
 
+.phone-18-bold {
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+    color: var(--dark-90);
+    margin-right: 40px;
+    transition: color .3s ease;
+}
+
+.phone-18-bold:hover {
+    color: var(--blue);
+}
+
 .section-12-medium {
     font-family: Gordita, sans-serif;
     font-style: normal;

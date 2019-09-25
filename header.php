@@ -31,10 +31,8 @@
             'items_wrap'      => '<ul class="menu__list">%3$s</ul>',
             'depth'           => 0,
         ] ); ?>
-        <a target="_blank" href="tel:<?php echo $redux_demo['header-phone']; ?>" class="header__phone">
-            <?php echo $redux_demo['header-phone']; ?>
-        </a>
-        <button class="header__callback btn btn-large btn-blue">
+        <?php get_template_part('templates/components/phone-number') ?>
+        <button class="header__callback btn btn-small btn-blue">
             Обратный звонок
         </button>
         <div class="header__lang lang">

@@ -27,16 +27,7 @@
 }
 
 .header__phone {
-    font-weight: bold;
-    font-size: 18px;
-    text-decoration: none;
-    color: #15254B;
     margin-right: 40px;
-    transition: color .3s ease;
-}
-
-.header__phone:hover {
-    color: #0169FF;
 }
 
 .header__menu {
