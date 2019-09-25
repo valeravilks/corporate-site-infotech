@@ -50,4 +50,7 @@ $(document).ready(function(){
         $('.header__close').hide();
         $('.tablet-l').removeClass('d-flex');
     });
+
+    $('.header__mobile-menu').show();
+
 });

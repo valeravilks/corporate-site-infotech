@@ -48,6 +48,15 @@
     color: var(--dark-90);
 }
 
+.head-30-medium {
+    font-family: Gordita, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 43px;
+    color: var(--black-blue-100);
+}
+
 .head-20-medium {
     font-family: Gordita, sans-serif;
     font-style: normal;

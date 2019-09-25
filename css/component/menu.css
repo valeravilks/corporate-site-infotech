@@ -229,3 +229,13 @@
     margin-left: 30px;
     flex-grow: 1;
 }
+.menu-mobile {
+    display: none;
+}
+.menu-mobile__item_lvl_1 {
+    margin-bottom: 10px;
+}
+
+.menu-mobile {
+    margin-top: 50px;
+}

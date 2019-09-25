@@ -110,3 +110,57 @@ function filter_nav_menu_link_attributes1( $atts, $item, $args, $depth ) {
     }
     return $atts;
 }
+
+
+//------------------------
+
+
+add_action( 'after_setup_theme', 'theme_register_nav_menu12' );
+function theme_register_nav_menu12() {
+    register_nav_menu( 'primary-mobile', 'Главное меню для телефона' );
+}
+
+// Remove ID in menu items (<li>)
+add_filter('nav_menu_item_id', '__return_false');
+
+// Change the attribute of the tag menu item
+add_filter( 'nav_menu_css_class', 'filter_nav_menu_css_classes222', 10, 4 );
+function filter_nav_menu_css_classes222( $classes, $item, $args, $depth ) {
+    if ( $args->theme_location === 'primary-mobile' ) {
+        $classes = [
+            'menu-mobile__item',
+            'menu-mobile__item_lvl_' . ( $depth + 1 )
+        ];
+        if ( $item->current ) {
+            $classes[] = 'menu-mobile__item-active';
+        }
+    }
+    return $classes;
+}
+
+// Change the class of the nested(вложенного) UL
+add_filter( 'nav_menu_submenu_css_class', 'filter_nav_menu_submenu_css_class12', 10, 3 );
+function filter_nav_menu_submenu_css_class12( $classes, $args, $depth ) {
+    if ( $args->theme_location === 'primary-mobile' ) {
+        $classes = [
+            'menu-mobile__sub',
+            'menu-mobile__sub_lvl_' . ( $depth + 2 )
+        ];
+    }
+    return $classes;
+}
+
+// Add classes to link
+add_filter( 'nav_menu_link_attributes', 'filter_nav_menu_link_attributes12', 10, 4 );
+function filter_nav_menu_link_attributes12( $atts, $item, $args, $depth ) {
+    if ( $args->theme_location === 'primary-mobile' ) {
+        $atts['class'] = 'menu-mobile__link' . ' menu-mobile__link_lvl_' . ( $depth + 1 );
+        if ( $item->current ) {
+            $atts['class'] .= ' menu-mobile__link-active';
+        }
+        if( $depth === 0) {
+            $atts['class'] .= ' head-30-medium';
+        }
+    }
+    return $atts;
+}

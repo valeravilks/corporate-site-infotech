@@ -20,6 +20,24 @@
                 'items_wrap'      => '<ul class="menu-tablet__list">%3$s</ul>',
                 'depth'           => 0,
             ] ); ?>
+            <?php
+            wp_nav_menu( [
+                'theme_location'  => 'primary-mobile',
+                'menu'            => 'primary-mobile',
+                'container'       => 'nav',
+                'container_class' => 'header__mobile-menu menu-mobile',
+                'container_id'    => '',
+                'menu_class'      => 'menu',
+                'menu_id'         => '',
+                'echo'            => true,
+                'fallback_cb'     => 'wp_page_menu',
+                'before'          => '',
+                'after'           => '',
+                'link_before'     => '',
+                'link_after'      => '',
+                'items_wrap'      => '<ul class="menu-mobile__list">%3$s</ul>',
+                'depth'           => 0,
+            ] ); ?>
         </div>
     </div>
     <div class="tablet-l__but">
