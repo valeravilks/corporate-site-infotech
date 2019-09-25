@@ -12,6 +12,21 @@
             </div>
         </div>-->
     </section>
+<div class="container">dfdf</div>
+<div class="container">
+    <div class="row">
+        <div class="col col-xl-6">1</div>
+        <div class="col col-xl-6">2</div>
+        <div class="col col-xl-6">3</div>
+    </div>
+</div>
+    <div class="container-photo">
+        sasdasd
+        <br><br><br><br><br><br><br><br>
+        <div class="lang lang-up">
+            <?php get_template_part('templates/components/lang')?>
+        </div>
 
+    </div>
 <?php
 get_footer() ?>

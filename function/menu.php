@@ -39,15 +39,21 @@ function filter_nav_menu_submenu_css_class( $classes, $args, $depth ) {
 // Add classes to link
 add_filter( 'nav_menu_link_attributes', 'filter_nav_menu_link_attributes', 10, 4 );
 function filter_nav_menu_link_attributes( $atts, $item, $args, $depth ) {
+
   if ( $args->theme_location === 'primary' ) {
+
+
     $atts['class'] = 'menu__link' . ' menu__link_lvl_' . ( $depth + 1 );
-    if ( $item->current ) {
-      $atts['class'] .= ' menu__link-active';
-    }
-  }
+      if ( $item->current ) {
+        $atts['class'] .= ' menu__link-active';
+      }
+
+      if ( $depth === 0 || $depth === 2 ) {
+          $atts['class'] .= ' menu-16-medium';
+      }
+   }
   return $atts;
 }
-
 
 //------------------------
 

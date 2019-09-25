@@ -8,7 +8,7 @@
 <?php global $redux_demo; ?>
 <body>
 <header class="header">
-    <div class="header__container">
+    <div class="container-fluid header__container">
         <a class="header__logo logo" href="<?php get_site_url() ?>">
             <img src="<?php echo $redux_demo['header-logo']['url'] ?>"
                  alt=""
@@ -34,7 +34,7 @@
         <a target="_blank" href="tel:<?php echo $redux_demo['header-phone']; ?>" class="header__phone">
             <?php echo $redux_demo['header-phone']; ?>
         </a>
-        <button class="header__callback btn btn-primary">
+        <button class="header__callback btn btn-large btn-blue">
             Обратный звонок
         </button>
         <div class="header__lang lang">

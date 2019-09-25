@@ -1,3 +1,50 @@
-body {
-    background-color: red!important;
+/* Button */
+
+.btn {
+    cursor: pointer;
+    transition: background .3s ease;
+    outline: none;
+    font-family: Gordita, sans-serif;
+    border: none;
+    text-align: center;
+    font-weight: 500;
+    border-radius: 4px;
 }
+
+.btn-blue {
+    color: var(--white);
+    background: var(--blue);
+}
+
+.btn-blue:hover {
+    background: var(--blue-hover);
+}
+
+.btn-blue:active {
+    background: var(--blue-active);
+}
+
+.btn-magenta {
+    color: var(--white);
+    background: var(--magenta);
+}
+
+.btn-magenta:hover {
+    background: var(--magenta-hover);
+}
+
+.btn-magenta:active {
+    background: var(--magenta-active);
+}
+
+.btn-large {
+    font-size: 18px;
+    padding: 9px 20px 8px;
+}
+
+.btn-small {
+    font-size: 16px;
+    padding: 3px 20px 3px;
+}
+
+/* End Button */
