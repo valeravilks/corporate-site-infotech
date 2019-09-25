@@ -1,0 +1,22 @@
+:root {
+    --blue: #0169FF;
+    --blue-hover: #418DFB;
+    --blue-active: #005ADB;
+
+    --magenta: #F81C41;
+    --magenta-hover: #FF5B77;
+    --magenta-active: #DA0025;
+
+    --dark-90: #15254B;
+    --black-blue-100: #3C5D72;
+    --black-blue-50: #86939B;
+
+    --energy-dark-blye: #182280;
+    --blue-light: #F2F5F9;
+
+    --tertiary-text-1: #A4B5C0;
+    --tertiary-text-2: #BECFD9;
+    --tertiary-text-3: #D4E2EB;
+
+    --white: #fff;
+}

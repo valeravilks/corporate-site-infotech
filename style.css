@@ -2,6 +2,10 @@
 Theme Name: Info tech
 */
 
+@import 'css/component/button.css';
+@import "css/component/components.css";
+@import "css/component/variable.css";
+
 /* Reset Css*/
 
 html, body, div, span, applet, object, iframe,
@@ -31,6 +35,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
     line-height: 1;
+
 }
 ol, ul {
     list-style: none;
@@ -973,6 +978,84 @@ table {
     text-decoration: none;
 }
 /* End Lang */
+
+/* Tablet layer */
+
+.tablet-l {
+    position: fixed;
+    height: calc(100% - 80px);
+    width: 100%;
+    top: 80px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #fff;
+    padding: 13px 0 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.tablet-l__container {
+    padding: 0 15px;
+}
+
+.menu-tablet__list {
+    display: flex;
+}
+
+.menu-tablet__item_lvl_1:nth-child(2) {
+    position: absolute;
+    top: 200px;
+}
+
+.menu-tablet__item_lvl_1 {
+    flex: 0 0 33%;
+}
+
+.menu-tablet__link_lvl_1 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    text-decoration: none;
+    line-height: 171%;
+    text-transform: uppercase;
+    color: rgba(81, 100, 112, 0.7);
+}
+
+.menu-tablet__link_lvl_1:hover {
+    color: #15254B;
+}
+
+.menu-tablet__link_lvl_2 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 23px;
+    color: #3C5D72;
+    text-decoration: none;
+}
+
+.menu-tablet__sub_lvl_2 {
+    margin-top: 23px;
+}
+
+.menu-tablet__item_lvl_2 {
+    margin-bottom: 10px;
+}
+
+.tablet-1__top{
+    flex-grow: 1;
+}
+
+.tablet-l__container-flex {
+    display: flex;
+}
+
+.tablet-l__container-flex > *{
+    align-self: center;
+}
+/* End Tablet layer */
 
 
 
