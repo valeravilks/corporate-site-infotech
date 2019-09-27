@@ -2,6 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <meta id="vp" name="viewport" content="width=device-width">
     <title>Info-tech</title>
     <?php wp_head(); ?>
 </head>
@@ -42,8 +43,10 @@
             <?php get_template_part('templates/components/lang-up')?>
         </div>
         <img class="header__mobile" src="<?php echo get_template_directory_uri(); ?>/img/main/main-menu.svg">
-        <img class="header__close" src="<?php echo get_template_directory_uri(); ?>/img/main/close-menu.svg">
+        <img class="header__close d-none" src="<?php echo get_template_directory_uri(); ?>/img/main/close-menu.svg">
 
         <?php get_template_part('templates/components/tablet-menu'); ?>
     </div>
+
 </header>
+<div class="background d-none"></div>

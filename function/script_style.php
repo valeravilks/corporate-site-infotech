@@ -11,6 +11,7 @@ function theme_name_scripts() {
   wp_enqueue_style( 'style', get_stylesheet_uri() );
 
   wp_enqueue_script('jquery_js', get_template_directory_uri() . '/js/jquery-3.4.1.js', '', null, true);
+  wp_enqueue_script('styler', get_template_directory_uri() . '/js/jquery.formstyler.js', '', null, true);
   wp_enqueue_script('owl', get_template_directory_uri() . '/js/owl.carousel.js', '', null, true);
   wp_enqueue_script('script', get_template_directory_uri() . '/js/script.js', '', null, true);
 }

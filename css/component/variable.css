@@ -19,4 +19,9 @@
     --tertiary-text-3: #D4E2EB;
 
     --white: #fff;
+
+    --breakpoint-xl: 1200px;
+    --breakpoint-lg: 992px;
+    --breakpoint-md: 480px;
+
 }

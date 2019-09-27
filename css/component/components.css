@@ -72,8 +72,14 @@
 
 /* End Logo */
 
-/* Phone */
-
-
-
-/* End Phone */
+.background {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    background-color: black;
+    opacity: .5;
+    cursor: pointer;
+}

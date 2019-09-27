@@ -38,6 +38,9 @@
                 'items_wrap'      => '<ul class="menu-mobile__list">%3$s</ul>',
                 'depth'           => 0,
             ] ); ?>
+            <div class="tablet-1__lang2 lang">
+                <?php get_template_part('templates/components/lang-down')?>
+            </div>
         </div>
     </div>
     <div class="tablet-l__but">
