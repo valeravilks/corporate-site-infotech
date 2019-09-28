@@ -1,0 +1,17 @@
+.callback {
+    position: fixed;
+    background: var(--white);
+    bottom: 0;
+    height: 75vh;
+    width: 100vw;
+    z-index: 100;
+}
+
+.callback__container {
+    display: flex;
+
+}
+
+.callback__head{
+    margin-bottom: 20px;
+}

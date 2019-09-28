@@ -83,3 +83,101 @@
     opacity: .5;
     cursor: pointer;
 }
+
+/* CheckBox */
+
+    .check {
+        padding-left: 20px;
+        font-family: Gordita, sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        color: var(--black-blue-100);
+    }
+
+    .check:hover {
+        color: var(--dark-90);
+    }
+
+    .check__input {
+        position: absolute;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
+
+    .check__box {
+        margin-left: -27px;
+        position: absolute;
+        width: 17px;
+        border-radius: 2px;
+        height: 17px;
+        left: 0;
+        top: 0;
+    }
+
+.check__input:not(:checked) + .check__box {
+     border: 1px solid var(--black-blue-100);
+ }
+.check__input:not(:checked) + .check__box:hover {
+    border: 1px solid var(--dark-90);
+}
+
+.check__input:checked + .check__box {
+    border: 1px solid var(--black-blue-100);
+    background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTEiIGhlaWdodD0iOSIgdmlld0JveD0iMCAwIDExIDkiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTEgNEw0IDdMMTAgMSIgc3Ryb2tlPSIjMDE2OUZGIiBzdHJva2Utd2lkdGg9IjIiLz48L3N2Zz4=) no-repeat center center;
+
+}/* End CheckBox */
+
+.mdc-text-field, .wpforms-field-text {
+    position: relative;
+    height: 60px;
+}
+
+.mdc-text-field__input, .wpforms-field-text input {
+    font-family: Gordita, sans-serif;
+    padding-top: 19px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+    position: absolute;
+    height: 60px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 150%;
+    background: var(--blue-light);
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0);
+    color: var(--dark-90);
+}
+
+.mdc-floating-label, .wpforms-field-text label {
+    position: absolute;
+    padding-left: 21px;
+    padding-top: 19px;
+    transition: all 0.3s ease;
+    font-family: Gordita, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--black-blue-50);
+    pointer-events: none;
+    z-index: 10;
+}
+
+.mdc-floating-label-in {
+    font-size: 14px!important;
+    padding-top: 8px!important;
+}
+
+.mdc-text-field__input:hover, .wpforms-field-text input:hover {
+    border: 1px solid var(--tertiary-text-1)
+}
+
+.mdc-text-field__input:focus .wpforms-field-text input:focu {
+    border: 1px solid var(--blue);
+    outline: none;
+    color: var(--dark-90);
+}

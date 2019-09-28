@@ -5,6 +5,9 @@ Theme Name: Info tech
 @import 'css/component/reset.css';
 @import "css/component/variable.css";
 @import 'css/component/grid.css';
+@import 'css/component/select.css';
+@import 'css/component/callback.css';
+
 @import 'css/component/font-text.css';
 @import 'css/component/button.css';
 @import "css/component/components.css";

@@ -46,7 +46,10 @@
         <img class="header__close d-none" src="<?php echo get_template_directory_uri(); ?>/img/main/close-menu.svg">
 
         <?php get_template_part('templates/components/tablet-menu'); ?>
+
+
     </div>
 
 </header>
+<?php get_template_part('templates/components/callback'); ?>
 <div class="background d-none"></div>

@@ -72,14 +72,13 @@ $(document).ready(function(){
      // $('.header__mobile-menu').show();
 
     //input text
-    $('.mdc-text-field__input').focus(function(){
-        $(this).siblings('.mdc-floating-label').addClass('mdc-floating-label-in');
+    $('.wpforms-field-text input').focus(function(){
+        $(this).siblings('.wpforms-field-text label').addClass('mdc-floating-label-in');
     });
 
-    $('.mdc-text-field__input').focusout(function(){
-        console.log($(this).val());
+    $('.wpforms-field-text input').focusout(function(){
         if($(this).val() === '') {
-            $(this).siblings('.mdc-floating-label').removeClass('mdc-floating-label-in');
+            $(this).siblings('.wpforms-field-text label').removeClass('mdc-floating-label-in');
         }
     });
 
@@ -87,4 +86,9 @@ $(document).ready(function(){
         selectSmartPositioning: true
     });
 
+    $('.wpforms-field-select select').styler({
+        selectSmartPositioning: true
+    });
+
+    $('.wpforms-field-checkbox label').append('<span class="check__box"></span>');
 });

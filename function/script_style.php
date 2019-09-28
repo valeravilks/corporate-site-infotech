@@ -18,7 +18,7 @@ function theme_name_scripts() {
 
 add_action('wp_print_styles', 'mytheme_dequeue_css_from_plugins', 100);
 function mytheme_dequeue_css_from_plugins() {
-//  wp_dequeue_style( 'contact-form-7' );
+  //wp_dequeue_style( 'wpforms-full-css');
 //  wp_dequeue_style( 'wp-block-library' );
 //  wp_dequeue_style( 'wordpress-popular-posts-css' );
 }
