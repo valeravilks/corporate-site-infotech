@@ -113,7 +113,7 @@
         border-radius: 2px;
         height: 17px;
         left: 0;
-        top: 0;
+        top: 2px;
     }
 
 .check__input:not(:checked) + .check__box {

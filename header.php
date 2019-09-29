@@ -36,7 +36,7 @@
            class="header__phone phone-18-bold">
             <?php echo $redux_demo['header-phone']; ?>
         </a>
-        <button class="header__callback btn btn-small btn-blue">
+        <button class="header__callback btn btn-small btn-blue js-callback">
             Обратный звонок
         </button>
         <div class="header__lang lang">

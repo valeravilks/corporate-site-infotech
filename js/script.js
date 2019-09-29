@@ -91,4 +91,20 @@ $(document).ready(function(){
     });
 
     $('.wpforms-field-checkbox label').append('<span class="check__box"></span>');
+
+    $('.js-callback').click(function(){
+        $('.callback').addClass('callback-show');
+        $('.callback-bg').fadeIn();
+    });
+
+    $('.callback-bg').click(function () {
+        $('.callback-bg').fadeOut();
+        $('.callback').removeClass('callback-show');
+    });
+
+    $('.callback__close').click(function () {
+        $('.callback-bg').fadeOut();
+        $('.callback').removeClass('callback-show');
+    });
+
 });

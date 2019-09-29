@@ -45,7 +45,7 @@
     </div>
     <div class="tablet-l__but">
         <div class="tablet-l__container tablet-l__container-flex">
-            <button class="btn btn-blue btn-small">
+            <button class="btn btn-blue btn-small js-callback">
                 Обратный звонок
             </button>
             <a target="_blank" href="tel:<?php echo $redux_demo['header-phone']; ?>"
