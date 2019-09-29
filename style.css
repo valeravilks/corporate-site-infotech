@@ -13,6 +13,8 @@ Theme Name: Info tech
 @import "css/component/components.css";
 @import "css/component/menu.css";
 @import 'css/component/header.css';
+@import 'css/component/footer.css';
+
 
 body {
     font-family: "Gordita", sans-serif;

@@ -164,3 +164,118 @@ function filter_nav_menu_link_attributes12( $atts, $item, $args, $depth ) {
     }
     return $atts;
 }
+
+//------------------------
+
+
+add_action( 'after_setup_theme', 'theme_register_nav_menu122' );
+function theme_register_nav_menu122() {
+    register_nav_menu( 'footer-menu', 'Меню для подвала сайта' );
+}
+
+// Remove ID in menu items (<li>)
+add_filter('nav_menu_item_id', '__return_false');
+
+// Change the attribute of the tag menu item
+add_filter( 'nav_menu_css_class', 'filter_nav_menu_css_classes2222', 10, 4 );
+function filter_nav_menu_css_classes2222( $classes, $item, $args, $depth ) {
+    if ( $args->theme_location === 'footer-menu' ) {
+        $classes = [
+            'menu-f__item',
+            'menu-f__item_lvl_' . ( $depth + 1 )
+        ];
+        if( $depth == 0){
+            $classes[] = 'col';
+        }
+        if ( $item->current ) {
+            $classes[] = 'menu-f__item-active';
+        }
+    }
+    return $classes;
+}
+
+// Change the class of the nested(вложенного) UL
+add_filter( 'nav_menu_submenu_css_class', 'filter_nav_menu_submenu_css_class122', 10, 3 );
+function filter_nav_menu_submenu_css_class122( $classes, $args, $depth ) {
+    if ( $args->theme_location === 'footer-menu' ) {
+        $classes = [
+            'menu-f__sub',
+            'menu-f__sub_lvl_' . ( $depth + 2 )
+        ];
+    }
+    return $classes;
+}
+
+// Add classes to link
+add_filter( 'nav_menu_link_attributes', 'filter_nav_menu_link_attributes122', 10, 4 );
+function filter_nav_menu_link_attributes122( $atts, $item, $args, $depth ) {
+    if ( $args->theme_location === 'footer-menu' ) {
+        $atts['class'] = 'menu-f__link' . ' menu-f__link_lvl_' . ( $depth + 1 );
+        if ( $item->current ) {
+            $atts['class'] .= ' menu-f__link-active';
+        }
+        if($depth == 0){
+            $atts['class'] .= ' menu-16-medium';
+        }
+        if($depth == 1){
+            $atts['class'] .= ' text-16-regular';
+        }
+    }
+    return $atts;
+}
+
+//------------------------
+
+
+add_action( 'after_setup_theme', 'theme_register_nav_menu1222' );
+function theme_register_nav_menu1222() {
+    register_nav_menu( 'footer-menu2', 'Меню для подвала сайта 2' );
+}
+
+// Remove ID in menu items (<li>)
+add_filter('nav_menu_item_id', '__return_false');
+
+// Change the attribute of the tag menu item
+add_filter( 'nav_menu_css_class', 'filter_nav_menu_css_classes22222', 10, 4 );
+function filter_nav_menu_css_classes22222( $classes, $item, $args, $depth ) {
+    if ( $args->theme_location === 'footer-menu2' ) {
+        $classes = [
+            'menu-f2__item',
+            'menu-f2__item_lvl_' . ( $depth + 1 )
+        ];
+        if( $depth == 0){
+            $classes[] = 'col';
+        }
+        if ( $item->current ) {
+            $classes[] = 'menu-f2__item-active';
+        }
+    }
+    return $classes;
+}
+
+// Change the class of the nested(вложенного) UL
+add_filter( 'nav_menu_submenu_css_class', 'filter_nav_menu_submenu_css_class1222', 10, 3 );
+function filter_nav_menu_submenu_css_class1222( $classes, $args, $depth ) {
+    if ( $args->theme_location === 'footer-menu2' ) {
+        $classes = [
+            'menu-f2__sub',
+            'menu-f2__sub_lvl_' . ( $depth + 2 )
+        ];
+    }
+    return $classes;
+}
+
+// Add classes to link
+add_filter( 'nav_menu_link_attributes', 'filter_nav_menu_link_attributes1222', 10, 4 );
+function filter_nav_menu_link_attributes1222( $atts, $item, $args, $depth ) {
+    if ( $args->theme_location === 'footer-menu2' ) {
+        $atts['class'] = 'menu-f2__link' . ' menu-f2__link_lvl_' . ( $depth + 1 );
+        if ( $item->current ) {
+            $atts['class'] .= ' menu-f2__link-active';
+        }
+        if($depth == 0){
+            $atts['class'] .= ' menu-16-medium';
+        }
+    }
+    return $atts;
+}
