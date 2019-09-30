@@ -1,7 +1,9 @@
 let path = require('path');
 let MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
-const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
+var webpack = require('webpack');
+
 
 let conf = {
     mode: 'development',
@@ -19,14 +21,28 @@ let conf = {
         ]),
         new BrowserSyncPlugin({
             proxy: 'http://infotech.valeravilks.ru'
+        }),
+        new webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery",
+            'window.jQuery': 'jquery'
         })
     ],
     watchOptions: {
         ignored: /node_modules/
     },
-
+    resolve: {
+        alias: {
+            $: path.resolve('node_modules','jquery/src/jquery'),
+            jquery: path.resolve('node_modules','jquery/src/jquery'),
+        }
+    },
     module: {
         rules: [
+            {
+                test: /\.exec\.jjs$/,
+                use: [ 'script-loader' ]
+            },
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
@@ -38,7 +54,7 @@ let conf = {
                 }
             },
             {
-                test: /\.scss$/,
+                test: /\.(scss|css)$/,
                 use: [
                     {
                         loader: MiniCssExtractPlugin.loader,
@@ -48,6 +64,31 @@ let conf = {
                     },
                     "css-loader", // translates CSS into CommonJS
                     'sass-loader',
+                ]
+            },
+            {
+                test: /\.(png|jpe?g|gif|svg)$/,
+                use: [
+                    {
+                        loader: 'url-loader',
+                        options: {
+                            outputPath: 'images',
+                            name: '[name][hash].[ext]',
+                            limit: 8192
+                        },
+                    },
+                ],
+            },
+            {
+                test: /\.(woff|woff2|eot|ttf|otf)$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            outputPath: 'font',
+                            name: '[name].[ext]',
+                        },
+                    },
                 ]
             }
         ]
