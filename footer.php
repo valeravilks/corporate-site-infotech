@@ -59,7 +59,7 @@ global  $redux_demo;
         </div>
         <div class="row footer__row3">
             <div class="col col-xl-3">
-                <a class="footer__logo logo" href="<?php get_site_url() ?>">
+                <a class="footer__logo logo" href="<?php echo pll_home_url(); ?>">
                     <img src="<?php echo $redux_demo['header-logo']['url'] ?>"
                          alt=""
                          class="logo__img">

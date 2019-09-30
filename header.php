@@ -10,7 +10,7 @@
 <body>
 <header class="header">
     <div class="container-fluid header__container">
-        <a class="header__logo logo" href="<?php get_site_url() ?>">
+        <a class="header__logo logo" href="<?php echo pll_home_url(); ?>">
             <img src="<?php echo $redux_demo['header-logo']['url'] ?>"
                  alt=""
                  class="logo__img">
