@@ -35,7 +35,19 @@ let conf = {
         alias: {
             $: path.resolve('node_modules','jquery/src/jquery'),
             jquery: path.resolve('node_modules','jquery/src/jquery'),
-        }
+            '~': path.resolve(__dirname, 'src'),
+        },
+        extensions: [
+            ".sass",
+            ".scss",
+            ".css",
+            ".wasm",
+            ".web.js",
+            ".mjs",
+            ".js",
+            ".web.jsx",
+            ".jsx"
+        ],
     },
     module: {
         rules: [
