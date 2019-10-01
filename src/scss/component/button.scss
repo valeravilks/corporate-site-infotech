@@ -1,6 +1,6 @@
 /* Button */
 
-.btn {
+@mixin btn {
     cursor: pointer;
     transition: background .3s ease;
     outline: none;
@@ -11,38 +11,38 @@
     border-radius: 4px;
 }
 
-.btn-blue {
-    color: var(--white);
-    background: var(--blue);
+@mixin btn-blue {
+    color: $color-white;
+    background: $color-blue;
+
+    &:hover {
+        background: $color-blue-hover;
+    }
+
+    &:active {
+        background: $color-blue-active;
+    }
 }
 
-.btn-blue:hover {
-    background: var(--blue-hover);
+@mixin btn-magenta {
+    color: $color-white;
+    background: $color-magenta;
+
+    &:hover {
+        background: $color-magenta-hover;
+    }
+
+    &:active {
+        background: $color-magenta-active;
+    }
 }
 
-.btn-blue:active {
-    background: var(--blue-active);
-}
-
-.btn-magenta {
-    color: var(--white);
-    background: var(--magenta);
-}
-
-.btn-magenta:hover {
-    background: var(--magenta-hover);
-}
-
-.btn-magenta:active {
-    background: var(--magenta-active);
-}
-
-.btn-large {
+@mixin btn-large {
     font-size: 18px;
-    padding: 9px 20px 8px;
+    padding: 8px 20px 9px;
 }
 
-.btn-small {
+@mixin btn-small {
     font-size: 16px;
     padding: 8px 20px 9px;
 }

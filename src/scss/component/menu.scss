@@ -7,6 +7,12 @@
         &_lvl_1{
             position: relative;
 
+            &:hover {
+                .menu__helper {
+                    display: block;
+                }
+            }
+
             .menu__sub_lvl_2 {
                 z-index: 100;
             }
@@ -24,6 +30,12 @@
         &_lvl_1 {
             position: relative;
             margin-right: 20px;
+            @include menu-16-medium;
+            color: $color-black-blue-100;
+
+            &:hover {
+                color: $color-dark-90;
+            }
 
             &.menu__link-active::before {
                 content: '';
@@ -52,10 +64,11 @@
     &__helper {
         height: 40px;
         position: absolute;
-        background-color: red;
-        width: 100%;
+        background-color: white;
+        width: 200%;
+        left: -30px;
         display: none;
-        opacity: 0.01;
+        opacity: 0.001;
     }
 }
 
@@ -76,10 +89,6 @@
         &:hover {
             .menu__sub_lvl_2 {
                 display: flex;
-            }
-
-            .menu__helper {
-                display: block;
             }
         }
 
@@ -106,6 +115,7 @@
 
         .menu__item_lvl_3 {
             margin-bottom: 15px;
+
         }
 
         .menu__sub_lvl_3 {
@@ -116,10 +126,17 @@
         }
 
         .menu__link_lvl_2 {
-            text-transform: uppercase;
-            opacity: 0.7;
-            color: #516470;
-            font-size: 12px;
+            @include section-12-medium;
+            color: $color-black-blue-50
+        }
+
+        .menu__link_lvl_3 {
+            @include menu-16-medium;
+            color: $color-black-blue-100;
+
+            &:hover {
+                color: $color-dark-90;
+            }
         }
 
     }
@@ -139,10 +156,20 @@
         left: -30px;
         background: #FFFFFF;
         border: 1px solid #F2F5F9;
+        min-width: 320px;
     }
 
     .menu__item_lvl_2 {
         margin-bottom: 15px;
+    }
+
+    .menu__link_lvl_2 {
+        @include menu-16-medium;
+        color: $color-black-blue-100;
+
+        &:hover {
+            color: $color-dark-90;
+        }
     }
 }
 

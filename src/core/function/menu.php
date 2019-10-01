@@ -47,10 +47,6 @@ function filter_nav_menu_link_attributes( $atts, $item, $args, $depth ) {
       if ( $item->current ) {
         $atts['class'] .= ' menu__link-active';
       }
-
-      if ( $depth === 0 || $depth === 2 ) {
-          $atts['class'] .= ' menu-16-medium';
-      }
    }
   return $atts;
 }
@@ -214,12 +210,6 @@ function filter_nav_menu_link_attributes122( $atts, $item, $args, $depth ) {
         if ( $item->current ) {
             $atts['class'] .= ' menu-f__link-active';
         }
-        if($depth == 0){
-            $atts['class'] .= ' menu-16-medium';
-        }
-        if($depth == 1){
-            $atts['class'] .= ' text-16-regular';
-        }
     }
     return $atts;
 }
@@ -272,9 +262,6 @@ function filter_nav_menu_link_attributes1222( $atts, $item, $args, $depth ) {
         $atts['class'] = 'menu-f2__link' . ' menu-f2__link_lvl_' . ( $depth + 1 );
         if ( $item->current ) {
             $atts['class'] .= ' menu-f2__link-active';
-        }
-        if($depth == 0){
-            $atts['class'] .= ' menu-16-medium';
         }
     }
     return $atts;
