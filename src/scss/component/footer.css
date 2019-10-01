@@ -1,5 +1,5 @@
 .footer {
-    background-color: var(--blue-light);
+    background-color: $color;
     padding: 70px 0 55px;
 }
 

@@ -1,9 +1,10 @@
 /*
 Theme Name: Info tech
 */
+@import './scss/smart-grid';
 @import './scss/component/reset.css';
 @import "./scss/component/variable";
-@import './scss/component/grid.css';
+//@import './scss/component/grid.css';
 @import './scss/component/select.css';
 @import './scss/component/callback.css';
 @import './scss/component/font-text';
@@ -13,6 +14,13 @@ Theme Name: Info tech
 @import './scss/component/header';
 @import './scss/component/footer.css';
 
+.wrapper {
+  @include wrapper;
+}
+
+.wrapper-full {
+  @include wrapper-full;
+}
 
 body {
   font-family: "Gordita", sans-serif;

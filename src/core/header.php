@@ -9,7 +9,7 @@
 <?php global $redux_demo; ?>
 <body>
 <header class="header">
-    <div class="container-fluid header__container">
+    <div class="header__wrapper">
         <a class="header__logo logo" href="<?php echo pll_home_url(); ?>">
             <img src="<?php echo $redux_demo['header-logo']['url'] ?>"
                  alt=""

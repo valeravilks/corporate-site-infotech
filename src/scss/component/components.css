@@ -1,65 +1,6 @@
 /* Lang */
 
-.lang {
-    line-height: 171%;
-    border-radius: 4px;
-    width: 40px;
-    height: 40px;
-    z-index: 100;
-    position: relative;
-}
 
-.lang__item {
-    width: 40px;
-    height: 40px;
-    text-align: center;
-    line-height: 41px;
-    cursor: pointer;
-    background-color: var(--blue-light);
-}
-
-.lang_item-current {
-    position: relative;
-    border-radius: 4px;
-}
-
-.lang__second{
-    display: none;
-    padding: 10px 0;
-    background: var(--white);
-    border: 1px solid var(--blue-light);
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 4px;
-    margin-top: 12px;
-}
-
-.lang__item-second {
-    width: 39px;
-}
-
-.lang__second-down {
-    margin-bottom: 12px;
-}
-
-.lang__item-second:hover {
-    background-color: var(--tertiary-text-3);
-}
-
-.lang__container {
-    width: 40px;
-}
-
-.lang__container-down {
-    position: absolute;
-    bottom: 0;
-}
-
-.lang__link{
-    display: block;
-    width: 100%;
-    height: 100%;
-    color: inherit;
-}
 
 /* End Lang */
 

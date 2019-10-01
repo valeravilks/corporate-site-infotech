@@ -1,10 +1,14 @@
 /* Header */
+
+@import 'header/lang';
+
 .header {
     z-index: 100;
     position: relative;
     background-color: $color-white;
 
-    &__container {
+    &__wrapper {
+        @include wrapper-full;
          display: flex;
          min-height: 80px;
 
@@ -18,10 +22,22 @@
         @include btn;
         @include btn-blue;
         @include btn-large;
+
+        @media (max-width: 1320px) {
+            display: none;
+        }
     }
 
     &__logo {
         margin-right: 70px;
+
+        @media (max-width: 700px) {
+            flex-grow: 1;
+        }
+
+        @media (max-width: 500px) {
+            margin-right: 0;
+        }
     }
 
     &__phone {
@@ -36,6 +52,20 @@
 
     &__menu {
         flex-grow: 1;
+
+        @media (max-width: 1090px) {
+            .menu__item_lvl_1:not(:first-child) {
+                display: none;
+            }
+
+            .menu__item_lvl_1:first-child:after {
+                display: none;
+            }
+        }
+
+        @media (max-width: 700px) {
+            display: none;
+        }
     }
 
     &__mobile {
@@ -43,6 +73,14 @@
         margin-left: 47px;
         margin-right: 10px;
         cursor: pointer;
+
+        @media (max-width: 1090px) {
+            display: block;
+        }
+
+        @media (max-width: 500px) {
+            margin-left: 0;
+        }
     }
 
     &__close {
@@ -52,62 +90,15 @@
     }
 
     &__phone {
-
-    }
-}
-
-
-@media (max-width: 1260px) {
-    .header__callback{
-        display: none;
-    }
-}
-
-@media (max-width: 1045px) {
-    .header__menu .menu__item_lvl_1:not(:first-child) {
-        display: none;
+        @media (max-width: 500px) {
+            margin-right: 0;
+            flex-grow: 1;
+        }
     }
 
-    .header__mobile {
-        display: block;
-    }
-
-    .header__tablet{
-
-    }
-}
-
-@media (max-width: 992px) {
-
-}
-
-@media (max-width: 700px) {
-    .header__menu {
-        display: none;
-    }
-
-    .header__logo {
-        flex-grow: 1;
-    }
-}
-
-@media (max-width: 530px) {
-    .header__lang {
-        display: none;
-    }
-}
-
-@media (max-width: 500px) {
-    .header__logo {
-        margin-right: 0;
-    }
-
-    .header__phone {
-        margin-right: 0;
-        flex-grow: 1;
-    }
-
-    .header__mobile {
-        margin-left: 0;
+    &__lang {
+        @media (max-width: 530px) {
+            display: none;
+        }
     }
 }
