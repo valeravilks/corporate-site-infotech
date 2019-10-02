@@ -32,28 +32,32 @@ global  $redux_demo;
                     <?php echo $redux_demo['header-phone']; ?>
                 </a>
                 <div class="footer__mail">
-                    info@infotech.group
+                    <?php echo $redux_demo['header-mail']; ?>
                 </div>
                 <div class="footer__work">
-                    Работаем с 9 до 18
+                    <?php echo $redux_demo['header-work']; ?>
                 </div>
             </div>
         </div>
         <div class="footer__row2">
             <div class="footer__company1 f-comp">
                 <div class="f-comp__img">
-
+                    <img src="<?php echo $redux_demo['header-i1']['url'] ?>"
+                         alt=""
+                         class="f-comp__img-1">
                 </div>
                 <div class="f-comp__text">
-                    Дочерняя компания Holocron - участник проекта “Сколково”
+                    <?php echo $redux_demo['header-i-text1']; ?>
                 </div>
             </div>
             <div class="footer__company2 f-comp">
                 <div class="f-comp__img">
-
+                    <img src="<?php echo $redux_demo['header-i2']['url'] ?>"
+                         alt=""
+                         class="f-comp__img-2">
                 </div>
                 <div class="f-comp__text">
-                    Участник объединения РУССОФТ
+                    <?php echo $redux_demo['header-i-text2']; ?>
                 </div>
             </div>
         </div>
@@ -65,7 +69,7 @@ global  $redux_demo;
                          class="logo__img">
                 </a>
                 <p class="footer__copyright">
-                    © 2016-2019, Infotech Group. Все права защищены. При копировании материалов ссылка на сайт обязательна.
+                    <?php echo $redux_demo['header-copyright']; ?>
                 </p>
             </div>
             <div class="footer__col-32">
@@ -91,13 +95,13 @@ global  $redux_demo;
                         Мы в социальных сетях:
                     </div>
                     <div class="f-soc__block">
-                        <a href="" class="f-soc__item">
+                        <a href="<?php echo $redux_demo['header-facebook']; ?>" class="f-soc__item">
                             facebook
                         </a>
-                        <a href="" class="f-soc__item">
+                        <a href="<?php echo $redux_demo['header-vkontakte']; ?>" class="f-soc__item">
                             vkontakte
                         </a>
-                        <a href="" class="f-soc__item">
+                        <a href="<?php echo $redux_demo['header-instagram']; ?>" class="f-soc__item">
                             instagram
                         </a>
                     </div>
@@ -109,13 +113,13 @@ global  $redux_demo;
                         Техническая поддержка:
                     </div>
                     <div class="f-help__phone">
-                        +7 (495) 22-65-222
+                        <?php echo $redux_demo['header-tech-phone']; ?>
                     </div>
                     <div class="f-help__mail">
-                        support@infotech.team
+                        <?php echo $redux_demo['header-tech-mail']; ?>
                     </div>
                     <div class="f-help__text2">
-                        Заявки принимаются круглосуточно
+                        <?php echo $redux_demo['header-tech-text']; ?>
                     </div>
                 </div>
             </div>

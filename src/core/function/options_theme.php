@@ -250,11 +250,11 @@ Redux::setSection( $opt_name, array(
 
 
 Redux::setSection( $opt_name, array(
-    'title'            => __( 'Шапка сайта', 'redux-framework-demo' ),
+    'title'            => __( 'Настройки шапки сайта и подвала', 'redux-framework-demo' ),
     'id'               => 'header-section',
     'subsection'       => true,
     'customizer_width' => '450px',
-    'desc'             => __( 'В данном разделе можно менять информацию в шапке сайта', 'redux-framework-demo' ),
+    'desc'             => __( 'В данном разделе можно менять информацию в шапке сайта и  в подвале', 'redux-framework-demo' ),
     'fields'           => array(
         array(
             'id'       => 'header-logo',
@@ -268,11 +268,105 @@ Redux::setSection( $opt_name, array(
         array(
             'id' => 'header-phone',
             'type' => 'text',
-            'title' => __( 'Номер телефона' , 'redux_docs_generator' ),
+            'title' => __( 'Номер главного телефона' , 'redux_docs_generator' ),
             'subtitle' => __( 'Введите номер телефона' , 'redux_docs_generator' ),
             'default'  => '8(800)707-36-15',
-        )
-    ) ));
+        ),
+        array(
+            'id' => 'header-mail',
+            'type' => 'text',
+            'title' => __( 'Главный email' , 'redux_docs_generator' ),
+            'subtitle' => __( 'Введите email' , 'redux_docs_generator' ),
+            'default'  => 'info@infotech.group',
+        ),
+        array(
+            'id' => 'header-work',
+            'type' => 'text',
+            'title' => __( 'Время работы' , 'redux_docs_generator' ),
+            'subtitle' => __( 'Введите время работы' , 'redux_docs_generator' ),
+            'default'  => 'Работаем с 9 до 18',
+        ),
+        array(
+            'id'       => 'header-i1',
+            'type'     => 'media',
+            'title'    => __( 'Логотип проектов в футер 1 ', 'redux-framework-demo' ),
+            'compiler' => 'true',
+            //'mode'      => false, // Can be set to false to allow any media type, or can also be set to any mime type.
+            'subtitle' => __( 'Загрузите изображение логотипа 60 на 60 пикселей', 'redux-framework-demo' ),
+            'default'  => array( 'url' => $url . '/img/footer-icon.jpg' ),
+        ),
+        array(
+            'id' => 'header-i-text1',
+            'type' => 'text',
+            'title' => __( 'Текст возле логотипа 1' , 'redux_docs_generator' ),
+            'subtitle' => __( 'Введите текст' , 'redux_docs_generator' ),
+            'default'  => 'Дочерняя компания Holocron - участник проекта “Сколково”',
+        ),
+        array(
+            'id'       => 'header-i2',
+            'type'     => 'media',
+            'title'    => __( 'Логотип проектов в футер 2 ', 'redux-framework-demo' ),
+            'compiler' => 'true',
+            //'mode'      => false, // Can be set to false to allow any media type, or can also be set to any mime type.
+            'subtitle' => __( 'Загрузите изображение логотипа 60 на 60 пикселей', 'redux-framework-demo' ),
+            'default'  => array( 'url' => $url . '/img/footer-icon2.jpg' ),
+        ),
+        array(
+            'id' => 'header-i-text2',
+            'type' => 'text',
+            'title' => __( 'Текст возле логотипа 2' , 'redux_docs_generator' ),
+            'subtitle' => __( 'Введите текст' , 'redux_docs_generator' ),
+            'default'  => 'Участник объединения РУССОФТ',
+        ),
+        array(
+            'id' => 'header-copyright',
+            'type' => 'text',
+            'title' => __( 'Текст копирайта' , 'redux_docs_generator' ),
+            'subtitle' => __( 'Текст в подвале под логотипом' , 'redux_docs_generator' ),
+            'default'  => '© 2016-2019, Infotech Group. Все права защищены. При копировании материалов ссылка на сайт обязательна.',
+        ),
+        array(
+            'id' => 'header-tech-phone',
+            'type' => 'text',
+            'title' => __( 'Телефон технической поддержки' , 'redux_docs_generator' ),
+            'subtitle' => __( 'Введите телефон' , 'redux_docs_generator' ),
+            'default'  => '+7 (495) 22-65-222',
+        ),
+        array(
+            'id' => 'header-tech-mail',
+            'type' => 'text',
+            'title' => __( 'Email технической поддержки' , 'redux_docs_generator' ),
+            'subtitle' => __( 'Введите email' , 'redux_docs_generator' ),
+            'default'  => 'support@infotech.team',
+        ),
+        array(
+            'id' => 'header-tech-text',
+            'type' => 'text',
+            'title' => __( 'Текст под почтой технической поддержки' , 'redux_docs_generator' ),
+            'subtitle' => __( 'Введите текст' , 'redux_docs_generator' ),
+            'default'  => 'Заявки принимаются круглосуточно',
+        ),
+        array(
+            'id' => 'header-facebook',
+            'type' => 'text',
+            'title' => __( 'Ссылка на Facebook' , 'redux_docs_generator' ),
+            'default'  => 'https://www.facebook.com/',
+        ),
+        array(
+            'id' => 'header-vkontakte',
+            'type' => 'text',
+            'title' => __( 'Ссылка на Vkontakte' , 'redux_docs_generator' ),
+            'default'  => 'https://vk.com/',
+        ),
+        array(
+            'id' => 'header-instagram',
+            'type' => 'text',
+            'title' => __( 'Ссылка на Instagram' , 'redux_docs_generator' ),
+            'default'  => 'https://www.instagram.com/',
+        ),
+) ));
+
+
 
 
 

@@ -209,7 +209,11 @@
 .f-comp__img {
     height: 60px;
     width: 60px;
-    background-color: red;
+    display: flex;
+
+    & > img{
+        align-self: center;
+    }
 }
 .f-comp__text {
     align-self: center;
