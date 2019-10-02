@@ -4,13 +4,13 @@ global  $redux_demo;
 ?>
 
 <footer class="footer">
-    <div class="container">
-        <div class="row footer__row1">
+    <div class="wrapper">
+        <div class="footer__row1">
             <?php wp_nav_menu( [
                 'theme_location'  => 'footer-menu',
                 'menu'            => 'footer-menu',
                 'container'       => 'nav',
-                'container_class' => 'footer__menu menu-f col-xl-9',
+                'container_class' => 'footer__menu',
                 'container_id'    => '',
                 'menu_class'      => 'menu-f',
                 'menu_id'         => '',
@@ -23,15 +23,15 @@ global  $redux_demo;
                 'items_wrap'      => '<ul class="menu-f__list row">%3$s</ul>',
                 'depth'           => 0,
             ] ); ?>
-            <div class="col-xl-3">
-                <button class="btn btn-blue btn-large js-callback">
+            <div class="footer__info">
+                <button class="footer__callback js-callback">
                     Обратный звонок
                 </button>
                 <a target="_blank" href="tel:<?php echo $redux_demo['header-phone']; ?>"
-                   class="header__phone menu-16-medium">
+                   class="footer__phone">
                     <?php echo $redux_demo['header-phone']; ?>
                 </a>
-                <div class="footer__phone menu-16-medium">
+                <div class="footer__mail">
                     info@infotech.group
                 </div>
                 <div class="footer__work">
@@ -39,36 +39,36 @@ global  $redux_demo;
                 </div>
             </div>
         </div>
-        <div class="row footer__row2">
-            <div class="col col-xl-3 footer__company f-comp">
+        <div class="footer__row2">
+            <div class="footer__company1 f-comp">
                 <div class="f-comp__img">
 
                 </div>
-                <div class="f-comp__text help-14-regular">
+                <div class="f-comp__text">
                     Дочерняя компания Holocron - участник проекта “Сколково”
                 </div>
             </div>
-            <div class="col offset-xl-1 col-xl-3 footer__company f-comp">
+            <div class="footer__company2 f-comp">
                 <div class="f-comp__img">
 
                 </div>
-                <div class="f-comp__text help-14-regular">
+                <div class="f-comp__text">
                     Участник объединения РУССОФТ
                 </div>
             </div>
         </div>
-        <div class="row footer__row3">
-            <div class="col col-xl-3">
+        <div class="footer__row3">
+            <div class="footer__col-31">
                 <a class="footer__logo logo" href="<?php echo pll_home_url(); ?>">
                     <img src="<?php echo $redux_demo['header-logo']['url'] ?>"
                          alt=""
                          class="logo__img">
                 </a>
-                <p class="footer__copyright help-14-regular">
+                <p class="footer__copyright">
                     © 2016-2019, Infotech Group. Все права защищены. При копировании материалов ссылка на сайт обязательна.
                 </p>
             </div>
-            <div class="col offset-xl-1 col-xl-3">
+            <div class="footer__col-32">
                 <?php wp_nav_menu( [
                     'theme_location'  => 'footer-menu2',
                     'menu'            => 'footer-menu2',
@@ -103,7 +103,7 @@ global  $redux_demo;
                     </div>
                 </div>
             </div>
-            <div class="col offset-xl-1 col-xl-4">
+            <div class="footer__col-33">
                 <div class="footer__help f-help">
                     <div class="f-help__text">
                         Техническая поддержка:
