@@ -12,6 +12,22 @@ $(".js-main-slider").owlCarousel({
     autoplay:true,
     autoplayTimeout:5000
 });
+
+$(".js-main-slider-2").owlCarousel({
+    loop:true,
+    margin:30,
+    autoWidth:true,
+    merge:true,
+    responsive:{
+        678:{
+            mergeFit:true
+        },
+        1000:{
+            mergeFit:false
+        }
+    }
+});
+
 $('.select').styler({
     selectSmartPositioning: true
 });

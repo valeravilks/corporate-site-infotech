@@ -137,53 +137,109 @@
                 </div>
             </div>
        </section>
+       <section class="home-page__4 hp4">
+            <div class="hp4__container">
+                <div class="hp4__head">
+                    Реализованные проекты
+                </div>
+                <div class="hp4__text">
+                    Infotech Group реализует проекты для крупнейших компаний России
+                </div>
+                <div class="hp4__slider owl-carousel owl-theme js-main-slider-2">
+                    <div class="hp4__item project-item">
+                        <div class="project-item__header">
+                            <img src="" alt="" class="hp4__img">
+                            <div class="project-item__head">
+                                Объединенная энергетическая компания
+                            </div>
+                        </div>
+                        <div class="project-item__text">
+                            Система управления диспетчерскими заявками по распределительным сетям
+                        </div>
+                        <div class="project-item__row">
+                            <div class="project-item__col">
+                                <div class="project-item__text-1">
+                                    11
+                                </div>
+                                <div class="project-item__text-2">
+                                    операционных подразделений подключены
+                                </div>
+                            </div>
+                            <div class="project-item__col">
+                                <div class="project-item__text-3">
+                                    Более 15 000
+                                </div>
+                                <div class="project-item__text-4">
+                                    электроустановок и кабельных линий на контроле
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hp4__item project-item">
+                        <div class="project-item__header">
+                            <img src="" alt="" class="hp4__img">
+                            <div class="project-item__head">
+                                Объединенная энергетическая компания
+                            </div>
+                        </div>
+                        <div class="project-item__text">
+                            Система управления диспетчерскими заявками по распределительным сетям
+                        </div>
+                        <div class="project-item__row">
+                            <div class="project-item__col">
+                                <div class="project-item__text-1">
+                                    11
+                                </div>
+                                <div class="project-item__text-2">
+                                    операционных подразделений подключены
+                                </div>
+                            </div>
+                            <div class="project-item__col">
+                                <div class="project-item__text-3">
+                                    Более 15 000
+                                </div>
+                                <div class="project-item__text-4">
+                                    электроустановок и кабельных линий на контроле
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hp4__item project-item">
+                        <div class="project-item__header">
+                            <img src="" alt="" class="hp4__img">
+                            <div class="project-item__head">
+                                Объединенная энергетическая компания
+                            </div>
+                        </div>
+                        <div class="project-item__text">
+                            Система управления диспетчерскими заявками по распределительным сетям
+                        </div>
+                        <div class="project-item__row">
+                            <div class="project-item__col">
+                                <div class="project-item__text-1">
+                                    11
+                                </div>
+                                <div class="project-item__text-2">
+                                    операционных подразделений подключены
+                                </div>
+                            </div>
+                            <div class="project-item__col">
+                                <div class="project-item__text-3">
+                                    Более 15 000
+                                </div>
+                                <div class="project-item__text-4">
+                                    электроустановок и кабельных линий на контроле
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+       </section>
    </main>
-<?php
-    $posts = get_posts( array(
-    'numberposts' => 100,
-    'category'    => 0,
-    'orderby'     => 'date',
-    'order'       => 'DESC',
-    'include'     => array(),
-    'exclude'     => array(),
-    'meta_key'    => '',
-    'meta_value'  =>'',
-    'post_type'   => 'project',
-    'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
-    ) );
 
 
 
-    foreach( $posts as $post ){
-    setup_postdata($post);
-//        var_dump($post);
-//        echo '---------------<br>';
 
-        for($i = 1; $i < 100; $i++){
 
-            $fields = get_field('project_card_' . $i);
-
-            if($fields) {
-                echo '<div>' . $fields['project_slide_text']  . '</div>';
-
-                if($fields['project_text_1']) {
-                    echo '<div>' . $fields['project_text_1'] . '</div>';
-                }
-
-                if($fields['project_text_2']) {
-                    echo '<div>' . $fields['project_text_2'] . '</div>';
-                }
-
-                if($fields['project_text_3']) {
-                    echo '<div>' . $fields['project_text_3'] . '</div>';
-                }
-
-                if($fields['project_text_4']) {
-                    echo '<div>' . $fields['project_text_4'] . '</div>';
-                }
-            }
-        }
-    }
-
-    wp_reset_postdata(); // сброс ?>
 <?php get_footer(); ?>
