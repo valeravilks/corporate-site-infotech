@@ -27,6 +27,6 @@ function mytheme_dequeue_css_from_plugins() {
 
 function my_deregister_scripts(){
 //  wp_deregister_script( 'wp-embed' );
-  wp_deregister_script('jquery');
+//  wp_deregister_script('jquery');
 }
 add_action( 'wp_footer', 'my_deregister_scripts' );

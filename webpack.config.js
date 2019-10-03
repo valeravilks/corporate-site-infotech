@@ -20,7 +20,9 @@ let conf = {
             { from: 'src/core', to: './' },
         ]),
         new BrowserSyncPlugin({
-            proxy: 'http://infotech.valeravilks.ru'
+            proxy: 'http://infotech.valeravilks.ru',
+            files: "dist/**/*.*",
+            reloadDelay: 1000
         }),
         new webpack.ProvidePlugin({
             $: "jquery",
@@ -29,7 +31,9 @@ let conf = {
         })
     ],
     watchOptions: {
-        ignored: /node_modules/
+        ignored: /node_modules/,
+        aggregateTimeout: 600,
+        poll: 1000
     },
     resolve: {
         alias: {

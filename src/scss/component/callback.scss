@@ -1,0 +1,106 @@
+.callback {
+    position: fixed;
+    background-color: $color-white;
+    bottom: 0;
+    width: 100vw;
+    z-index: 101;
+    min-height: 80%;
+    max-height: 100%;
+    padding: 102px 0 60px;
+    box-shadow: 0px -10px 50px rgba(0, 0, 0, 0.3);
+    transform: translateY(120%);
+    transition: all 0.5s ease;
+    overflow-y: scroll;
+    box-sizing: border-box;
+
+    @include md-block{
+        padding: 40px 0 60px;
+    }
+
+    &__container {
+        display: flex;
+        @include row-flex;
+        @include wrapper;
+    }
+
+    &__row {
+        @include row-flex;
+        width: 100%;
+    }
+
+    &__head {
+        @include head-30-bold;
+        color: $color-dark-90;
+
+        @include md-block {
+            margin-bottom: 10px;
+            @include head-20-medium;
+        }
+    }
+
+    &__text {
+        @include text-16-regular;
+        color: $color-dark-90;
+    }
+
+    &__col-1 {
+        @include col();
+        @include size(2);
+        @include size-lg(3);
+        @include shift-lg-left(0);
+        @include size-md(11);
+        @include md-block {
+            order: 1;
+            margin-bottom: 40px;
+        }
+    }
+
+    &__col-2 {
+        @include col();
+        @include size(5);
+        @include shift-left(1);
+        @include size-lg(7);
+        @include size-md(12);
+        @include shift-md-left(0);
+        @include md-block {
+            order: 3;
+        }
+
+    }
+
+    &__col-3 {
+        @include col();
+        @include size(2);
+        @include shift-left(1);
+        @include size-lg(1);
+        @include shift-lg-left(0);
+        @include size-md(1);
+        @include md-block {
+            order: 2;
+        }
+    }
+}
+
+.callback-show {
+    transform: translateY(0);
+}
+
+.callback__head{
+    margin-bottom: 20px;
+}
+
+.callback__close{
+    cursor: pointer;
+}
+.callback-bg {
+    position: fixed;
+    display: none;
+    bottom: 0;
+    height: 100vh;
+    background-color: $color-dark-90;
+    opacity: 0.4;
+    width: 100vw;
+    z-index: 100;
+    top: 0;
+    cursor: pointer;
+}

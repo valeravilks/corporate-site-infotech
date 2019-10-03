@@ -1,15 +1,15 @@
 /*
 Theme Name: Info tech
 */
+
+@import './scss/component/reset';
 @import './scss/smart-grid';
-@import './scss/component/reset.css';
 @import "./scss/component/variable";
-//@import './scss/component/grid.css';
-@import './scss/component/select.css';
-@import './scss/component/callback.css';
 @import './scss/component/font-text';
+@import './scss/component/select';
 @import './scss/component/button.scss';
-@import "./scss/component/components.css";
+@import "./scss/component/components";
+@import './scss/component/callback';
 @import "./scss/component/menu";
 @import './scss/component/header';
 @import './scss/component/footer';
@@ -20,6 +20,10 @@ Theme Name: Info tech
 
 .wrapper-full {
   @include wrapper-full;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
@@ -40,46 +44,187 @@ a {
 }
 
 
+.hp1 {
+  &__item {
+    background-color: blue;
+  }
 
-.hp1__item {
-  height: 600px;
-  background-color: blue;
+  &__container {
+    @include wrapper;
+
+    min-height: 600px;
+
+    @include md-block{
+      min-height: 400px;
+    }
+
+    @include sm-block{
+      min-height: 700px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+  }
+
+  &__row {
+    @include row-flex;
+  }
+
+  &__head {
+    @include col();
+    @include shift-left(2);
+    @include size(6);
+    @include shift-sm-left(0);
+    @include size-sm(12);
+
+    font-family: Gordita, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 70px;
+    line-height: 67px;
+    color: $color-white;
+    padding-top: 100px;
+
+    @include lg-block{
+      font-size: 50px;
+    }
+  }
+
+  &__text {
+    @include col();
+    @include shift-left(5);
+    @include size(4);
+    @include size-md(6);
+    @include shift-sm-left(0);
+    @include size-sm(12);
+
+    @include desc-18-regular;
+    color: $color-blue-light;
+    @include md-block {
+      @include desc-18-bold;
+    }
+    margin-bottom: 50px;
+  }
+
+  &__btn-row {
+    @include col();
+    @include shift-left(5);
+    @include size(4);
+    @include size-md(6);
+    @include shift-sm-left(0);
+    @include size-sm(12);
+
+    padding-bottom: 50px;
+  }
+
+  &__btn{
+    @include btn;
+    @include btn-magenta;
+    @include btn-accent;
+  }
 }
 
-.hp1__head {
-  font-family: Gordita, sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 70px;
-  line-height: 67px;
-  color: var(--white);
-  padding-top: 100px;
-}
+.hp2 {
+  &__container {
+    @include wrapper;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
 
-.hp1__text {
-  margin-bottom: 50px;
-  color: var(--white);
-}
+  &__head{
+    @include head-30-bold;
+    color: $color-dark-90;
+  }
 
-.section-p {
-  padding: 100px 0;
-}
+  &__text {
+    @include head-20-medium;
+    margin-bottom: 30px;
+    color: $color-black-blue-100;
+  }
 
-.ph2__head{
+  &__row {
+    @include row-flex;
+  }
 
-}
+  &__col {
+    @include col();
+    @include size(4);
+    @include size-sm(12);
+    background: url("./img/2.jpg") no-repeat, rgba(21, 37, 75, 0.5);
+    background-blend-mode: hard-light;
+    background-size: cover;
+    transition: background-color 0.3s ease;
+    position: relative;
+    border-radius: 4px;
 
-.ph2__t{
+    &:hover {
+      background: url("./img/2.jpg") no-repeat, rgba(21, 37, 75, 0);
+      background-size: cover;
+    }
 
-  margin-bottom: 30px;
+    @include sm-block {
+      margin-bottom: 10px;
+    }
+  }
 }
 
 .cart1{
-  height: 500px;
+  min-height: 500px;
   padding: 64px 40px 41px;
-  border-radius: 4px;
+  border-radius: 5px;
   color: var(--white)!important;
-  background: url("./img/2.jpg");
+  position: relative;
+  transition: background-color, opacity 1s ease;
+  display: flex;
+  flex-direction: column;
+
+  @include md-block{
+    min-height: 330px;
+    padding: 44px 40px 44px;
+  }
+
+  @include sm-block {
+    min-height: 220px;
+  }
+
+  &:hover > &__more {
+    opacity: 1;
+  }
+
+  &__head {
+    @include head-30-bold;
+    color: $color-white;
+    margin-bottom: 20px;
+
+    @include md-block {
+      @include head-20-bold;
+    }
+
+    @include sm-block {
+      font-size: 24px;
+    }
+  }
+
+  &__text {
+    @include text-16-regular;
+    color: $color-white;
+  }
+
+  &__more {
+    display: flex;
+    margin-top: auto;
+    opacity: 0;
+
+    & > * {
+      align-self: center;
+    }
+
+    &-text {
+      margin-left: 10px;
+      @include menu-16-medium;
+      color: $color-white;
+    }
+  }
 }
 
 .cart1__head {

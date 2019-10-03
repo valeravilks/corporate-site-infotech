@@ -33,11 +33,11 @@
         font-style: normal;
         font-weight: normal;
         font-size: 14px;
-        color: var(--black-blue-100);
+        color: $color-black-blue-100;
     }
 
     .check:hover {
-        color: var(--dark-90);
+        color: $color-dark-90;
     }
 
     .check__input {
@@ -58,14 +58,14 @@
     }
 
 .check__input:not(:checked) + .check__box {
-     border: 1px solid var(--black-blue-100);
+     border: 1px solid $color-black-blue-100;
  }
 .check__input:not(:checked) + .check__box:hover {
-    border: 1px solid var(--dark-90);
+    border: 1px solid $color-dark-90;
 }
 
 .check__input:checked + .check__box {
-    border: 1px solid var(--black-blue-100);
+    border: 1px solid $color-black-blue-100;
     background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTEiIGhlaWdodD0iOSIgdmlld0JveD0iMCAwIDExIDkiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTEgNEw0IDdMMTAgMSIgc3Ryb2tlPSIjMDE2OUZGIiBzdHJva2Utd2lkdGg9IjIiLz48L3N2Zz4=) no-repeat center center;
 
 }/* End CheckBox */
@@ -87,10 +87,11 @@
     font-weight: normal;
     font-size: 16px;
     line-height: 150%;
-    background: var(--blue-light);
+    background: $color-blue-light;
     border-radius: 4px;
     border: 1px solid rgba(0, 0, 0, 0);
-    color: var(--dark-90);
+    color: $color-dark-90;
+    box-sizing: border-box;
 }
 
 .mdc-floating-label, .wpforms-field-text label {
@@ -103,7 +104,7 @@
     font-weight: normal;
     font-size: 16px;
     line-height: 150%;
-    color: var(--black-blue-50);
+    color: $color-black-blue-50;
     pointer-events: none;
     z-index: 10;
 }
@@ -114,11 +115,11 @@
 }
 
 .mdc-text-field__input:hover, .wpforms-field-text input:hover {
-    border: 1px solid var(--tertiary-text-1)
+    border: 1px solid $color-tertiary-text-1;
 }
 
-.mdc-text-field__input:focus .wpforms-field-text input:focu {
-    border: 1px solid var(--blue);
+.mdc-text-field__input:focus .wpforms-field-text input:focus {
+    border: 1px solid $color-blue;
     outline: none;
-    color: var(--dark-90);
+    color: $color-dark-90;
 }

@@ -43,6 +43,7 @@
     &__mail {
         @include menu-16-medium;
         margin-bottom: 10px;
+        color: $color-dark-90;
     }
 
     &__work {
@@ -216,6 +217,8 @@
     }
 }
 .f-comp__text {
+    @include help-14-regular;
+    color: $color-black-blue-50;
     align-self: center;
     margin-left: 20px;
 }

@@ -39,7 +39,12 @@
 
 @mixin btn-large {
     font-size: 18px;
-    padding: 8px 20px 9px;
+    padding: 18px 20px 17px;
+}
+
+@mixin btn-accent {
+    font-size: 18px;
+    padding: 17px 50px 17px;
 }
 
 @mixin btn-small {
@@ -47,5 +52,16 @@
     padding: 8px 20px 9px;
 }
 
+.btn-b {
+    @include btn;
+    @include btn-blue;
+    @include btn-large;
+}
+
+.btn-m {
+    @include btn;
+    @include btn-magenta;
+    @include btn-large;
+}
 
 /* End Button */

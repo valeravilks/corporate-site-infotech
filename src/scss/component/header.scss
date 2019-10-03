@@ -6,6 +6,7 @@
     z-index: 100;
     position: relative;
     background-color: $color-white;
+    border-bottom: 1px solid $color-blue-light;
 
     &__wrapper {
         @include wrapper-full;
@@ -21,7 +22,7 @@
         margin-right: 20px;
         @include btn;
         @include btn-blue;
-        @include btn-large;
+        @include btn-small;
 
         @media (max-width: 1320px) {
             display: none;

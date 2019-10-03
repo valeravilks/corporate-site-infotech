@@ -113,7 +113,7 @@
                 height: 100%;
                 right: 41px;
                 background: #D4E2EB;
-                width: 2px;
+                width: 1px;
             }
 
             &:first-child {
@@ -201,7 +201,7 @@
 .tablet-l {
     position: absolute;
     min-height: 500px;
-    height: calc(100% - 80px);
+    height: calc(100vh - 80px);
     width: 100%;
     top: 80px;
     left: 0;
