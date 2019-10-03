@@ -24,6 +24,22 @@
     }
 }
 
+@mixin btn-second {
+    background: $color-white;
+    color: $color-blue;
+    border: 2px solid $color-blue;
+
+    &:hover {
+        border: 2px solid $color-blue-active;
+        color: $color-blue-active;
+    }
+
+    &:active {
+        border: 2px solid $color-dark-90;
+        color: $color-dark-90;
+    }
+}
+
 @mixin btn-magenta {
     color: $color-white;
     background: $color-magenta;

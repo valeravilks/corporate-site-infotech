@@ -76,26 +76,114 @@
                    </div>
                </div>
                <div class="row all-product">
-                   <div class="col col-xl-5">
-                       <div class="all-product__text head-40-bold">
+                   <div class="all-product__col1">
+                       <div class="all-product__text">
                            Все продукты
                            Infotech Group реализованы
                            на базе собственной платформы
                        </div>
-                       <button class="btn btn-blue btn-large">Подробнее о платформе</button>
+                       <button class="all-product__btn">Подробнее о платформе</button>
                    </div>
-                   <div class="col offset-xl-1 col-xl-2">
-                       f
+                   <div class="all-product__col2 item-1">
+                       <div class="item-1__block">
+                           <img src="<?php echo get_template_directory_uri(); ?>/img/main/item1.svg" alt="" class="item-1__img">
+                       </div>
+                       <div class="item-1__head">
+                           Intellect
+                       </div>
+                       <div class="item-1__text">
+                           Анализ и обработка событий в реальном времени
+                       </div>
                    </div>
-                   <div class="col col-xl-2">
-                       1ss
+                   <div class="all-product__col2 item-1">
+                       <div class="item-1__block">
+                           <img src="<?php echo get_template_directory_uri(); ?>/img/main/item1.svg" alt="" class="item-1__img">
+                       </div>
+                       <div class="item-1__head">
+                           Intellect
+                       </div>
+                       <div class="item-1__text">
+                           Анализ и обработка событий в реальном времени
+                       </div>
                    </div>
-                   <div class="col col-xl-2">
-                       1ssssssss
+                   <div class="all-product__col2 item-1">
+                       <div class="item-1__block">
+                           <img src="<?php echo get_template_directory_uri(); ?>/img/main/item1.svg" alt="" class="item-1__img">
+                       </div>
+                       <div class="item-1__head">
+                           Intellect
+                       </div>
+                       <div class="item-1__text">
+                           Анализ и обработка событий в реальном времени
+                       </div>
                    </div>
                </div>
            </div>
        </section>
+       <section class="home-page__3 hp3">
+            <div class="hp3__container">
+                <div class="hp3__row">
+                    <div class="hp3__col-1">
+                        Подберем оптимальное IT-решение для вашей организации
+                    </div>
+                    <div class="hp3__col-2">
+                        <div class="hp3__text">
+                            В нашей команде работают ведущие отраслевые эксперты. Подход Infotech Group сочетает сильные IT-компетенции и глубокое понимание специфики бизнеса заказчика.
+                        </div>
+                        <button class="hp3__button">
+                            Обсудить проект
+                        </button>
+                    </div>
+                </div>
+            </div>
+       </section>
    </main>
-пssss
+<?php
+    $posts = get_posts( array(
+    'numberposts' => 100,
+    'category'    => 0,
+    'orderby'     => 'date',
+    'order'       => 'DESC',
+    'include'     => array(),
+    'exclude'     => array(),
+    'meta_key'    => '',
+    'meta_value'  =>'',
+    'post_type'   => 'project',
+    'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
+    ) );
+
+
+
+    foreach( $posts as $post ){
+    setup_postdata($post);
+//        var_dump($post);
+//        echo '---------------<br>';
+
+        for($i = 1; $i < 100; $i++){
+
+            $fields = get_field('project_card_' . $i);
+
+            if($fields) {
+                echo '<div>' . $fields['project_slide_text']  . '</div>';
+
+                if($fields['project_text_1']) {
+                    echo '<div>' . $fields['project_text_1'] . '</div>';
+                }
+
+                if($fields['project_text_2']) {
+                    echo '<div>' . $fields['project_text_2'] . '</div>';
+                }
+
+                if($fields['project_text_3']) {
+                    echo '<div>' . $fields['project_text_3'] . '</div>';
+                }
+
+                if($fields['project_text_4']) {
+                    echo '<div>' . $fields['project_text_4'] . '</div>';
+                }
+            }
+        }
+    }
+
+    wp_reset_postdata(); // сброс ?>
 <?php get_footer(); ?>

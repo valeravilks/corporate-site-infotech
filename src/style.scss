@@ -129,6 +129,10 @@ a {
     @include wrapper;
     padding-top: 100px;
     padding-bottom: 100px;
+
+    @include sm-block{
+      padding-bottom: 40px;
+    }
   }
 
   &__head{
@@ -215,6 +219,10 @@ a {
     margin-top: auto;
     opacity: 0;
 
+    @include sm-block {
+      display: none;
+    }
+
     & > * {
       align-self: center;
     }
@@ -227,16 +235,125 @@ a {
   }
 }
 
-.cart1__head {
-  margin-bottom: 20px;
-}
-
-.cart1__text {
-}
 .all-product {
   padding-top: 100px;
+  @include row-flex;
+
+  &__text {
+    @include head-40-bold;
+    padding-right: 90px;
+    padding-bottom: 40px;
+
+    @include sm-block{
+      @include head-30-bold;
+      color: $color-dark-90;
+    }
+  }
+
+  &__col1 {
+    @include col();
+    @include size(5);
+    @include shift-right(1);
+    @include size-md(10);
+    @include size-sm(12);
+  }
+
+  &__col2 {
+    @include col();
+    @include size(2);
+    @include md-block {
+      display: none;
+    }
+  }
+
+  &__btn{
+    @include btn;
+    @include btn-second;
+    @include btn-large;
+
+  }
 }
-.all-product__text {
-  padding-right: 90px;
-  padding-bottom: 40px;
+
+.item-1 {
+  &__block {
+    background-color: $color-blue-light;
+    margin-bottom: 16px;
+    border-radius: 4px;
+    position: relative;
+    padding-bottom: 100%;
+  }
+
+  &__head {
+    @include head-20-medium;
+    color: $color-dark-90;
+    margin-bottom: 7px;
+  }
+
+  &__text {
+    @include help-14-regular;
+    color: $color-black-blue-100;
+  }
+  &__img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.hp3 {
+  background-color: blue;
+
+  &__container {
+    padding-top: 100px;
+    padding-bottom: 150px;
+    @include wrapper;
+
+    @include sm-block{
+      padding-bottom: 100px;
+    }
+  }
+
+  &__row {
+    @include row-flex;
+  }
+
+  &__col-1 {
+    @include col();
+    @include size(4);
+    @include shift-right(1);
+    @include size-md(6);
+    @include shift-md-right(0);
+    @include size-sm(12);
+
+    @include sm-block{
+      margin-bottom: 25px;
+    }
+
+    @include head-30-bold;
+    color: $color-white;
+  }
+
+  &__col-2 {
+    @include col();
+    @include size(5);
+    @include size-md(6);
+    @include size-sm(12);
+  }
+
+  &__text {
+    @include desc-18-regular;
+    color: $color-blue-light;
+    margin-bottom: 32px;
+
+    @include sm-block{
+      margin-bottom: 50px;
+    }
+  }
+
+  &__button {
+    @include btn;
+    @include btn-magenta;
+    @include btn-large;
+  }
 }
