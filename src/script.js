@@ -14,31 +14,25 @@ $(".js-main-slider").owlCarousel({
 });
 
 let slider2 = $(".js-main-slider-2").owlCarousel({
-    loop:true,
     margin:30,
     autoWidth:true,
     merge:true,
-    dots:true
+    dots:true,
+    loop: false,
 });
 
-// let carts =  $('.js-project-cart').owlCarousel({
-//     loop:true,
-//     margin:10,
-//     items:1,
-//     dots:false,
-//     touchDrag: false,
-//     mouseDrag: false,
-// });
- let slides = $('.js-project-cart');
 
+ var slides = $('.js-main-slider-2').find('.owl-item').not('.cloned').find('.js-project-cart');
+ console.log('---------');
+console.log(slides);
+console.log('---------');
 let slideMass = [];
 
 for(let i = 0; i < slides.length; i++){
     let slid =  slides.eq(i).owlCarousel({
-        loop:true,
         margin:10,
         items:1,
-        dots:false,
+        dots:true,
         touchDrag: false,
         mouseDrag: false,
     });
@@ -46,15 +40,27 @@ for(let i = 0; i < slides.length; i++){
 }
 
 
-
-carts.on('to.owl.carousel', function(){
-    console.log('drag');
-});
-
+console.log(slideMass);
 
 
 $('.owl-theme-cart-dot').click(function () {
-    carts.trigger('prev.owl.carousel', [10000])
+    slideMass[0].slide.trigger('to.owl.carousel', [3]);
+
+    let elemJquery = $(this).parents('.project-item').not('.clone').eq(0).children('.js-project-cart');
+    let nubmer = $('.js-main-slider-2').find('.owl-item').not('.cloned').find('.js-project-cart').index(elemJquery);
+
+    // console.log(elemJquery);
+    let goSlide = $(this).parents('.owl-theme-cart-dots').children('.owl-theme-cart-dot').index($(this));
+    //
+    console.log('Какой слайдер: ' + nubmer);
+    console.log('Номер слайда: ' + goSlide);
+
+    slideMass.forEach(function(item, i, arr) {
+        if(item.count === nubmer) {
+            console.log(item.slide);
+            // item.slide.trigger('next.owl.carousel');
+        }
+    });
 });
 
 

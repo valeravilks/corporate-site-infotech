@@ -157,5 +157,5 @@
 
 
 <?php
-get_template_part('templates/project/project-cart');
+
 get_footer(); ?>
