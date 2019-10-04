@@ -1,7 +1,7 @@
 import './style.scss';
 
 import './js/jquery.formstyler';
-import 'owl.carousel/dist/assets/owl.carousel.css';
+// import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel';
 
 
@@ -18,15 +18,19 @@ $(".js-main-slider-2").owlCarousel({
     margin:30,
     autoWidth:true,
     merge:true,
-    responsive:{
-        678:{
-            mergeFit:true
-        },
-        1000:{
-            mergeFit:false
-        }
-    }
+    dots:true
 });
+
+$('.js-project-cart').owlCarousel({
+    loop:true,
+    margin:10,
+    items:1,
+    dots:false,
+    touchDrag: false,
+    mouseDrag: false,
+})
+
+
 
 $('.select').styler({
     selectSmartPositioning: true

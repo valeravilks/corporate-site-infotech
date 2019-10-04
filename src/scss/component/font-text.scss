@@ -69,6 +69,14 @@
   line-height: 34px;
 }
 
+@mixin head-20-regular {
+    font-family: Gordita, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 34px;
+}
+
 @mixin desc-18-regular {
     font-family: Gordita, sans-serif;
     font-style: normal;

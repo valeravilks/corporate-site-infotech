@@ -145,94 +145,8 @@
                 <div class="hp4__text">
                     Infotech Group реализует проекты для крупнейших компаний России
                 </div>
-                <div class="hp4__slider owl-carousel owl-theme js-main-slider-2">
-                    <div class="hp4__item project-item">
-                        <div class="project-item__header">
-                            <img src="" alt="" class="hp4__img">
-                            <div class="project-item__head">
-                                Объединенная энергетическая компания
-                            </div>
-                        </div>
-                        <div class="project-item__text">
-                            Система управления диспетчерскими заявками по распределительным сетям
-                        </div>
-                        <div class="project-item__row">
-                            <div class="project-item__col">
-                                <div class="project-item__text-1">
-                                    11
-                                </div>
-                                <div class="project-item__text-2">
-                                    операционных подразделений подключены
-                                </div>
-                            </div>
-                            <div class="project-item__col">
-                                <div class="project-item__text-3">
-                                    Более 15 000
-                                </div>
-                                <div class="project-item__text-4">
-                                    электроустановок и кабельных линий на контроле
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="hp4__item project-item">
-                        <div class="project-item__header">
-                            <img src="" alt="" class="hp4__img">
-                            <div class="project-item__head">
-                                Объединенная энергетическая компания
-                            </div>
-                        </div>
-                        <div class="project-item__text">
-                            Система управления диспетчерскими заявками по распределительным сетям
-                        </div>
-                        <div class="project-item__row">
-                            <div class="project-item__col">
-                                <div class="project-item__text-1">
-                                    11
-                                </div>
-                                <div class="project-item__text-2">
-                                    операционных подразделений подключены
-                                </div>
-                            </div>
-                            <div class="project-item__col">
-                                <div class="project-item__text-3">
-                                    Более 15 000
-                                </div>
-                                <div class="project-item__text-4">
-                                    электроустановок и кабельных линий на контроле
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="hp4__item project-item">
-                        <div class="project-item__header">
-                            <img src="" alt="" class="hp4__img">
-                            <div class="project-item__head">
-                                Объединенная энергетическая компания
-                            </div>
-                        </div>
-                        <div class="project-item__text">
-                            Система управления диспетчерскими заявками по распределительным сетям
-                        </div>
-                        <div class="project-item__row">
-                            <div class="project-item__col">
-                                <div class="project-item__text-1">
-                                    11
-                                </div>
-                                <div class="project-item__text-2">
-                                    операционных подразделений подключены
-                                </div>
-                            </div>
-                            <div class="project-item__col">
-                                <div class="project-item__text-3">
-                                    Более 15 000
-                                </div>
-                                <div class="project-item__text-4">
-                                    электроустановок и кабельных линий на контроле
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="hp4__slider owl-carousel owl-theme-slide js-main-slider-2">
+                   <?php get_template_part('templates/project/project-cart'); ?>
                 </div>
             </div>
        </section>
@@ -242,4 +156,6 @@
 
 
 
-<?php get_footer(); ?>
+<?php
+get_template_part('templates/project/project-cart');
+get_footer(); ?>
