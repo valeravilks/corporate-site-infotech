@@ -19,6 +19,7 @@ foreach( $posts as $post ):
 
     $image = get_field('project_icon');
     $name = get_field('project_name');
+    $itemNum = 0;
     ?>
 
 
@@ -32,9 +33,13 @@ foreach( $posts as $post ):
         <div class="project-item__owl owl-carousel owl-theme-cart js-project-cart">
         <?php
         for($i = 1; $i < 10; $i++):
+
             if( have_rows('project_card_' . $i) ):
+
                 while( have_rows('project_card_' . $i) ): the_row();
-                    if(get_sub_field('project_slide_text')):?>
+                    if(get_sub_field('project_slide_text')):
+                        $itemNum = $itemNum + 1;
+                        ?>
                     <div class="project-item__row">
                         <div class="project-item__col">
                             <div class="project-item__text">
@@ -57,11 +62,36 @@ foreach( $posts as $post ):
                                 <?php echo get_sub_field('project_text_4'); ?>
                             </div>
                         </div>
+
+
                     </div>
                     <?php endif;
                 endwhile; ?>
             <?php endif; ?>
         <?php endfor; ?>
+
+
+        </div>
+        <div class="owl-theme-cart-dots">
+        <?php
+            if($itemNum !== 1):
+                for($j = 0; $j < $itemNum; $j++):
+                    ?>
+
+                    <?php if($j == 0):?>
+                      <div class="owl-theme-cart-dot active">
+                          <div class="bg"></div>
+                      </div>
+                    <?php
+                    continue;
+                    endif;?>
+
+                <div class="owl-theme-cart-dot">
+                    <div class="bg"></div>
+                </div>
+                <?php endfor;
+            endif;
+        ?>
         </div>
     </div>
 <? endforeach; ?>

@@ -13,7 +13,7 @@ $(".js-main-slider").owlCarousel({
     autoplayTimeout:5000
 });
 
-$(".js-main-slider-2").owlCarousel({
+let slider2 = $(".js-main-slider-2").owlCarousel({
     loop:true,
     margin:30,
     autoWidth:true,
@@ -21,14 +21,42 @@ $(".js-main-slider-2").owlCarousel({
     dots:true
 });
 
-$('.js-project-cart').owlCarousel({
-    loop:true,
-    margin:10,
-    items:1,
-    dots:false,
-    touchDrag: false,
-    mouseDrag: false,
-})
+// let carts =  $('.js-project-cart').owlCarousel({
+//     loop:true,
+//     margin:10,
+//     items:1,
+//     dots:false,
+//     touchDrag: false,
+//     mouseDrag: false,
+// });
+ let slides = $('.js-project-cart');
+
+let slideMass = [];
+
+for(let i = 0; i < slides.length; i++){
+    let slid =  slides.eq(i).owlCarousel({
+        loop:true,
+        margin:10,
+        items:1,
+        dots:false,
+        touchDrag: false,
+        mouseDrag: false,
+    });
+    slideMass.push({slide: slid, count: i });
+}
+
+
+
+carts.on('to.owl.carousel', function(){
+    console.log('drag');
+});
+
+
+
+$('.owl-theme-cart-dot').click(function () {
+    carts.trigger('prev.owl.carousel', [10000])
+});
+
 
 
 

@@ -163,3 +163,27 @@ $dot-background-active:	$color-base !default;
 		}
 	}
 }
+
+.owl-theme-cart-dots{
+	display: flex;
+}
+
+.owl-theme-cart-dot{
+	cursor: pointer;
+	padding: 10px;
+
+	.bg {
+		transform: scale(1);
+		background-color: $color-tertiary-text-1;
+		transition: all .3s ease;
+		height: 6px;
+		border-radius: 12px;
+		width: 6px;
+	}
+
+	&.active .bg{
+		background-color: $color-tertiary-text-3;
+		transform: scale(2);
+	}
+}
+
