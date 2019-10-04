@@ -69,29 +69,6 @@ foreach( $posts as $post ):
                 endwhile; ?>
             <?php endif; ?>
         <?php endfor; ?>
-
-
-        </div>
-        <div class="owl-theme-cart-dots">
-        <?php
-            if($itemNum !== 1):
-                for($j = 0; $j < $itemNum; $j++):
-                    ?>
-
-                    <?php if($j == 0):?>
-                      <div class="owl-theme-cart-dot active">
-                          <div class="bg"></div>
-                      </div>
-                    <?php
-                    continue;
-                    endif;?>
-
-                <div class="owl-theme-cart-dot">
-                    <div class="bg"></div>
-                </div>
-                <?php endfor;
-            endif;
-        ?>
         </div>
     </div>
 <? endforeach; ?>

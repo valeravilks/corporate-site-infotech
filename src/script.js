@@ -23,9 +23,7 @@ let slider2 = $(".js-main-slider-2").owlCarousel({
 
 
  var slides = $('.js-main-slider-2').find('.owl-item').not('.cloned').find('.js-project-cart');
- console.log('---------');
-console.log(slides);
-console.log('---------');
+
 let slideMass = [];
 
 for(let i = 0; i < slides.length; i++){
@@ -39,32 +37,7 @@ for(let i = 0; i < slides.length; i++){
     slideMass.push({slide: slid, count: i });
 }
 
-
-console.log(slideMass);
-
-
-$('.owl-theme-cart-dot').click(function () {
-    slideMass[0].slide.trigger('to.owl.carousel', [3]);
-
-    let elemJquery = $(this).parents('.project-item').not('.clone').eq(0).children('.js-project-cart');
-    let nubmer = $('.js-main-slider-2').find('.owl-item').not('.cloned').find('.js-project-cart').index(elemJquery);
-
-    // console.log(elemJquery);
-    let goSlide = $(this).parents('.owl-theme-cart-dots').children('.owl-theme-cart-dot').index($(this));
-    //
-    console.log('Какой слайдер: ' + nubmer);
-    console.log('Номер слайда: ' + goSlide);
-
-    slideMass.forEach(function(item, i, arr) {
-        if(item.count === nubmer) {
-            console.log(item.slide);
-            // item.slide.trigger('next.owl.carousel');
-        }
-    });
-});
-
-
-
+slideMass[0].slide.on();
 
 $('.select').styler({
     selectSmartPositioning: true
@@ -74,9 +47,16 @@ $('.wpforms-field-select select').styler({
     selectSmartPositioning: true
 });
 
+$(window).resize(function(){
+    $('.js-main-slider-2 > .owl-stage-outer').css("padding-left", $('.hp4__head').offset().left);
+    $('.js-main-slider-2 > .owl-dots').css("margin-left", $('.hp4__head').offset().left);
+    $('.js-main-slider-2 > .owl-dots').css("margin-right", $('.hp4__head').offset().left);
+});
 
 $(document).ready(function(){
-
+    $('.js-main-slider-2 > .owl-stage-outer').css("padding-left", $('.hp4__head').offset().left);
+    $('.js-main-slider-2 > .owl-dots').css("margin-left", $('.hp4__head').offset().left);
+    $('.js-main-slider-2 > .owl-dots').css("margin-right", $('.hp4__head').offset().left);
 
     // Lang amination
     $('.lang__container').mouseenter(function(){
