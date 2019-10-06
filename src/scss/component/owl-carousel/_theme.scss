@@ -65,7 +65,7 @@ $dot-background-active:	$color-base !default;
 		text-align: center;
 		-webkit-tap-highlight-color: transparent;
 		display: flex;
-		background-color: $color-black-blue-50;
+		background-color: rgba(134, 147, 155, 0.5);
 		border-radius: 4px;
 
 		.owl-dot {
@@ -76,7 +76,6 @@ $dot-background-active:	$color-base !default;
 
 			span {
 				width: 100%;
-				background: $color-black-blue-50;
 				border-right: 4px;
 				height: 4px;
 				display: block;
@@ -137,27 +136,31 @@ $dot-background-active:	$color-base !default;
 	.owl-dots {
 		text-align: center;
 		-webkit-tap-highlight-color: transparent;
+		background: none;
 
 		.owl-dot {
 			display: inline-block;
+			flex-grow: 0;
 			zoom: 1;
 			*display: inline;
 
 			span {
-				width: $dot-width;
-				height: $dot-height;
+				width: 6px;
+				height: 6px;
 				margin: $dot-margin;
-				background: $dot-background;
+				background: $color-tertiary-text-3;
 				display: block;
 				-webkit-backface-visibility: visible;
 				transition: opacity 200ms ease;
-				border-radius: $dot-rounded;
+				border-radius: 10px;
+				transition: all .2s ease;
 			}
 
 			&.active,
 			&:hover {
 				span {
-					background: $dot-background-active;
+					background: $color-tertiary-text-1;
+					transform: scale(2);
 				}
 			}
 		}

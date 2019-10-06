@@ -367,7 +367,6 @@ a {
   &__container {
     @include wrapper;
     padding-top: 100px;
-    padding-bottom: 100px;
 
     @include sm-block{
       padding-bottom: 40px;
@@ -397,6 +396,10 @@ a {
       margin-bottom: 20px;
     }
   }
+
+  &__slider {
+    padding-bottom: 100px;
+  }
 }
 
 .project-item {
@@ -407,6 +410,10 @@ a {
   min-height: 600px;
   display: flex;
   flex-direction: column;
+
+  @media screen and (max-width: 550px){
+    width: calc(100% - 30px);
+  }
 
   @include md-block{
     padding: 50px;
@@ -421,25 +428,18 @@ a {
 
   }
 
-  &__header {
-    display: flex;
-    margin-bottom: 50px;
-
-  }
-
   &__img {
     display: flex!important;
-    align-self: center;
-    max-height: 80px;
+    align-self: flex-start;
+    height: 80px;
     width: auto!important;
-    max-width: 200px;
+    margin-bottom: 30px;
   }
 
   &__head {
-    align-self: center;
     @include head-20-medium;
     color: $color-dark-90;
-    margin-left: 20px;
+    margin-bottom: 20px;
   }
 
   &__text {

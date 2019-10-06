@@ -1,9 +1,9 @@
 import './style.scss';
 
 import './js/jquery.formstyler';
-// import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel';
 
+// Settings owl carousel
 
 $(".js-main-slider").owlCarousel({
     items: 1,
@@ -19,11 +19,19 @@ let slider2 = $(".js-main-slider-2").owlCarousel({
     merge:true,
     dots:true,
     loop: false,
+    responsive : {
+        0 : {
+            items: 1,
+            autoWidth:false
+        },
+        550 : {
+            items: 3,
+            autoWidth:true,
+        },
+    }
 });
 
-
- var slides = $('.js-main-slider-2').find('.owl-item').not('.cloned').find('.js-project-cart');
-
+var slides = $('.js-main-slider-2').find('.owl-item').not('.cloned').find('.js-project-cart');
 let slideMass = [];
 
 for(let i = 0; i < slides.length; i++){
@@ -37,7 +45,15 @@ for(let i = 0; i < slides.length; i++){
     slideMass.push({slide: slid, count: i });
 }
 
-slideMass[0].slide.on();
+$(window).resize(function(){
+    $('.js-main-slider-2 > .owl-stage-outer').css("padding-left", $('.hp4__head').offset().left);
+    $('.js-main-slider-2 > .owl-dots').css("margin-left", $('.hp4__head').offset().left);
+    $('.js-main-slider-2 > .owl-dots').css("margin-right", $('.hp4__head').offset().left);
+});
+
+
+
+// Styler select
 
 $('.select').styler({
     selectSmartPositioning: true
@@ -47,11 +63,7 @@ $('.wpforms-field-select select').styler({
     selectSmartPositioning: true
 });
 
-$(window).resize(function(){
-    $('.js-main-slider-2 > .owl-stage-outer').css("padding-left", $('.hp4__head').offset().left);
-    $('.js-main-slider-2 > .owl-dots').css("margin-left", $('.hp4__head').offset().left);
-    $('.js-main-slider-2 > .owl-dots').css("margin-right", $('.hp4__head').offset().left);
-});
+
 
 $(document).ready(function(){
     $('.js-main-slider-2 > .owl-stage-outer').css("padding-left", $('.hp4__head').offset().left);

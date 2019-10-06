@@ -24,11 +24,9 @@ foreach( $posts as $post ):
 
 
     <div class="hp4__item project-item">
-        <div class="project-item__header">
-            <img src="<?php echo $image['url']; ?>" alt="" class="project-item__img">
-            <div class="project-item__head">
-                <?php the_field('project_name'); ?>
-            </div>
+        <img src="<?php echo $image['url']; ?>" alt="" class="project-item__img">
+        <div class="project-item__head">
+            <?php the_field('project_name'); ?>
         </div>
         <div class="project-item__owl owl-carousel owl-theme-cart js-project-cart">
         <?php
