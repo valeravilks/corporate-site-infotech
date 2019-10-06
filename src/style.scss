@@ -6,6 +6,7 @@ Theme Name: Info tech
 @import './scss/smart-grid';
 @import "./scss/component/variable";
 @import './scss/component/font-text';
+@import './scss/component/class';
 @import "./scss/component/owl-carousel/core";
 @import "./scss/component/owl-carousel/theme";
 @import './scss/component/select';
@@ -23,6 +24,10 @@ Theme Name: Info tech
 
 .wrapper-full {
   @include wrapper-full;
+}
+
+.row {
+  @include row-flex;
 }
 
 * {
@@ -474,5 +479,100 @@ a {
     position: relative;
     height: 160px;
   }
+}
 
+.our-client {
+  @extend .section-padding;
+
+  @include sm-block{
+    display: none;
+  }
+
+  .head {
+    @extend .font-section-title;
+    margin-bottom: 50px;
+  }
+
+  .icon {
+    align-self: center;
+    max-height: 100%;
+    width: auto!important;
+    max-width: 100%;
+    margin-bottom: 9px;
+  }
+
+  .desc {
+    @extend .font-help;
+
+    align-self: center;
+    text-align: center;
+
+
+  }
+
+  .cont {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .block {
+    @include col();
+    @include size(2);
+    @include size-md(3);
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}
+
+.our-client-mobile {
+  display: none;
+
+  @include sm-block{
+    display: block;
+  }
+
+  .block {
+    @include col();
+    @include size(6);
+  }
+
+  .block {
+    margin-bottom: 30px;
+  }
+
+  .owl-nav {
+    display: flex;
+    justify-content: center;
+
+    button {
+      height: 40px;
+      width: 40px;
+      border-radius: 40px;
+      border: 2px solid $color-tertiary-text-2!important;
+
+      &:focus {
+        border: none;
+        outline: none;
+      }
+    }
+
+    span {
+      font-size: 33px;
+      line-height: 19px;
+      font-weight: 300;
+      color: $color-dark-90;
+    }
+  }
+
+
+}
+
+.owl-count {
+  align-self: center;
+  width: 100px;
+  text-align: center;
+  font-weight: normal;
 }

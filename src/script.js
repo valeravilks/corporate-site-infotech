@@ -51,7 +51,33 @@ $(window).resize(function(){
     $('.js-main-slider-2 > .owl-dots').css("margin-right", $('.hp4__head').offset().left);
 });
 
+$(".js-client-cart").owlCarousel({
+    items: 1,
+    loop:true,
+    nav: true,
+    margin:10,
+    autoplay:true,
+    autoplayTimeout:5000,
+    onInitialized  : insertItem, //When the plugin has initialized.
+    onTranslated : counter
+});
 
+function insertItem(e){
+    $('.js-client-cart .owl-prev').after('<div class="owl-count"></div>');
+    counter(e);
+}
+
+function counter(event) {
+    var element   = event.target;         // DOM element, in this example .owl-carousel
+    var items     = event.item.count;     // Number of items
+    var item      = event.item.index + 1;     // Position of the current item
+
+    // it loop is true then reset counter from 1
+    if(item > items) {
+        item = item - items
+    }
+    $('.owl-count').html(item+"/"+items)
+}
 
 // Styler select
 

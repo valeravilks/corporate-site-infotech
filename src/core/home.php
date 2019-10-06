@@ -150,7 +150,7 @@
                <?php get_template_part('templates/project/project-cart'); ?>
            </div>
        </section>
-
+       <?php get_template_part('templates/our-client'); ?>
    </main>
 
 
