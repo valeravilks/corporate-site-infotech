@@ -23,57 +23,45 @@
                </div>
            </div>
        </section>
+       <?php
+        $cart1 = get_field('section-cart-1', 'option');
+        $cart2 = get_field('section-cart-2', 'option');
+        $cart3 = get_field('section-cart-3', 'option');
+       ?>
        <section class="home-page__2 hp2">
            <div class="hp2__container">
                 <div class="hp2__head">
-                    Направления
+                    <?php the_field('section-title', 'option'); ?>
                 </div>
                <div class="hp2__text">
-                   Развиваем цифровую экономику и строим Индустрию 4.0
+                   <?php the_field('section-text', 'option'); ?>
                 </div>
                <div class="hp2__row">
-                   <div class="hp2__col">
-                       <a href="https://google.com" class="cart1">
-                           <div class="cart1__head">
-                               Промышленность
+                   <?php
+                   for($i = 1; $i < 4; $i++) :
+                       $rows = 'section-cart-' . $i;
+                       if( have_rows($rows, 'option') ):
+                           while ( have_rows($rows, 'option') ) : the_row();
+                             ?>
+                           <div class="hp2__col" data-bg="<?php the_sub_field('image')['url']; ?>">
+                               <a href="<?php the_sub_field('link'); ?>" class="cart1">
+                                   <div class="cart1__head">
+                                       <?php the_sub_field('head'); ?>
+                                   </div>
+                                   <div class="cart1__text">
+                                       <?php the_sub_field('text'); ?>
+                                   </div>
+                                   <div class="cart1__mores">
+                                       <img src="<?php echo get_template_directory_uri(); ?>/img/main/arrow-cart.svg" alt="" class="cart1__more-img">
+                                       <div class="cart1__mores-text">Подробнее</div>
+
+                                   </div>
+                               </a>
                            </div>
-                           <div class="cart1__text">
-                               Прогнозирование отказов промышленного оборудования
-                           </div>
-                           <div class="cart1__more">
-                               <img src="<?php echo get_template_directory_uri(); ?>/img/main/arrow-cart.svg" alt="" class="cart1__more-img">
-                               <div class="cart1__more-text">Подробнее</div>
-                           </div>
-                       </a>
-                   </div>
-                   <div class="hp2__col">
-                       <a href="https://google.com" class="cart1">
-                           <div class="cart1__head">
-                               Промышленность
-                           </div>
-                           <div class="cart1__text">
-                               Прогнозирование отказов промышленного оборудования
-                           </div>
-                           <div class="cart1__more">
-                               <img src="<?php echo get_template_directory_uri(); ?>/img/main/arrow-cart.svg" alt="" class="cart1__more-img">
-                               <div class="cart1__more-text">Подробнее</div>
-                           </div>
-                       </a>
-                   </div>
-                   <div class="hp2__col">
-                       <a href="https://google.com" class="cart1">
-                           <div class="cart1__head">
-                               Промышленность
-                           </div>
-                           <div class="cart1__text">
-                               Прогнозирование отказов промышленного оборудования
-                           </div>
-                           <div class="cart1__more">
-                               <img src="<?php echo get_template_directory_uri(); ?>/img/main/arrow-cart.svg" alt="" class="cart1__more-img">
-                               <div class="cart1__more-text">Подробнее</div>
-                           </div>
-                       </a>
-                   </div>
+                          <?php endwhile;
+                       endif;
+                   endfor;
+                   ?>
                </div>
                <div class="row all-product">
                    <div class="all-product__col1">
@@ -151,6 +139,23 @@
            </div>
        </section>
        <?php get_template_part('templates/our-client'); ?>
+       <section class="home-page__3 hp3">
+           <div class="hp3__container">
+               <div class="hp3__row">
+                   <div class="hp3__col-1">
+                       Подберем оптимальное IT-решение для вашей организации
+                   </div>
+                   <div class="hp3__col-2">
+                       <div class="hp3__text">
+                           В нашей команде работают ведущие отраслевые эксперты. Подход Infotech Group сочетает сильные IT-компетенции и глубокое понимание специфики бизнеса заказчика.
+                       </div>
+                       <button class="hp3__button">
+                           Обсудить проект
+                       </button>
+                   </div>
+               </div>
+           </div>
+       </section>
    </main>
 
 

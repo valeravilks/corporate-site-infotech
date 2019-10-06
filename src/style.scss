@@ -199,7 +199,7 @@ a {
     min-height: 220px;
   }
 
-  &:hover > &__more {
+  &:hover > &__mores {
     opacity: 1;
   }
 
@@ -222,7 +222,7 @@ a {
     color: $color-white;
   }
 
-  &__more {
+  &__mores {
     display: flex;
     margin-top: auto;
     opacity: 0;

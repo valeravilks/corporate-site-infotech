@@ -1,6 +1,5 @@
 <?php
 wp_footer();
-global  $redux_demo;
 ?>
 
 <footer class="footer">
@@ -27,49 +26,49 @@ global  $redux_demo;
                 <button class="footer__callback js-callback">
                     Обратный звонок
                 </button>
-                <a target="_blank" href="tel:<?php echo $redux_demo['header-phone']; ?>"
+                <a target="_blank" href="tel:<?php the_field('phone', 'option'); ?>"
                    class="footer__phone">
-                    <?php echo $redux_demo['header-phone']; ?>
+                    <?php the_field('phone', 'option'); ?>
                 </a>
                 <div class="footer__mail">
-                    <?php echo $redux_demo['header-mail']; ?>
+                    <?php the_field('email', 'option'); ?>
                 </div>
                 <div class="footer__work">
-                    <?php echo $redux_demo['header-work']; ?>
+                    <?php the_field('time-work', 'option'); ?>
                 </div>
             </div>
         </div>
         <div class="footer__row2">
             <div class="footer__company1 f-comp">
                 <div class="f-comp__img">
-                    <img src="<?php echo $redux_demo['header-i1']['url'] ?>"
+                    <img src="<?php the_field('logo1', 'option')['url']; ?>"
                          alt=""
                          class="f-comp__img-1">
                 </div>
                 <div class="f-comp__text">
-                    <?php echo $redux_demo['header-i-text1']; ?>
+                    <?php the_field('logo-text1', 'option'); ?>
                 </div>
             </div>
             <div class="footer__company2 f-comp">
                 <div class="f-comp__img">
-                    <img src="<?php echo $redux_demo['header-i2']['url'] ?>"
+                    <img src="<?php the_field('logo2', 'option')['url']; ?>"
                          alt=""
                          class="f-comp__img-2">
                 </div>
                 <div class="f-comp__text">
-                    <?php echo $redux_demo['header-i-text2']; ?>
+                    <?php the_field('logo-text2', 'option'); ?>
                 </div>
             </div>
         </div>
         <div class="footer__row3">
             <div class="footer__col-31">
                 <a class="footer__logo logo" href="<?php echo pll_home_url(); ?>">
-                    <img src="<?php echo $redux_demo['header-logo']['url'] ?>"
+                    <img src="<?php the_field('logo', 'option')['url']; ?>"
                          alt=""
                          class="logo__img">
                 </a>
                 <p class="footer__copyright">
-                    <?php echo $redux_demo['header-copyright']; ?>
+                    <?php the_field('copyright', 'option'); ?>
                 </p>
             </div>
             <div class="footer__col-32">
@@ -95,13 +94,13 @@ global  $redux_demo;
                         Мы в социальных сетях:
                     </div>
                     <div class="f-soc__block">
-                        <a href="<?php echo $redux_demo['header-facebook']; ?>" class="f-soc__item">
+                        <a href="<?php the_field('facebook', 'option'); ?>" class="f-soc__item">
                             facebook
                         </a>
-                        <a href="<?php echo $redux_demo['header-vkontakte']; ?>" class="f-soc__item">
+                        <a href="<?php the_field('vkontakte', 'option'); ?>" class="f-soc__item">
                             vkontakte
                         </a>
-                        <a href="<?php echo $redux_demo['header-instagram']; ?>" class="f-soc__item">
+                        <a href="<?php the_field('instagram', 'option'); ?>" class="f-soc__item">
                             instagram
                         </a>
                     </div>
@@ -113,13 +112,13 @@ global  $redux_demo;
                         Техническая поддержка:
                     </div>
                     <div class="f-help__phone">
-                        <?php echo $redux_demo['header-tech-phone']; ?>
+                        <?php the_field('tech-phone', 'option'); ?>
                     </div>
                     <div class="f-help__mail">
-                        <?php echo $redux_demo['header-tech-mail']; ?>
+                        <?php the_field('email-tech', 'option'); ?>
                     </div>
                     <div class="f-help__text2">
-                        <?php echo $redux_demo['header-tech-text']; ?>
+                        <?php the_field('tech-text', 'option'); ?>
                     </div>
                 </div>
             </div>

@@ -11,7 +11,7 @@
 <header class="header">
     <div class="header__wrapper">
         <a class="header__logo logo" href="<?php echo pll_home_url(); ?>">
-            <img src="<?php echo $redux_demo['header-logo']['url'] ?>"
+            <img src="<?php the_field('logo', 'option')['url']; ?>"
                  alt=""
                  class="logo__img">
         </a>
@@ -32,9 +32,9 @@
             'items_wrap'      => '<ul class="menu__list">%3$s</ul>',
             'depth'           => 0,
         ] ); ?>
-        <a target="_blank" href="tel:<?php echo $redux_demo['header-phone']; ?>"
+        <a target="_blank" href="tel:<?php the_field('phone', 'option'); ?>"
            class="header__phone">
-            <?php echo $redux_demo['header-phone']; ?>
+            <?php the_field('phone', 'option'); ?>
         </a>
         <button class="header__callback js-callback">
             Обратный звонок
@@ -46,7 +46,6 @@
         <img class="header__close d-none" src="<?php echo get_template_directory_uri(); ?>/img/main/close-menu.svg">
 
         <?php get_template_part('templates/components/tablet-menu'); ?>
-
 
     </div>
 
