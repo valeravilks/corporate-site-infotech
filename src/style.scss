@@ -278,6 +278,7 @@ a {
     @include btn;
     @include btn-second;
     @include btn-large;
+    display: inline-block;
 
   }
 }
@@ -289,6 +290,10 @@ a {
     border-radius: 4px;
     position: relative;
     padding-bottom: 100%;
+
+    &:hover img{
+      transform: translate(-50%, -50%) scale(1.2);
+    }
   }
 
   &__head {
@@ -305,7 +310,8 @@ a {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(1);
+    transition: all .2s ease;
   }
 }
 

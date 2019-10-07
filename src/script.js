@@ -91,13 +91,16 @@ $('.wpforms-field-select select').styler({
 
 $('.hp2__col').hover(function(){
     let url = $(this).data('bg');
-    console.log(url);
     $(this).css('background', 'url(' + url + ') no-repeat, rgba(21, 37, 75, 0)').css('background-size', 'cover');
 }, function(){
     let url = $(this).data('bg');
     $(this).css('background', 'url(' + url + ') no-repeat, rgba(21, 37, 75, 0.5)').css('background-size', 'cover');
 });
 
+$('.hp2__col').each(function() {
+    let url = $(this).data('bg');
+    $(this).css('background', 'url(' + url + ') no-repeat, rgba(21, 37, 75, 0.5)').css('background-size', 'cover');
+});
 
 $(document).ready(function(){
     $('.js-main-slider-2 > .owl-stage-outer').css("padding-left", $('.hp4__head').offset().left);

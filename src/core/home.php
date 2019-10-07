@@ -66,45 +66,31 @@
                <div class="row all-product">
                    <div class="all-product__col1">
                        <div class="all-product__text">
-                           Все продукты
-                           Infotech Group реализованы
-                           на базе собственной платформы
+                           <?php the_field('section-head-2', 'option'); ?>
                        </div>
-                       <button class="all-product__btn">Подробнее о платформе</button>
+                       <a href="<?php the_field('section-l-link', 'option'); ?>" class="all-product__btn">Подробнее о платформе</a>
                    </div>
-                   <div class="all-product__col2 item-1">
-                       <div class="item-1__block">
-                           <img src="<?php echo get_template_directory_uri(); ?>/img/main/item1.svg" alt="" class="item-1__img">
-                       </div>
-                       <div class="item-1__head">
-                           Intellect
-                       </div>
-                       <div class="item-1__text">
-                           Анализ и обработка событий в реальном времени
-                       </div>
-                   </div>
-                   <div class="all-product__col2 item-1">
-                       <div class="item-1__block">
-                           <img src="<?php echo get_template_directory_uri(); ?>/img/main/item1.svg" alt="" class="item-1__img">
-                       </div>
-                       <div class="item-1__head">
-                           Intellect
-                       </div>
-                       <div class="item-1__text">
-                           Анализ и обработка событий в реальном времени
-                       </div>
-                   </div>
-                   <div class="all-product__col2 item-1">
-                       <div class="item-1__block">
-                           <img src="<?php echo get_template_directory_uri(); ?>/img/main/item1.svg" alt="" class="item-1__img">
-                       </div>
-                       <div class="item-1__head">
-                           Intellect
-                       </div>
-                       <div class="item-1__text">
-                           Анализ и обработка событий в реальном времени
-                       </div>
-                   </div>
+                    <?php
+                    for($i = 1; $i < 4; $i++) :
+                        $rows = 'section-cart-' . $i . $i;
+                        if( have_rows($rows, 'option') ):
+                            while ( have_rows($rows, 'option') ) : the_row();
+                                ?>
+                               <div class="all-product__col2 item-1">
+                                   <div class="item-1__block">
+                                       <img src="<?php the_sub_field('img')['url']; ?>" alt="" class="item-1__img">
+                                   </div>
+                                   <div class="item-1__head">
+                                       <?php the_sub_field('title'); ?>
+                                   </div>
+                                   <div class="item-1__text">
+                                       <?php the_sub_field('text'); ?>
+                                   </div>
+                               </div>
+                            <?php endwhile;
+                        endif;
+                    endfor;
+                    ?>
                </div>
            </div>
        </section>
