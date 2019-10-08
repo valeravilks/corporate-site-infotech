@@ -2,21 +2,69 @@
    <main class="home-page">
        <section class="home-page__1 hp1">
            <div class="hp1__slider owl-carousel owl-theme js-main-slider">
-               <div class="item hp1__item">
+               <div class="item hp1__item" style="background-image: url(<?php the_field('sl-1-img', 'option'); ?>">
                    <div class="hp1__container">
                        <div class="hp1__row">
                            <h1 class="hp1__head">
-                               Цифровая трансформация бизнеса
+                               <?php the_field('sl-1-head', 'option'); ?>
                            </h1>
                        </div>
                        <div class="hp1__row">
                            <div class="hp1__text">
-                               Решения в сфере Промышленного интернета вещей и предиктивной аналитики от российского разработчика
+                               <?php the_field('sl-1-text', 'option'); ?>
                            </div>
                        </div>
                        <div class="hp1__row">
                            <div class="hp1__btn-row">
-                                <button class="hp1__btn">Презентация компании</button>
+                                <a href="<?php the_field('sl-1-link', 'option'); ?>" class="hp1__btn">
+                                    <?php the_field('sl-1-text-link', 'option'); ?>
+                                </a>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+               <div class="item hp1__item hp1__item-second">
+                   <div class="hp1__container">
+                       <div class="hp1__row hp1__row-1">
+                           <div class="col col-1">
+                               <div class="title">
+                                   <?php the_field('sl-2-head', 'option'); ?>
+                               </div>
+                               <div class="text">
+                                   <?php the_field('sl-2-text', 'option'); ?>
+                               </div>
+                               <div class="for-link">
+                                   <a href="<?php the_field('sl-2-link', 'option'); ?>" class="link">
+                                       <?php the_field('sl-2-text-link', 'option'); ?>
+                                   </a>
+                               </div>
+
+                           </div>
+                           <div class="col col-2">
+                               <div class="img" style="background-image: url(<?php the_field('sl-3-img', 'option'); ?>)"></div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+               <div class="item hp1__item hp1__item-second">
+                   <div class="hp1__container">
+                       <div class="hp1__row hp1__row-1">
+                           <div class="col col-1">
+                               <div class="title">
+                                   <?php the_field('sl-3-head', 'option'); ?>
+                               </div>
+                               <div class="text">
+                                   <?php the_field('sl-3-text', 'option'); ?>
+                               </div>
+                               <div class="for-link">
+                                   <a href="<?php the_field('sl-3-link', 'option'); ?>" class="link">
+                                       <?php the_field('sl-3-text-link', 'option'); ?>
+                                   </a>
+                               </div>
+
+                           </div>
+                           <div class="col col-2">
+                               <div class="img" style="background-image: url(<?php the_field('sl-2-img', 'option'); ?>)" ></div>
                            </div>
                        </div>
                    </div>
@@ -138,6 +186,92 @@
                        <button class="hp3__button">
                            Обсудить проект
                        </button>
+                   </div>
+               </div>
+           </div>
+       </section>
+       <section class="main-news">
+           <div class="wrapper">
+               <div class="head">
+                   Новости компании
+               </div>
+               <div class="row row-1">
+                   <div class="col col-1">
+                        <div class="new-cart-large">
+                            <div class="data">
+                                18 марта
+                            </div>
+                            <div class="title">
+                                Специалисты Infotech Group встретились со студентами «СТАНКИН»
+                            </div>
+                            <div class="text">
+                                Ведущие специалисты Infotech Group рассказали студентам МГТУ «СТАНКИН» о возможностях развития в компании.
+                            </div>
+                        </div>
+                   </div>
+                   <div class="col col-2">
+                       <div class="new-cart-medium">
+                            <div class="img-data">
+                                <div class="data">
+                                    3 марта
+                                </div>
+                            </div>
+                           <div class="title">
+                               Infotech Group участвует в конкурсе портала «Рынок электротехники»
+                           </div>
+                           <div class="text">
+                               Ведущие специалисты Infotech Group рассказали студентам МГТУ «СТАНКИН» о возможностях развития в компании.
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col col-2">
+                       <div class="new-cart-medium">
+                           <div class="img-data">
+                               <div class="data">
+                                   3 марта
+                               </div>
+                           </div>
+                           <div class="title">
+                               Infotech Group участвует в конкурсе портала «Рынок электротехники»
+                           </div>
+                           <div class="text">
+                               Ведущие специалисты Infotech Group рассказали студентам МГТУ «СТАНКИН» о возможностях развития в компании.
+                           </div>
+                       </div>
+                   </div>
+               </div>
+               <div class="row row-2">
+                   <div class="new-cart-small">
+                        <div class="title">
+                            Система Infotech Group помогает ФГУП «Охрана» Росгвардии работать с контрагентами
+                        </div>
+                       <div class="text">
+                           Infotech Group модернизировала систему управления контрагентами для ФГУП «Охрана» Росгвардии.
+                       </div>
+                   </div>
+                   <div class="new-cart-small">
+                       <div class="title">
+                           Система Infotech Group помогает ФГУП «Охрана» Росгвардии работать с контрагентами
+                       </div>
+                       <div class="text">
+                           Infotech Group модернизировала систему управления контрагентами для ФГУП «Охрана» Росгвардии.
+                       </div>
+                   </div>
+                   <div class="new-cart-small">
+                       <div class="title">
+                           Система Infotech Group помогает ФГУП «Охрана» Росгвардии работать с контрагентами
+                       </div>
+                       <div class="text">
+                           Infotech Group модернизировала систему управления контрагентами для ФГУП «Охрана» Росгвардии.
+                       </div>
+                   </div>
+                   <div class="new-cart-small">
+                       <div class="title">
+                           Система Infotech Group помогает ФГУП «Охрана» Росгвардии работать с контрагентами
+                       </div>
+                       <div class="text">
+                           Infotech Group модернизировала систему управления контрагентами для ФГУП «Охрана» Росгвардии.
+                       </div>
                    </div>
                </div>
            </div>

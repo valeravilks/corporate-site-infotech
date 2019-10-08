@@ -9,7 +9,7 @@ $(".js-main-slider").owlCarousel({
     items: 1,
     loop:true,
     margin:10,
-    autoplay:true,
+    autoplay:false,
     autoplayTimeout:5000
 });
 

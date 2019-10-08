@@ -54,7 +54,8 @@ a {
 
 .hp1 {
   &__item {
-    background-color: blue;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 
   &__container {
@@ -131,6 +132,95 @@ a {
     @include btn-accent;
   }
 }
+
+.hp1__item-second {
+  background-color: $color-energy-dark-blue;
+
+  .col {
+    @include col();
+  }
+
+  .col-1 {
+    @include shift-left(1);
+    @include size(5);
+    @include shift-lg-left(0);
+    @include size-sm(12);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .col-2 {
+    @include shift-left(1);
+    @include size(4);
+    @include size-lg(5);
+    @include shift-sm-left(0);
+    @include size-sm(6);
+    height: 100%;
+
+    @include sm-block{
+      order: -1;
+      margin-bottom: 50px;
+    }
+  }
+
+  .title {
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 120%;
+    color: #FFFFFF;
+
+    @include lg-block {
+      font-size: 30px;
+    }
+  }
+
+  .text {
+    flex-grow: 1;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 150%;
+    color: #F2F5F9;
+
+    @include md-block {
+      margin-bottom: 20px;
+    }
+
+    @include sm-block {
+      margin-bottom: 40px;
+    }
+  }
+
+  .img {
+    background-color: red;
+    height: 345px;
+    width: 345px;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include sm-block{
+      height: 195px;
+      width: 195px;
+    }
+  }
+
+  .link {
+    @include btn;
+    @include btn-magenta;
+    @include btn-large;
+    display: inline;
+  }
+
+  .for-link {
+    display: flex;
+  }
+}
+.hp1__row-1 {
+  min-height: 600px;
+  padding: 115px 0 140px;
+  box-sizing: border-box;
+}
+
 
 .hp2 {
   &__container {
@@ -284,16 +374,20 @@ a {
 }
 
 .item-1 {
+  &:hover img{
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+
+  &:hover &__head {
+    color: $color-blue;
+  }
+
   &__block {
     background-color: $color-blue-light;
     margin-bottom: 16px;
     border-radius: 4px;
     position: relative;
     padding-bottom: 100%;
-
-    &:hover img{
-      transform: translate(-50%, -50%) scale(1.2);
-    }
   }
 
   &__head {
@@ -581,4 +675,114 @@ a {
   width: 100px;
   text-align: center;
   font-weight: normal;
+}
+
+.main-news {
+  @extend .section-padding;
+  .row{
+    @include row-flex;
+
+    .col{
+      @include col();
+    }
+
+    &.row-1 {
+      margin-bottom: 60px;
+
+      .col-1 {
+        @include size(6);
+      }
+
+      .col-2 {
+        @include size(3);
+      }
+    }
+
+    &.row-2 {
+      .col {
+        @include size(3);
+      }
+
+      .title {
+
+      }
+
+      .text {
+
+      }
+    }
+  }
+
+  .head {
+    @extend .font-section-title;
+    margin-bottom: 50px;
+  }
+}
+
+.new-cart-large {
+  min-height: 425px;
+  background-color: red;
+  padding: 36px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  .data {
+    @extend .font-desc-18-blue-light;
+    margin-bottom: 30px;
+  }
+
+  .title {
+    @extend .font-head-30-white-b;
+    margin-bottom: 30px;
+  }
+
+  .text {
+    @extend .font-text-16-white;
+  }
+}
+
+.new-cart-medium{
+  .img-data {
+    background-color: red;
+    padding: 20px;
+    margin-bottom: 30px;
+    height: 200px;
+    display: flex;
+  }
+
+  .data {
+    @extend .font-desc-18-blue-light;
+    align-self: flex-end;
+  }
+
+  .title{
+    @extend .font-head-20-dark-m;
+    margin-bottom: 30px;
+
+    &:hover {
+      color: $color-blue;
+    }
+  }
+
+  .text {
+    @extend .font-text-16-black-bl-100;
+  }
+}
+
+.new-cart-small {
+  @include col();
+  @include size(3);
+
+  .title {
+    @extend .font-head-20-dark-m;
+    margin-bottom: 30px;
+
+    &:hover {
+      color: $color-blue;
+    }
+  }
+  .text {
+    @extend .font-text-16-black-bl-100;
+  }
 }
