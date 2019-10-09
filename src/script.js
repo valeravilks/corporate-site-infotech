@@ -45,11 +45,44 @@ for(let i = 0; i < slides.length; i++){
     slideMass.push({slide: slid, count: i });
 }
 
-$(window).resize(function(){
-    $('.js-main-slider-2 > .owl-stage-outer').css("padding-left", $('.hp4__head').offset().left);
-    $('.js-main-slider-2 > .owl-dots').css("margin-left", $('.hp4__head').offset().left);
-    $('.js-main-slider-2 > .owl-dots').css("margin-right", $('.hp4__head').offset().left);
+if($('*').is('.js-main-slider-2')) {
+    $(window).resize(function(){
+        $('.js-main-slider-2 > .owl-stage-outer').css("padding-left", $('.hp4__head').offset().left);
+        $('.js-main-slider-2 > .owl-dots').css("margin-left", $('.hp4__head').offset().left);
+        $('.js-main-slider-2 > .owl-dots').css("margin-right", $('.hp4__head').offset().left);
+    });
+}
+
+//Carousel team
+$('.js-team-owl').owlCarousel({
+    margin: 30,
+    items: 1,
+    autoWidth:true,
+    dots: false,
+    loop: true,
+    nav: true,
+    onInitialized  : insertItemTeam, //When the plugin has initialized.
+    onTranslated : counterTeam
 });
+
+function insertItemTeam(e){
+    $('.js-team-owl .owl-prev').after('<div class="owl-count2"></div>');
+    counterTeam(e);
+}
+
+function counterTeam(event) {
+    var element   = event.target;         // DOM element, in this example .owl-carousel
+    var items     = event.item.count;     // Number of items
+    var item      = event.item.index + 1;     // Position of the current item
+
+    // it loop is true then reset counter from 1
+    if(item > items) {
+        item = item - items
+    }
+    $('.owl-count2').html(item+"/"+items)
+}
+
+
 
 $(".js-client-cart").owlCarousel({
     items: 1,
@@ -103,10 +136,12 @@ $('.hp2__col').each(function() {
 });
 
 $(document).ready(function(){
-    $('.js-main-slider-2 > .owl-stage-outer').css("padding-left", $('.hp4__head').offset().left);
-    $('.js-main-slider-2 > .owl-dots').css("margin-left", $('.hp4__head').offset().left);
-    $('.js-main-slider-2 > .owl-dots').css("margin-right", $('.hp4__head').offset().left);
 
+    if($('*').is('.js-main-slider-2')) {
+        $('.js-main-slider-2 > .owl-stage-outer').css("padding-left", $('.hp4__head').offset().left);
+        $('.js-main-slider-2 > .owl-dots').css("margin-left", $('.hp4__head').offset().left);
+        $('.js-main-slider-2 > .owl-dots').css("margin-right", $('.hp4__head').offset().left);
+    }
     // Lang amination
     $('.lang__container').mouseenter(function(){
         $(this).find('.lang__second').stop().slideDown(300);

@@ -1,0 +1,36 @@
+.mini-menu {
+  border-bottom: 1px solid $color-tertiary-text-3;
+
+  @include md-block {
+    display: none;
+  }
+
+  ul {
+    display: flex;
+  }
+
+  li {
+    padding: 18px 0;
+    margin-right: 30px;
+  }
+
+  a {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 23px;
+    color: $color-black-blue-50;
+
+    &:hover {
+      color: $color-dark-90;
+    }
+  }
+
+  .current-menu-item{
+    color: $color-dark-90;
+    border-bottom: 2px solid $color-blue;
+
+    a {
+      color: $color-dark-90;
+    }
+  }
+}

@@ -266,3 +266,8 @@ function filter_nav_menu_link_attributes1222( $atts, $item, $args, $depth ) {
     }
     return $atts;
 }
+
+add_action( 'after_setup_theme', 'theme_register_nav_menu23' );
+function theme_register_nav_menu23() {
+    register_nav_menu( 'about', 'Меню О компании' );
+}

@@ -146,15 +146,15 @@
             <div class="hp3__container">
                 <div class="hp3__row">
                     <div class="hp3__col-1">
-                        Подберем оптимальное IT-решение для вашей организации
+                        <?php the_field('s3-head', 'option'); ?>
                     </div>
                     <div class="hp3__col-2">
                         <div class="hp3__text">
-                            В нашей команде работают ведущие отраслевые эксперты. Подход Infotech Group сочетает сильные IT-компетенции и глубокое понимание специфики бизнеса заказчика.
+                            <?php the_field('s3-text', 'option'); ?>
                         </div>
-                        <button class="hp3__button">
-                            Обсудить проект
-                        </button>
+                        <a href="<?php the_field('s3-link', 'option'); ?>" class="hp3__button">
+                            <?php the_field('s3-text-link', 'option'); ?>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -177,15 +177,15 @@
            <div class="hp3__container">
                <div class="hp3__row">
                    <div class="hp3__col-1">
-                       Подберем оптимальное IT-решение для вашей организации
+                       <?php the_field('s6-head', 'option'); ?>
                    </div>
                    <div class="hp3__col-2">
                        <div class="hp3__text">
-                           В нашей команде работают ведущие отраслевые эксперты. Подход Infotech Group сочетает сильные IT-компетенции и глубокое понимание специфики бизнеса заказчика.
+                           <?php the_field('s6-text', 'option'); ?>
                        </div>
-                       <button class="hp3__button">
-                           Обсудить проект
-                       </button>
+                       <a href="<?php the_field('s6-link', 'option'); ?>" class="hp3__button">
+                           <?php the_field('s6-text-link', 'option'); ?>
+                       </a>
                    </div>
                </div>
            </div>

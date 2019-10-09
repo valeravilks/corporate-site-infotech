@@ -190,3 +190,47 @@ $dot-background-active:	$color-base !default;
 	}
 }
 
+.owl-theme-team {
+	// Styling Next and Prev buttons
+	// Styling dots
+	.owl-nav.disabled + .owl-dots {
+		margin-top: 10px;
+	}
+
+	.owl-dots {
+		text-align: center;
+		-webkit-tap-highlight-color: transparent;
+		display: flex;
+		background-color: rgba(134, 147, 155, 0.5);
+		border-radius: 4px;
+
+		.owl-dot {
+			display: inline-block;
+			zoom: 1;
+			*display: inline;
+			flex-grow: 1;
+
+			span {
+				width: 100%;
+				border-right: 4px;
+				height: 4px;
+				display: block;
+				-webkit-backface-visibility: visible;
+				transition: opacity 200ms ease;
+				border-radius: $dot-rounded;
+			}
+
+			&:focus {
+				outline: none;
+			}
+
+			&.active,
+			&:hover {
+				span {
+					background: $color-black-blue-100;
+					outline: none;
+				}
+			}
+		}
+	}
+}

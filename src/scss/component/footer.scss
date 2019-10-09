@@ -49,6 +49,7 @@
     &__work {
         @include text-16-regular;
         color: $color-black-blue-50;
+        margin-bottom: 30px;
     }
 
     &__row1{
@@ -225,6 +226,18 @@
 
 .f-soc__block {
     display: flex;
+}
+
+.f-soc-f:hover path{
+    fill: #3B5998;
+}
+
+.f-soc-v:hover path{
+    fill: #4680C2;
+}
+
+.f-soc-i:hover path{
+    fill: #ED001A;
 }
 
 .menu-f {

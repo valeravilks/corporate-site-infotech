@@ -14,8 +14,10 @@ Theme Name: Info tech
 @import "./scss/component/components";
 @import './scss/component/callback';
 @import "./scss/component/menu";
+@import "./scss/component/mini-menu";
 @import './scss/component/header';
 @import './scss/component/footer';
+@import "./scss/page/team";
 
 
 .wrapper {
@@ -452,7 +454,7 @@ a {
   &__text {
     @include desc-18-regular;
     color: $color-blue-light;
-    margin-bottom: 32px;
+    margin-bottom: 70px;
 
     @include sm-block{
       margin-bottom: 50px;
@@ -513,8 +515,13 @@ a {
   background-color: $color-white;
   width: 550px;
   min-height: 600px;
+  height: 100%;
   display: flex;
   flex-direction: column;
+
+  &:hover {
+    box-shadow: 0px 4px 20px #BECFD9;
+  }
 
   @media screen and (max-width: 550px){
     width: calc(100% - 30px);
@@ -620,6 +627,7 @@ a {
     @include col();
     @include size(2);
     @include size-md(3);
+    margin-bottom: 30px;
 
     display: flex;
     flex-direction: column;
@@ -743,6 +751,11 @@ a {
 }
 
 .new-cart-medium{
+  cursor: pointer;
+  &:hover .title {
+    color: $color-blue;
+  }
+
   .img-data {
     background-color: red;
     padding: 20px;
@@ -760,9 +773,6 @@ a {
     @extend .font-head-20-dark-m;
     margin-bottom: 30px;
 
-    &:hover {
-      color: $color-blue;
-    }
   }
 
   .text {
@@ -774,15 +784,20 @@ a {
   @include col();
   @include size(3);
 
+  cursor: pointer;
+  &:hover .title {
+    color: $color-blue;
+  }
+
   .title {
     @extend .font-head-20-dark-m;
     margin-bottom: 30px;
-
-    &:hover {
-      color: $color-blue;
-    }
   }
   .text {
     @extend .font-text-16-black-bl-100;
   }
+}
+
+.hp4__slider > .owl-stage-outer > .owl-stage {
+  display: flex;
 }
