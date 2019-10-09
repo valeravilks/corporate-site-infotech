@@ -55,6 +55,7 @@ a {
 
 
 .hp1 {
+  padding-top: 80px;
   &__item {
     background-size: cover;
     background-repeat: no-repeat;
@@ -413,6 +414,7 @@ a {
 
 .hp3 {
   background-color: blue;
+  background-size: cover;
 
   &__container {
     padding-top: 100px;
@@ -493,14 +495,14 @@ a {
   &__text {
     @include desc-18-regular;
     color: $color-black-blue-100;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 
     @include md-block{
-      margin-bottom: 40px;
+      margin-bottom: 10px;
     }
 
     @include sm-block{
-      margin-bottom: 20px;
+      margin-bottom: 10px;
     }
   }
 

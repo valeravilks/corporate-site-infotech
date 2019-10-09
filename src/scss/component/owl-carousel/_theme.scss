@@ -99,6 +99,11 @@ $dot-background-active:	$color-base !default;
 	}
 }
 
+.owl-theme-slide > div > div > div {
+	margin: 40px 0;
+}
+
+
 .owl-theme-cart {
 	// Styling Next and Prev buttons
 	.owl-nav {

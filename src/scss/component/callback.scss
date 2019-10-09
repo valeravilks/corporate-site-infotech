@@ -26,6 +26,7 @@
     &__row {
         @include row-flex;
         width: 100%;
+        justify-content: center;
     }
 
     &__head {
@@ -70,7 +71,7 @@
 
     &__col-3 {
         @include col();
-        @include size(2);
+        @include size(1);
         @include shift-left(1);
         @include size-lg(1);
         @include shift-lg-left(0);

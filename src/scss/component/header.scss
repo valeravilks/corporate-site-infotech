@@ -3,8 +3,10 @@
 @import 'header/lang';
 
 .header {
+    position: fixed;
+    top: 0;
+    width: 100%;
     z-index: 100;
-    position: relative;
     background-color: $color-white;
     border-bottom: 1px solid $color-blue-light;
 

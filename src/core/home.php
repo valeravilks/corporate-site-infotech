@@ -142,7 +142,7 @@
                </div>
            </div>
        </section>
-       <section class="home-page__3 hp3">
+       <section class="home-page__3 hp3" style="background-image: url(<?php the_field('s3-bg', 'option')['url'];?>)">
             <div class="hp3__container">
                 <div class="hp3__row">
                     <div class="hp3__col-1">
@@ -173,7 +173,7 @@
            </div>
        </section>
        <?php get_template_part('templates/our-client'); ?>
-       <section class="home-page__3 hp3">
+       <section class="home-page__3 hp3" style="background-image: url(<?php the_field('s6-bg', 'option')['url'];?>)">
            <div class="hp3__container">
                <div class="hp3__row">
                    <div class="hp3__col-1">

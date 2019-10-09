@@ -137,11 +137,7 @@
     }
 
     &__logo {
-        margin-bottom: auto;
-
-        @include sm-block{
-            margin-bottom: 30px;
-        }
+        margin-bottom: 30px;
     }
 }
 
@@ -176,7 +172,7 @@
     &__item {
         @include menu-16-medium;
         color: $color-dark-90;
-        margin-right: 21px;
+        margin-right: 13px;
     }
 }
 
@@ -215,6 +211,8 @@
 
     & > img{
         align-self: center;
+        width: 100%;
+        width: 60px;
     }
 }
 .f-comp__text {
@@ -230,14 +228,17 @@
 
 .f-soc-f:hover path{
     fill: #3B5998;
+    fill-opacity: 1;
 }
 
 .f-soc-v:hover path{
     fill: #4680C2;
+    fill-opacity: 1;
 }
 
 .f-soc-i:hover path{
     fill: #ED001A;
+    fill-opacity: 1;
 }
 
 .menu-f {

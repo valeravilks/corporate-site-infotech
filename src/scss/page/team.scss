@@ -1,5 +1,5 @@
 .team {
-  margin-top: 30px;
+  padding-top: 110px;
 
   .desktop {
     @include sm-block {
@@ -17,24 +17,42 @@
 
   .item {
     width: 300px;
+    display: block;
   }
 
   .title {
     margin: 100px 0 50px;
     @extend .font-section-title;
+
+    @include md-block {
+      margin: 70px 0 50px;
+    }
+
+    @include sm-block {
+      margin: 30px 0 50px;
+      font-size: 30px;
+    }
+  }
+
+  .help {
+    margin-bottom: 30px;
+    height: 420px;
+    background-size: auto;
+    background-position: center;
+    overflow: hidden;
   }
 
   .img {
-    background-image: url(https://infotech.group/assets/images/about/team/pavlov.jpg);
-    margin-bottom: 30px;
-    height: 420px;
+    transform: scale(1);
+    transition: all .3s ease;
+    height: 100%;
     background-size: cover;
     background-position: center;
-    transition: background-size .3s ease;
   }
 
   .col {
     margin-bottom: 43px;
+    display: block;
     @include col();
     @include size(3);
     @include size-md(4);
@@ -44,7 +62,7 @@
     }
 
     &:hover .img {
-      background-size: 120%;
+      transform: scale(1.1);
     }
   }
 
@@ -56,7 +74,9 @@
   }
   .status {
     color: $color-black-blue-50;
+    font-style: normal;
     font-weight: normal;
+    line-height: 150%;
   }
 
   .owl-nav {
@@ -88,5 +108,5 @@
   align-self: center;
   margin: 10px;
   font-weight: normal;
-  color: $color-black-blue-50;
+  color: $color-black-blue-100;
 }

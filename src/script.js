@@ -9,7 +9,7 @@ $(".js-main-slider").owlCarousel({
     items: 1,
     loop:true,
     margin:10,
-    autoplay:false,
+    autoplay:true,
     autoplayTimeout:5000
 });
 
@@ -59,7 +59,7 @@ $('.js-team-owl').owlCarousel({
     items: 1,
     autoWidth:true,
     dots: false,
-    loop: true,
+    loop: false,
     nav: true,
     onInitialized  : insertItemTeam, //When the plugin has initialized.
     onTranslated : counterTeam

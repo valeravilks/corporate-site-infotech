@@ -18,14 +18,16 @@
         $text = get_field('our-client-text');
         ?>
 
-        <div class="col">
-            <div class="img" style="background-image: url(<?php the_field('team-prev')['url']; ?>)"></div>
+        <a href="#" class="col">
+            <div class="help">
+                <div class="img" style="background-image: url(<?php the_field('team-prev')['url']; ?>)"></div>
+            </div>
             <div class="name">
                 <?php the_field('team-name'); ?>
             </div>
             <div class="status">
                 <?php the_field('team-status'); ?>
             </div>
-        </div>
+        </a>
     <? endforeach; ?>
 <?php wp_reset_postdata(); // сsброс ?>
