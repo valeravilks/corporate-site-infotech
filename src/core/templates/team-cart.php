@@ -18,7 +18,7 @@
         $text = get_field('our-client-text');
         ?>
 
-        <a href="#" class="col">
+        <a href="<?php the_permalink(); ?>" class="col">
             <div class="help">
                 <div class="img" style="background-image: url(<?php the_field('team-prev')['url']; ?>)"></div>
             </div>

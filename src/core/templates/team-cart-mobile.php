@@ -14,7 +14,7 @@
 <?php foreach( $posts as $post ):
     ?>
 
-    <a href="#" class="item">
+    <a href="<?php the_permalink(); ?>" class="item">
         <div class="help">
             <div class="img" style="background-image: url(<?php the_field('team-prev')['url']; ?>)"></div>
         </div>

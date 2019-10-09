@@ -175,9 +175,15 @@
 }
 
 .font-text-16-black-bl-100 {
+   font-weight: normal;
+   font-size: 16px;
+   line-height: 25px;
+   color: $color-black-blue-100;
+ }
+
+.font-text-16-black-bl-50 {
   font-weight: normal;
   font-size: 16px;
-  line-height: 25px;
-  color: $color-black-blue-100;
-
+  line-height: 160%;
+  color: $color-black-blue-50;
 }

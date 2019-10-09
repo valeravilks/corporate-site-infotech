@@ -110,3 +110,99 @@
   font-weight: normal;
   color: $color-black-blue-100;
 }
+
+.single-team {
+  padding-top: 110px;
+
+  @include md-block{
+    padding-top: 80px;
+  }
+
+  .help {
+    @include md-block{
+      display: none;
+    }
+  }
+  .title {
+    @extend .font-section-title;
+
+    @include sm-block {
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+  }
+
+
+  .status {
+    @extend .font-text-16-black-bl-50;
+    margin-bottom: 50px;
+
+    @include sm-block {
+      margin-bottom: 20px;
+    }
+  }
+
+  .help2 {
+    @include col();
+    @include size(12);
+    @include size-md(6);
+    @include size-sm(12);
+  }
+
+  .img {
+    @include col();
+    @include size(12);
+    @include size-md(6);
+    @include size-sm(12);
+    width: 100%;
+
+    @include md-block {
+      margin-bottom: 50px;
+    }
+  }
+
+  .back {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 171%;
+    text-transform: uppercase;
+    color: $color-black-blue-50;
+    margin: 50px 0;
+    display: block;
+
+    &:hover {
+      color: $color-dark-90;
+    }
+  }
+
+  .col-1 {
+    @include col();
+    @include size(5);
+    @include size-md(12);
+  }
+  .col-2 {
+    @include col();
+    @include size(7);
+    @include size-md(12);
+  }
+
+  h2 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 171%;
+    text-transform: uppercase;
+    margin-bottom: 13px;
+    color: $color-dark-90;
+  }
+
+  p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 160.5%;
+    color: $color-black-blue-100;
+    margin-bottom: 30px;
+  }
+}
