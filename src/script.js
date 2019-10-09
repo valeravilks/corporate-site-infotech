@@ -124,15 +124,15 @@ $('.wpforms-field-select select').styler({
 
 $('.hp2__col').hover(function(){
     let url = $(this).data('bg');
-    $(this).css('background', 'url(' + url + ') no-repeat, rgba(21, 37, 75, 0)').css('background-size', 'cover');
+    $(this).css('background', 'url(' + url + ') no-repeat bottom, rgba(21, 37, 75, 0)').css('background-size', 'cover');
 }, function(){
     let url = $(this).data('bg');
-    $(this).css('background', 'url(' + url + ') no-repeat, rgba(21, 37, 75, 0.5)').css('background-size', 'cover');
+    $(this).css('background', 'url(' + url + ') no-repeat bottom, rgba(21, 37, 75, 0.5)').css('background-size', 'cover');
 });
 
 $('.hp2__col').each(function() {
     let url = $(this).data('bg');
-    $(this).css('background', 'url(' + url + ') no-repeat, rgba(21, 37, 75, 0.5)').css('background-size', 'cover');
+    $(this).css('background', 'url(' + url + ') no-repeat bottom, rgba(21, 37, 75, 0.5)').css('background-size', 'cover');
 });
 
 $(document).ready(function(){

@@ -30,6 +30,7 @@
     height: 420px;
     background-size: cover;
     background-position: center;
+    transition: background-size .3s ease;
   }
 
   .col {
@@ -37,6 +38,14 @@
     @include col();
     @include size(3);
     @include size-md(4);
+
+    &:hover .name {
+      color: $color-blue;
+    }
+
+    &:hover .img {
+      background-size: 120%;
+    }
   }
 
   .name {
