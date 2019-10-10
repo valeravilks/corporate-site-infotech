@@ -5,12 +5,16 @@ import 'owl.carousel';
 
 // Settings owl carousel
 
-$(".js-main-slider").owlCarousel({
+let mainSlider = $(".js-main-slider").owlCarousel({
     items: 1,
     loop:true,
     margin:10,
     autoplay:true,
     autoplayTimeout:5000
+});
+
+mainSlider.on('drag.owl.carousel', function(){
+    mainSlider.trigger('stop.owl.autoplay');
 });
 
 let slider2 = $(".js-main-slider-2").owlCarousel({
