@@ -33,6 +33,60 @@ get_header();
                 <?php the_field('team-desc'); ?>
             </div>
         </div>
+        <?php
+        $next_post = get_next_post();
+        $prev_post = get_previous_post();
+
+        if(empty($next_post))
+        $justify = 'style="justify-content: flex-end;"'
+        ?>
+
+        <div class="row-mini" <?php echo $justify ?>>
+            <?php
+            if( ! empty($next_post) ){
+             $idNext = $next_post->ID; ?>
+            <a href="<?php echo get_permalink($idNext); ?>" class="prev">
+                <div class="img-mini" style="background-image: url(<?php the_field('team-prev', $idNext)['url']; ?>)"></div>
+                <div class="block-mini">
+                    <div class="text-mini">
+                        Предыдущий
+                    </div>
+                    <div class="title-mini">
+                        <?php the_field('team-name', $idNext); ?>
+                    </div>
+                    <div class="status-mini">
+                        <?php the_field('team-status', $idNext); ?>
+                    </div>
+                </div>
+
+                <?php
+                }
+                ?>
+            </a>
+
+            <?php
+
+            if( ! empty($prev_post) ){
+            $idPrev = $prev_post->ID ?>
+            <a href="<?php echo get_permalink($idPrev); ?>" class="next">
+                <div class="img-mini" style="background-image: url(<?php the_field('team-prev', $idPrev)['url']; ?>)"></div>
+                <div class="block-mini">
+                    <div class="text-mini">
+                        Следующий
+                    </div>
+                    <div class="title-mini">
+                        <?php the_field('team-name', $idPrev); ?>
+                    </div>
+                    <div class="status-mini">
+                        <?php the_field('team-status', $idPrev); ?>
+                    </div>
+                </div>
+
+                <?php
+                }
+                ?>
+            </a>
+        </div>
     </div>
 </section>
 <?php get_footer(); ?>
