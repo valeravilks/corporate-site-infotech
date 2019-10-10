@@ -1,0 +1,57 @@
+.license {
+  padding-top: 110px;
+  margin-bottom: -30px;
+
+  .title {
+    margin: 100px 0 50px;
+    @extend .font-section-title;
+
+    @include md-block {
+      margin: 70px 0 50px;
+    }
+
+    @include sm-block {
+      margin: 50px 0 50px;
+      font-size: 30px;
+    }
+  }
+
+  .image {
+    background-color: $color-blue-light;
+    position: relative;
+    padding-bottom: 100%;
+    background-position: center;
+    background-size: 47%;
+    background-repeat: no-repeat;
+
+    @include sm-block {
+      padding-bottom: 60%;
+      background-size: 34%;
+    }
+  }
+
+  .col {
+    @include col();
+    @include size(3);
+    @include size-md(4);
+    @include size-sm(12);
+    margin-bottom: 50px;
+  }
+
+  .name {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 23px;
+    color: $color-dark-90;
+    margin-bottom: 10px;
+    margin-top: 30px;
+  }
+  .dop {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 150%;
+    color: $color-black-blue-50;
+  }
+}
