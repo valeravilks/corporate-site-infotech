@@ -155,6 +155,7 @@
     @include size-md(6);
     @include size-sm(12);
     width: 100%;
+    height: intrinsic;
 
     @include md-block {
       margin-bottom: 50px;
@@ -178,12 +179,14 @@
 
   .col-1 {
     @include col();
-    @include size(5);
+    @include size(4);
     @include size-md(12);
   }
   .col-2 {
     @include col();
+    @include shift-left(1);
     @include size(7);
+    @include shift-md(0);
     @include size-md(12);
   }
 
@@ -253,6 +256,7 @@
     background-color: $color-blue-light;
     padding: 30px;
     margin-bottom: 30px;
+    margin-top: 70px;
   }
 
   .text-mini {

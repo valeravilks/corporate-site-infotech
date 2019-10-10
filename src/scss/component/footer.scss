@@ -1,6 +1,7 @@
 .footer {
     background-color: $color-blue-light;
     padding: 70px 0 55px;
+    margin-top: 150px;
 
     @include sm-block{
         padding: 50px 0 30px;

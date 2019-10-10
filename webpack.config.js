@@ -3,7 +3,7 @@ let MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 var webpack = require('webpack');
-
+const autoprefixer = require('autoprefixer');
 
 let conf = {
     mode: 'development',
@@ -79,6 +79,17 @@ let conf = {
                         }
                     },
                     "css-loader", // translates CSS into CommonJS
+                    {
+                        loader: 'postcss-loader',
+                        options: {
+                            plugins: [
+                                autoprefixer({
+                                    browsers:['ie >= 8', 'last 4 version']
+                                })
+                            ],
+                            sourceMap: true
+                        }
+                    },
                     'sass-loader',
                 ]
             },
