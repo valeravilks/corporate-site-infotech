@@ -1,0 +1,386 @@
+.scolkovo {
+  padding-top: 110px;
+  margin-bottom: -30px;
+
+  .title {
+    @extend .font-section-title;
+    margin-bottom: 50px;
+    margin-top: 100px;
+
+    @include sm-block {
+      font-size: 30px;
+      margin-top: 70px;
+    }
+  }
+
+  .img {
+    height: 300px;
+    background-color: red;
+    position: relative;
+    margin-bottom: 50px;
+
+    @include md-block {
+      height: 195px;
+    }
+  }
+
+  .in-img {
+    position: absolute;
+    bottom: 50px;
+    height: 100px;
+    width: 135px;
+    right: 50px;
+    max-width: 100%;
+    background-color: blue;
+
+    @include md-block {
+      bottom: 30px;
+      right: 30px;
+      height: 67px;
+    }
+
+    @include sm-block {
+      top: 30px;
+      bottom: initial;
+    }
+
+  }
+
+  .children {
+    @include row-flex;
+    margin-bottom: 85px;
+
+    .col-2 {
+       @include col();
+       @include size(5);
+       @include size-md(6);
+      @include size-sm(12);
+     }
+
+    .col-1 {
+      @include col();
+      @include size(4);
+      @include size-md(6);
+      @include size-sm(12);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .logo {
+      height: 50px;
+      background-color: red;
+      margin-bottom: 15px;
+    }
+
+    .text {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 150%;
+      color: rgba(81, 100, 112, 0.7);
+    }
+
+    .link {
+      margin-top: auto;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 23px;
+      color: #0169FF;
+
+      @include sm-block {
+        margin-bottom: 30px;
+      }
+    }
+
+    .text-2 {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 30px;
+      line-height: 43px;
+      color: #15254B;
+
+      @include md-block {
+        font-size: 20px;
+        line-height: 150%;
+      }
+    }
+  }
+
+  .dop {
+    @include row-flex;
+    margin-bottom: 100px;
+
+    .col {
+      @include col();
+      @include size(4);
+      @include size-sm(12);
+
+      @include sm-block {
+        margin-bottom: 50px;
+      }
+    }
+
+    .img-d {
+      height: 200px;
+      background-color: red;
+      margin-bottom: 30px;
+
+      @include sm-block {
+        margin-bottom: 20px;
+      }
+    }
+
+    .text {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 150%;
+      color: #3C5D72;
+
+    }
+  }
+
+  .analog {
+
+    padding: 100px 110px;
+
+
+    @include md-block {
+      padding: 60px 70px;
+    }
+
+    @include sm-block {
+      padding: 50px 30px;
+    }
+
+    background-color: red;
+
+    .block {
+      @include row-flex;
+    }
+
+    .col-1 {
+      @include col();
+      @include size(4);
+      @include size-md(6);
+      @include size-sm(12);
+    }
+
+    .col-2 {
+      @include col();
+      @include shift-left(1);
+      @include size(5);
+      @include shift-md(0);
+      @include size-md(6);
+      @include size-sm(12);
+    }
+
+    .text-1 {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 171%;
+      text-transform: uppercase;
+      color: #F2F5F9;
+      margin-bottom: 10px;
+    }
+
+    .text-2 {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 40px;
+      line-height: 120%;
+      color: #FFFFFF;
+
+      @include sm-block {
+        margin-bottom: 35px;
+        font-size: 30px;
+      }
+    }
+
+    .text-3 {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 160%;
+      color: #FFFFFF;
+    }
+  }
+
+  .technolog {
+    padding: 100px 0 50px;
+    background-color: $color-blue-light;
+    margin-top: 150px ;
+
+    @include sm-block {
+      padding: 50px 0 30px;
+    }
+
+    .title-t {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 40px;
+      line-height: 120%;
+      color: #15254B;
+      margin-bottom: 50px;
+
+      @include sm-block {
+        font-size: 30px;
+      }
+    }
+
+    .col {
+      @include col();
+      @include size(2);
+      @include size-md(3);
+      @include size-sm(6);
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 50px;
+    }
+
+    .icon {
+      padding-bottom: 100%;
+      background-color: red;
+      margin-bottom: 20px;
+    }
+
+    .text {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 160%;
+      color: #15254B;
+      align-self: center;
+    }
+  }
+
+  .benefits {
+    padding: 170px 0 50px;
+
+    @include md-block {
+      padding: 100px 0 50px;
+    }
+    .head {
+      margin-bottom: 60px;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 40px;
+      line-height: 120%;
+      color: #15254B;
+
+      @include sm-block {
+        font-size: 30px;
+      }
+
+      @include sm-block {
+        margin-bottom: 50px;
+      }
+    }
+
+    .col {
+      @include col();
+      @include size(6);
+      @include size-sm(12);
+      margin-bottom: 50px;
+    }
+
+    .icon {
+      height: 60px;
+      width: 60px;
+      margin-bottom: 30px;
+      background-color: red;
+    }
+
+    .text-1 {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 30px;
+      line-height: 120%;
+      color: #15254B;
+      margin-bottom: 22px;
+
+      @include md-block {
+        font-size: 20px;
+      }
+    }
+
+    .text-2 {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 160%;
+      color: #3C5D72;
+    }
+  }
+
+  .decision {
+
+    @include row-flex();
+
+    .col-1 {
+      @include col();
+      @include size(4);
+      @include size-md(12);
+      @include md-block {
+        margin-bottom: 50px;
+      }
+    }
+
+    .col-2 {
+      @include col();
+      @include size(4);
+      @include size-md(6);
+      @include size-sm(12);
+      @include sm-block {
+        margin-bottom: 50px;
+      }
+    }
+
+    .col-3 {
+      @include col();
+      @include size(4);
+      @include size-md(6);
+      @include size-sm(12);
+      @include sm-block {
+        margin-bottom: 50px;
+      }
+    }
+
+    .head {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 40px;
+      line-height: 120%;
+      color: #15254B;
+
+      @include sm-block{
+        font-size: 30px;
+      }
+    }
+
+    .img {
+      height: 200px;
+      background-color: red;
+      margin-bottom: 20px;
+    }
+
+    .text-1 {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 150%;
+      color: #15254B;
+      margin-bottom: 10px;
+    }
+
+    .text-2 {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 22px;
+      color: #3C5D72;
+    }
+  }
+}

@@ -1,0 +1,235 @@
+.about {
+  padding-top: 110px;
+  margin-bottom: -30px;
+
+  .modern {
+    margin-top: 50px;
+    margin-bottom: 100px;
+    display: flex;
+    flex-wrap: wrap;
+
+    .col-1 {
+      background-color: $color-blue-light;
+      display: flex;
+      align-items: center;
+      width: 400px;
+      flex-grow: 1;
+
+      @include md-block{
+        width: 200px;
+      }
+
+      @include sm-block {
+        width: 100%;
+        background: none;
+      }
+    }
+
+    .title {
+      font-style: normal;
+      padding: 50px 0 50px 50px;
+      font-weight: 500;
+      font-size: 40px;
+      line-height: 140%;
+      color: $color-dark-90;
+
+      @include md-block{
+        font-size: 30px;
+      };
+
+      @include sm-block {
+        padding: 20px 0 84px;
+      }
+    }
+
+    .col-2 {
+      padding: 0 50px 60px;
+      background-color: $color-blue-light;
+      overflow: hidden;
+      width: 410px;
+
+      @include sm-block {
+        width: 100%;
+      }
+    }
+
+    .img {
+      height: 183px;
+      width: 90%;
+      background-color: red;
+      transform: rotate(-6deg) translateY(-30px);
+      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+      max-width: 300px;
+
+      @include md-block {
+        transform: rotate(-6deg) translateY(-30px);
+      }
+    }
+
+    .text-1 {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 150%;
+      color: $color-black-blue-100;
+      margin-bottom: 40px;
+      margin-top: 15px;
+    }
+
+    .link {
+      @include btn;
+      @include btn-blue;
+      @include btn-large;
+    }
+  }
+
+  .head-2 {
+    @extend .font-section-title;
+    margin-bottom: 50px;
+
+    @include sm-block {
+      font-size: 30px;
+    }
+  }
+
+  .to {
+    @include row-flex;
+
+    .col{
+      @include col();
+      @include size(4);
+      @include size-md(6);
+      @include size-xs(12);
+      margin-bottom: 50px;
+    }
+
+    .img {
+      height: 180px;
+      background-color: red;
+    }
+
+    .title {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 150%;
+      color: $color-dark-90;
+      margin: 20px 0 16px;
+    }
+
+    .text {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 150%;
+      color: $color-black-blue-100;
+    }
+  }
+
+  .n-block {
+    .title {
+      @extend .font-section-title;
+      margin-bottom: 50px;
+      margin-top: 70px;
+
+      @include sm-block {
+        font-size: 30px;
+      }
+    }
+
+    .abouts {
+      @include row-flex;
+      margin-bottom: 80px;
+
+      .col-1 {
+        @include col();
+        @include size(4);
+        @include size-md(6);
+        @include size-sm(12);
+        border: 1px solid #D4E2EB;
+        box-sizing: border-box;
+        border-radius: 4px;
+        padding: 50px 40px 35px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .col-2 {
+        @include col();
+        @include size(4);
+        @include size-md(6);
+        border: 1px solid #D4E2EB;
+        box-sizing: border-box;
+        border-radius: 4px;
+        padding: 50px 40px 35px;
+        display: flex;
+        flex-direction: column;
+
+        @include sm-block{
+          display: none;
+        }
+      }
+
+      .col-3 {
+        @include col();
+        @include size(4);
+        @include size-md(6);
+        border: 1px solid #D4E2EB;
+        box-sizing: border-box;
+        border-radius: 4px;
+        padding: 50px 40px 35px;
+        display: flex;
+        flex-direction: column;
+
+        @include md-block{
+          display: none;
+        }
+      }
+
+      .logo {
+        width: 150px;
+        height: 20px;
+        background-color: red;
+        margin-bottom: 50px;
+      }
+
+      .date {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 22px;
+        color: #3C5D72;
+        margin-bottom: 10px;
+      }
+
+      .text {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 150%;
+        color: #15254B;
+        margin-bottom: 60px;
+      }
+
+      .link {
+        margin-top: auto;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        color: #0169FF;
+
+        &:hover {
+          opacity: .8;
+        }
+      }
+    }
+  }
+
+  .to-news {
+    @include btn;
+    @include btn-second;
+    @include btn-large;
+    margin-top: 80px;
+  }
+}
