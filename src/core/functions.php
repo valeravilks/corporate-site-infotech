@@ -48,6 +48,15 @@ function register_acf_options_pages() {
         'capability'    => 'edit_posts',
         'redirect'      => true
     ));
+
+    acf_add_options_sub_page(array(
+        'page_title' 	=> 'Направления деятельности',
+        'menu_title'	=> 'Направления деятельности',
+        'parent_slug'	=> 'site-settings',
+        'menu_slug'     => 'about',
+        'capability'    => 'edit_posts',
+        'redirect'      => true
+    ));
 }
 
 // Hook into acf initialization.

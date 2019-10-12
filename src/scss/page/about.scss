@@ -60,6 +60,9 @@
       transform: rotate(-6deg) translateY(-30px);
       box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
       max-width: 300px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
 
       @include md-block {
         transform: rotate(-6deg) translateY(-30px);
@@ -106,6 +109,9 @@
     .img {
       height: 180px;
       background-color: red;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
     }
 
     .title {

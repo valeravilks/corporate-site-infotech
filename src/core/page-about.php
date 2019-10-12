@@ -11,78 +11,40 @@ get_header(); ?>
         <div class="modern">
             <div class="col-1">
                 <div class="title">
-                    Современный подход к автоматизации и решению повседневных задач бизнеса
+                    <?php the_field('about_title', 'option'); ?>
                 </div>
             </div>
             <div class="col-2">
-                <div class="img">
+                <div class="img" style="background-image: url(<?php echo get_field('about_cart', 'option');?>)">
                 </div>
                 <div class="text-1">
-                    Ознакомьтесь с основными направлениями деятельности компании
+                    <?php the_field('about_text1', 'option'); ?>
                 </div>
-                <a href="#" class="link">
-                    Скачать буклет
+                <a href="<?php the_field('about_link', 'option'); ?>" class="link">
+                    <?php the_field('about_text-link', 'option'); ?>
                 </a>
             </div>
         </div>
         <div class="head-2">
-            Основные направления деятельности компании
+            <?php the_field('about-1', 'option'); ?>
         </div>
         <div class="to">
-            <div class="col">
-                <div class="img"></div>
-                <div class="title">
-                    Внедрение программных продуктов
-                </div>
-                <div class="text">
-                    Внедряем программные продукты собственной разработки в сферы энергетики, судостроения, учета имущества, здравоохранения, обеспечения безопасности и охраны
-                </div>
-            </div>
-            <div class="col">
-                <div class="img"></div>
-                <div class="title">
-                    Внедрение программных продуктов
-                </div>
-                <div class="text">
-                    Внедряем программные продукты собственной разработки в сферы энергетики, судостроения, учета имущества, здравоохранения, обеспечения безопасности и охраны
-                </div>
-            </div>
-            <div class="col">
-                <div class="img"></div>
-                <div class="title">
-                    Внедрение программных продуктов
-                </div>
-                <div class="text">
-                    Внедряем программные продукты собственной разработки в сферы энергетики, судостроения, учета имущества, здравоохранения, обеспечения безопасности и охраны
-                </div>
-            </div>
-            <div class="col">
-                <div class="img"></div>
-                <div class="title">
-                    Внедрение программных продуктов
-                </div>
-                <div class="text">
-                    Внедряем программные продукты собственной разработки в сферы энергетики, судостроения, учета имущества, здравоохранения, обеспечения безопасности и охраны
-                </div>
-            </div>
-            <div class="col">
-                <div class="img"></div>
-                <div class="title">
-                    Внедрение программных продуктов
-                </div>
-                <div class="text">
-                    Внедряем программные продукты собственной разработки в сферы энергетики, судостроения, учета имущества, здравоохранения, обеспечения безопасности и охраны
-                </div>
-            </div>
-            <div class="col">
-                <div class="img"></div>
-                <div class="title">
-                    Внедрение программных продуктов
-                </div>
-                <div class="text">
-                    Внедряем программные продукты собственной разработки в сферы энергетики, судостроения, учета имущества, здравоохранения, обеспечения безопасности и охраны
-                </div>
-            </div>
+            <?php if( have_rows('about-2', 'option')) :
+                while (have_rows('about-2', 'option')) :
+                    the_row();
+                    ?>
+                    <div class="col">
+                        <div class="img" style="background-image: url(<?php echo get_sub_field('img');?>)"></div>
+                        <div class="title">
+                            <?php echo get_sub_field('text-1');?>
+                        </div>
+                        <div class="text">
+                            <?php echo get_sub_field('text-2');?>
+                        </div>
+                    </div>
+                <?php endwhile;
+            endif;
+            ?>
         </div>
         <div class="n-block">
             <div class="title">
