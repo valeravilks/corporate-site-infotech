@@ -39,6 +39,15 @@ function register_acf_options_pages() {
         'capability'    => 'edit_posts',
         'redirect'      => false
     ));
+
+    acf_add_options_sub_page(array(
+        'page_title' 	=> 'Проект в Сколково',
+        'menu_title'	=> 'Проект в Сколково',
+        'parent_slug'	=> 'site-settings',
+        'menu_slug'     => 'scolkovo',
+        'capability'    => 'edit_posts',
+        'redirect'      => true
+    ));
 }
 
 // Hook into acf initialization.

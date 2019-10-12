@@ -18,25 +18,25 @@
     background-color: red;
     position: relative;
     margin-bottom: 50px;
+    background-color: red;
 
     @include md-block {
       height: 195px;
     }
   }
 
+
   .in-img {
     position: absolute;
     bottom: 50px;
     height: 100px;
-    width: 135px;
     right: 50px;
-    max-width: 100%;
-    background-color: blue;
+    width: auto;
 
     @include md-block {
       bottom: 30px;
       right: 30px;
-      height: 67px;
+      height: 65px;
     }
 
     @include sm-block {
@@ -67,9 +67,10 @@
     }
 
     .logo {
-      height: 50px;
-      background-color: red;
+      max-height: 50px;
       margin-bottom: 15px;
+      align-self: flex-start;
+      max-width: 100%;
     }
 
     .text {
@@ -125,6 +126,9 @@
       height: 200px;
       background-color: red;
       margin-bottom: 30px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
 
       @include sm-block {
         margin-bottom: 20px;
@@ -142,7 +146,9 @@
   }
 
   .analog {
-
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     padding: 100px 110px;
 
 
@@ -241,9 +247,14 @@
     }
 
     .icon {
-      padding-bottom: 100%;
-      background-color: red;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
       margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      height: 80px;
+      justify-content: center;
     }
 
     .text {
@@ -252,6 +263,12 @@
       font-size: 18px;
       line-height: 160%;
       color: #15254B;
+      align-self: center;
+    }
+
+    .image {
+      font-size: 10px;
+      max-width: 80px;
       align-self: center;
     }
   }
@@ -290,7 +307,6 @@
       height: 60px;
       width: 60px;
       margin-bottom: 30px;
-      background-color: red;
     }
 
     .text-1 {
@@ -304,6 +320,10 @@
       @include md-block {
         font-size: 20px;
       }
+    }
+    .image {
+      max-width: 60px;
+      max-height: 60px;
     }
 
     .text-2 {
@@ -360,10 +380,13 @@
       }
     }
 
-    .img {
+    .image {
       height: 200px;
       background-color: red;
       margin-bottom: 20px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
     }
 
     .text-1 {
