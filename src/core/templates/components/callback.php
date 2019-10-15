@@ -6,7 +6,7 @@
                     Заказ обратного звонка
                 </div>
                 <div class="callback__text">
-                    Наши специалисты свяжутся с вами в самое ближайшее время
+                    Наши специалисты свяжутся с вами в удобное для вас время
                 </div>
             </div>
             <div class="callback__col-2 order-1 order-md-2 offset-md-1 col-md-7 offset-xl-1 col-xl-5">

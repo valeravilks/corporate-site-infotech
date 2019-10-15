@@ -21,6 +21,7 @@ Theme Name: Info tech
 @import "./scss/page/license";
 @import "./scss/page/about";
 @import "./scss/page/scolkovo";
+@import "./scss/page/news";
 
 
 .wrapper {
@@ -245,7 +246,7 @@ a {
   }
 
   &__text {
-    @include head-20-medium;
+    @include head-20-regular;
     margin-bottom: 30px;
     color: $color-black-blue-100;
   }
@@ -347,10 +348,11 @@ a {
     @include head-40-bold;
     padding-right: 90px;
     padding-bottom: 40px;
+    color: $color-dark-90;
 
     @include sm-block{
       @include head-30-bold;
-      color: $color-dark-90;
+
     }
   }
 

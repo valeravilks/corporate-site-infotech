@@ -113,13 +113,17 @@
     font-size: 14px!important;
     padding-top: 8px!important;
 }
+.mdc-text-field__input:focus .wpforms-field-text input:focus {
+    border: 1px solid $color-blue!important;
+    outline: none;
+    color: $color-dark-90;
+}
 
 .mdc-text-field__input:hover, .wpforms-field-text input:hover {
     border: 1px solid $color-tertiary-text-1;
 }
 
-.mdc-text-field__input:focus .wpforms-field-text input:focus {
-    border: 1px solid $color-blue;
+.wpforms-field-text input:focus {
     outline: none;
-    color: $color-dark-90;
+    border: 1px solid #0169FF!important;
 }

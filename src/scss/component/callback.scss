@@ -58,7 +58,7 @@
 
     &__col-2 {
         @include col();
-        @include size(5);
+        @include size(6);
         @include shift-left(1);
         @include size-lg(7);
         @include size-md(12);
@@ -72,7 +72,6 @@
     &__col-3 {
         @include col();
         @include size(1);
-        @include shift-left(1);
         @include size-lg(1);
         @include shift-lg-left(0);
         @include size-md(1);

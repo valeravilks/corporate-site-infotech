@@ -7,6 +7,10 @@
         &_lvl_1{
             position: relative;
 
+            &.menu__item-active a{
+                color: $color-dark-90;
+            }
+
             &:hover {
                 .menu__helper {
                     display: block;
@@ -21,7 +25,17 @@
                 z-index: 100;
             }
 
+            &:hover > a:not(:only-child):after{
+                transform: rotate(180deg) translateY(-7px);
+            }
+
+            & > a:not(:only-child):after {
+                transition: all .3s ease;
+                transform: rotate(0deg) translateY(0px);
+            }
+
             & > a:not(:only-child):after{
+                display: inline-block;
                 margin-left: 5px;
                 content: url('~/img/main/arrow-menu.svg');
                 position: relative;
@@ -52,7 +66,7 @@
                 position: absolute;
                 right: -10px;
                 left: -10px;
-                bottom: -25px;
+                bottom: -28px;
             }
         }
     }

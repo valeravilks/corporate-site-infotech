@@ -271,3 +271,8 @@ add_action( 'after_setup_theme', 'theme_register_nav_menu23' );
 function theme_register_nav_menu23() {
     register_nav_menu( 'about', 'Меню О компании' );
 }
+
+add_action( 'after_setup_theme', 'theme_register_nav_menu2333' );
+function theme_register_nav_menu2333() {
+    register_nav_menu( 'news', 'Меню Новости' );
+}

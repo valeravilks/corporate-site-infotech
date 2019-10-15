@@ -2,9 +2,6 @@
     border-radius: 4px;
     border: 1px solid rgba(0,0,0,0);
 }
-.jqselect.opened {
-    border: 1px solid $color-blue;
-}
 
 .jq-selectbox__select::before {
     position: absolute;
@@ -184,7 +181,21 @@
 
 .wpforms-field-select {
     position: relative;
+    outline: none;
 }
+
+.jqselect.opened .jq-selectbox__select{
+    border: 1px solid $color-blue;
+}
+
+
+
+
+.wpforms-field-text input:focus {
+    outline: none;
+    border: 1px solid $color-blue;
+}
+
 .wpforms-field-select label {
     pointer-events: none;
     z-index: 130;
@@ -267,4 +278,8 @@
 .callback-form .wpforms-field-container > * {
     margin-bottom: 20px;
     flex: 0 0 100%;
+}
+
+.jq-selectbox__select:focus {
+    border: 1px solid $color-blue;
 }

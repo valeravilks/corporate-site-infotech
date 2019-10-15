@@ -119,11 +119,11 @@ function counter(event) {
 // Styler select
 
 $('.select').styler({
-    selectSmartPositioning: true
+    selectSmartPositioning: false
 });
 
 $('.wpforms-field-select select').styler({
-    selectSmartPositioning: true
+    selectSmartPositioning: false
 });
 
 $('.hp2__col').hover(function(){
