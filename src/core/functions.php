@@ -61,5 +61,6 @@ function register_acf_options_pages() {
 
 // Hook into acf initialization.
 add_action('acf/init', 'register_acf_options_pages');
-add_theme_support( 'post-thumbnails', array( 'news' , 'publications' ) );
+add_theme_support( 'post-thumbnails', array( 'new' , 'publications' ) );
+
 

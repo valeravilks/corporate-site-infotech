@@ -30,7 +30,7 @@
             }
 
             & > a:not(:only-child):after {
-                transition: all .3s ease;
+                transition: all .2s ease;
                 transform: rotate(0deg) translateY(0px);
             }
 

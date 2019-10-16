@@ -30,6 +30,10 @@ get_header();
             'echo'      => true,
             'topic_count_text_callback' => 'default_topic_count_text',
         ) );
+
+        // Получаем слаг текущего тега
+        $tax_current = single_term_title('', 0);
+        $term = get_term_by('name', $tax_current , 'tags');
         ?>
         <div class="title">
             Новости компании
@@ -39,6 +43,7 @@ get_header();
             <?php $posts = get_posts( array(
                 'numberposts' => 1000,
                 'category'    => 0,
+                'tags'         => $term->slug,
                 'orderby'     => 'date',
                 'order'       => 'DESC',
                 'include'     => array(),

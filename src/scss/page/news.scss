@@ -1,4 +1,112 @@
 .news-page {
   padding-top: 110px;
   margin-bottom: -30px;
+
+  .title {
+    @extend .font-section-title;
+    margin-bottom: 37px;
+    margin-top: 20px;
+
+    @include sm-block {
+      font-size: 30px;
+      margin-top: 57px;
+    }
+  }
+
+  .col {
+    padding-bottom: 50px;
+    @include col();
+    @include size(4);
+    @include size-md(6);
+    @include size-sm(12);
+
+    &:hover .head{
+      color: $color-blue;
+    }
+
+    .img {
+      height: 200px;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      margin-bottom: 30px;
+    }
+
+    .head {
+      margin-bottom: 10px;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 150%;
+      color: #15254B;
+    }
+    .date {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 22px;
+      color: rgba(81, 100, 112, 0.7);
+    }
+
+    .text {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 25px;
+      color: #3C5D72;
+    }
+  }
+
+  .find_block {
+    display: flex;
+    justify-content: flex-end;
+
+    @include sm-block {
+      display: none;
+    }
+
+    .button {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 20px;
+      color: rgba(81, 100, 112, 0.7);
+      cursor: pointer;
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+
+    .button:after {
+      display: inline-block;
+      margin-left: 15px;
+      content: url('~/img/main/arrow-menu.svg');
+      position: relative;
+      bottom: 1px;
+      transform: rotate(0deg) translateY(0px);
+      transition: all .2s ease;
+    }
+  }
+}
+
+.wp-tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+
+  li {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background-color: #F2F5F9;
+    min-height: 30px;
+    display: flex;
+    align-items: center;
+
+    a {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 22px;
+      color: #15254B;
+      padding: 0 10px;
+    }
+  }
 }

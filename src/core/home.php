@@ -167,10 +167,11 @@
                 <div class="hp4__text">
                     Infotech Group реализует проекты для крупнейших компаний России
                 </div>
+                <div class="hp4__slider owl-carousel owl-theme-slide js-main-slider-2">
+                    <?php get_template_part('templates/project/project-cart'); ?>
+                </div>
             </div>
-           <div class="hp4__slider owl-carousel owl-theme-slide js-main-slider-2">
-               <?php get_template_part('templates/project/project-cart'); ?>
-           </div>
+
        </section>
        <?php get_template_part('templates/our-client'); ?>
        <section class="home-page__3 hp3" style="background-image: url(<?php the_field('s6-bg', 'option')['url'];?>)">
