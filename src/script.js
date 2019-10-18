@@ -36,6 +36,14 @@ $('.slider-ul').owlCarousel({
 
 $('.slider-ul').addClass("owl-carousel").addClass('owl-theme-slide');
 
+$('.js-news-slide-tablet').owlCarousel({
+    autoWidth:true,
+    margin:30,
+    dots:false,
+    loop: false,
+    nav: false
+});
+
 var slides = $('.js-main-slider-2').find('.owl-item').not('.cloned').find('.js-project-cart');
 let slideMass = [];
 
@@ -145,7 +153,8 @@ $('.wp-tag-cloud').addClass('d-none');
 $(document).ready(function(){
     $('.news-page .find_block .button').click(function(){
         $('.wp-tag-cloud').toggleClass('d-none');
-
+        $('.find_block .button').toggleClass('button-active');
+        $('.find_block .button .quarat').toggleClass('active');
     });
 
     // if($('*').is('.js-main-slider-2')) {

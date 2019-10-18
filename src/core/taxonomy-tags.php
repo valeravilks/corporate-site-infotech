@@ -11,7 +11,10 @@ get_header();
 <section class="news-page">
     <div class="wrapper">
         <?php get_template_part('templates/mini-menu-news'); ?>
-        <div class="find_block">
+        <div class="find_block find_block-tag">
+            <a href="<?php echo pll_home_url(); ?>news/" class="current-tag">
+                <?php single_term_title(); ?> <span>+</span>
+            </a>
             <div class="button">Поиск по тегам</div>
         </div>
         <?php wp_tag_cloud( array(

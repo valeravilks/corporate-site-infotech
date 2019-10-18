@@ -2,8 +2,6 @@
 
 // File with script and style
 
-
-
 add_action( 'wp_enqueue_scripts', 'theme_name_scripts' );
 function theme_name_scripts() {
 //  wp_enqueue_style( 'owl', get_template_directory_uri() . '/css/owl.carousel.css' );

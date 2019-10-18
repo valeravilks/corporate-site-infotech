@@ -129,6 +129,7 @@
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
+      border-radius: 4px;
 
       @include sm-block {
         margin-bottom: 20px;
@@ -146,10 +147,9 @@
   }
 
   .analog {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    background-color: $color-blue-active;
     padding: 100px 110px;
+    border-radius: 4px;
 
 
     @include md-block {
@@ -159,8 +159,6 @@
     @include sm-block {
       padding: 50px 30px;
     }
-
-    background-color: red;
 
     .block {
       @include row-flex;
@@ -312,7 +310,7 @@
     .text-1 {
       font-style: normal;
       font-weight: bold;
-      font-size: 30px;
+      font-size: 20px;
       line-height: 120%;
       color: #15254B;
       margin-bottom: 22px;
@@ -332,6 +330,7 @@
       font-size: 18px;
       line-height: 160%;
       color: #3C5D72;
+      padding-right: 50px;
     }
   }
 
@@ -356,6 +355,16 @@
       @include sm-block {
         margin-bottom: 50px;
       }
+
+      &:hover {
+        .image {
+          transform: scale(1.1);
+        }
+
+        .text-1 {
+          color: $color-blue;
+        }
+      }
     }
 
     .col-3 {
@@ -365,6 +374,17 @@
       @include size-sm(12);
       @include sm-block {
         margin-bottom: 50px;
+      }
+      cursor: pointer;
+
+      &:hover {
+        .image {
+          transform: scale(1.1);
+        }
+
+        .text-1 {
+          color: $color-blue;
+        }
       }
     }
 
@@ -379,14 +399,21 @@
         font-size: 30px;
       }
     }
-
-    .image {
+    .help {
       height: 200px;
-      background-color: red;
       margin-bottom: 20px;
+      overflow: hidden;
+      border-radius: 4px;
+    }
+    .image {
+      width: 100%;
+      background-color: red;
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
+      height: 100%;
+      transition: all .3s ease;
+
     }
 
     .text-1 {

@@ -75,7 +75,7 @@ get_header(); ?>
             <?php endif; ?>
 
         </div>
-        <div class="analog" style="background-image: url(<?php the_field('scolT-bg', 'option')['url']; ?>)">
+        <div class="analog">
             <div class="block">
                 <div class="col-1">
                     <div class="text-1">
@@ -149,24 +149,28 @@ get_header(); ?>
                     <?php the_field('scol-got-title', 'option'); ?>
                 </div>
             </div>
-            <div class="col-2">
-                <div class="image" style="background-image: url(<?php the_field('scol-good-img1', 'option'); ?>)"></div>
+            <a href="<?php the_field('scol-good-link-1', 'option')['url'] ?>" class="col-2">
+                <div class="help">
+                    <div class="image" style="background-image: url(<?php the_field('scol-good-img1', 'option'); ?>)"></div>
+                </div>
                 <div class="text-1">
                     <?php the_field('scol-good-head1', 'option'); ?>
                 </div>
                 <div class="text-2">
                     <?php the_field('scol-good-text1', 'option'); ?>
                 </div>
-            </div>
-            <div class="col-3">
-                <div class="image" style="background-image: url(<?php the_field('scol-good-img2', 'option'); ?>)"></div>
+            </a>
+            <a href="<?php the_field('scol-good-link-2', 'option')['url'] ?>" class="col-3">
+                <div class="help">
+                    <div class="image" style="background-image: url(<?php the_field('scol-good-img2', 'option'); ?>)"></div>
+                </div>
                 <div class="text-1">
                     <?php the_field('scol-good-head2', 'option'); ?>
                 </div>
                 <div class="text-2">
                     <?php the_field('scol-good-text2', 'option'); ?>
                 </div>
-            </div>
+            </a>
         </div>
     </div>
 

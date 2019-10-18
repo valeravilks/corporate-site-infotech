@@ -59,7 +59,7 @@ wp_footer();
             </div>
         </div>
         <div class="footer__row2">
-            <div class="footer__company1 f-comp">
+            <a href="<?php the_field('logo-link-1', 'option')['url']; ?>" class="footer__company1 f-comp">
                 <div class="f-comp__img">
                     <img src="<?php the_field('logo1', 'option')['url']; ?>"
                          alt=""
@@ -68,8 +68,8 @@ wp_footer();
                 <div class="f-comp__text">
                     <?php the_field('logo-text1', 'option'); ?>
                 </div>
-            </div>
-            <div class="footer__company2 f-comp">
+            </a>
+            <a href="<?php esc_url(the_field('logo-link-2', 'option')); ?>" class="footer__company2 f-comp">
                 <div class="f-comp__img">
                     <img src="<?php the_field('logo2', 'option')['url']; ?>"
                          alt=""
@@ -78,7 +78,7 @@ wp_footer();
                 <div class="f-comp__text">
                     <?php the_field('logo-text2', 'option'); ?>
                 </div>
-            </div>
+            </a>
         </div>
         <div class="footer__row3">
             <div class="footer__col-31">

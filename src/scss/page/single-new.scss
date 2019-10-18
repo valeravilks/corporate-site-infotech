@@ -8,11 +8,11 @@
     line-height: 22px;
     margin-bottom: 110px;
 
-    .home, .arrow {
+    .home, .arrow, .all_news {
       color: rgba(81, 100, 112, 0.7);
     }
 
-    .all_news {
+    a:hover {
       color: #3C5D72;
     }
 
@@ -38,12 +38,17 @@
       line-height: 150%;
       color: rgba(81, 100, 112, 0.7);
       margin-bottom: 40px;
+      transition: background-color .2s ease;
     }
 
     .tags {
 
       li {
         list-style: none;
+
+        &:hover a {
+          background-color: $color-tertiary-text-3;
+        }
 
         a{
           font-style: normal;
@@ -83,7 +88,7 @@
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
-    line-height: 150%;
+    line-height: 170%;
     color: #3C5D72;
     margin-bottom: 30px;
   }

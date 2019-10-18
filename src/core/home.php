@@ -197,92 +197,132 @@
                    Новости компании
                </div>
                <div class="row row-1">
-                   <div class="col col-1">
-                        <div class="new-cart-large">
-                            <div class="data">
-                                18 марта
-                            </div>
-                            <div class="title">
-                                Специалисты Infotech Group встретились со студентами «СТАНКИН»
-                            </div>
-                            <div class="text">
-                                Ведущие специалисты Infotech Group рассказали студентам МГТУ «СТАНКИН» о возможностях развития в компании.
-                            </div>
-                        </div>
-                   </div>
-                   <div class="col col-2">
-                       <div class="new-cart-medium">
-                            <div class="img-data">
+
+                   <?php $posts = get_posts( array(
+                       'numberposts' => 15,
+                       'category'    => 0,
+                       'orderby'     => 'date',
+                       'order'       => 'DESC',
+                       'include'     => array(),
+                       'exclude'     => array(),
+                       'meta_key'    => '',
+                       'meta_value'  =>'',
+                       'post_type'   => 'new',
+                       'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
+                   ) );
+
+                   $i = 1;
+                   ?>
+
+                   <?php foreach( $posts as $post ):
+                        if($i == 1) :
+                       ?>
+
+                        <a href="<?php the_permalink(); ?>" class="col col-1">
+                            <div class="new-cart-large" style="background-image: url(<?php the_post_thumbnail_url('large'); ?>)">
                                 <div class="data">
-                                    3 марта
+                                    <?php echo get_the_date(); ?>
+                                </div>
+                                <div class="title">
+                                    <?php the_title();?>
+                                </div>
+                                <div class="text">
+                                    <?php the_excerpt(); ?>
                                 </div>
                             </div>
-                           <div class="title">
-                               Infotech Group участвует в конкурсе портала «Рынок электротехники»
-                           </div>
-                           <div class="text">
-                               Ведущие специалисты Infotech Group рассказали студентам МГТУ «СТАНКИН» о возможностях развития в компании.
-                           </div>
-                       </div>
-                   </div>
-                   <div class="col col-2">
-                       <div class="new-cart-medium">
-                           <div class="img-data">
-                               <div class="data">
-                                   3 марта
-                               </div>
-                           </div>
-                           <div class="title">
-                               Infotech Group участвует в конкурсе портала «Рынок электротехники»
-                           </div>
-                           <div class="text">
-                               Ведущие специалисты Infotech Group рассказали студентам МГТУ «СТАНКИН» о возможностях развития в компании.
-                           </div>
-                       </div>
-                   </div>
+                        </a>
+
+                        <?
+                        endif;
+                        if($i == 2 || $i == 3) :
+                        ?>
+                            <a href="<?php the_permalink(); ?>" class="col col-2">
+                                <div class="new-cart-medium">
+                                    <div class="img-data" style="background-image: url(<?php the_post_thumbnail_url('medium'); ?>)">
+                                        <div class="data">
+                                            <?php echo get_the_date(); ?>
+                                        </div>
+                                    </div>
+                                    <div class="title">
+                                        <?php the_title();?>
+                                    </div>
+                                    <div class="text">
+                                        <?php the_excerpt(); ?>
+                                    </div>
+                                </div>
+                            </a>
+                        <?php
+                        endif;
+                       $i++;
+                        endforeach;
+                   ?>
                </div>
                <div class="row row-2">
-                   <div class="new-cart-small">
-                        <div class="title">
-                            Система Infotech Group помогает ФГУП «Охрана» Росгвардии работать с контрагентами
-                        </div>
-                       <div class="text">
-                           Infotech Group модернизировала систему управления контрагентами для ФГУП «Охрана» Росгвардии.
-                       </div>
-                   </div>
-                   <div class="new-cart-small">
-                       <div class="title">
-                           Система Infotech Group помогает ФГУП «Охрана» Росгвардии работать с контрагентами
-                       </div>
-                       <div class="text">
-                           Infotech Group модернизировала систему управления контрагентами для ФГУП «Охрана» Росгвардии.
-                       </div>
-                   </div>
-                   <div class="new-cart-small">
-                       <div class="title">
-                           Система Infotech Group помогает ФГУП «Охрана» Росгвардии работать с контрагентами
-                       </div>
-                       <div class="text">
-                           Infotech Group модернизировала систему управления контрагентами для ФГУП «Охрана» Росгвардии.
-                       </div>
-                   </div>
-                   <div class="new-cart-small">
-                       <div class="title">
-                           Система Infotech Group помогает ФГУП «Охрана» Росгвардии работать с контрагентами
-                       </div>
-                       <div class="text">
-                           Infotech Group модернизировала систему управления контрагентами для ФГУП «Охрана» Росгвардии.
-                       </div>
-                   </div>
+                    <?php
+                        $i = 1;
+                        foreach ($posts as $post):
+                        if($i > 3 && $i < 8):
+                        ?>
+                        <a href="<?php the_permalink(); ?>" class="new-cart-small">
+                            <div class="title">
+                                <?php the_title();?>
+                            </div>
+                            <div class="text">
+                                <?php the_excerpt(); ?>
+                            </div>
+                        </a>
+                    <?php endif;
+                    $i++;
+                    endforeach; ?>
+                   <?php wp_reset_postdata(); // сsброс ?>
                </div>
            </div>
        </section>
+       <secttion class="main-news-tablet">
+           <div class="wrapper">
+               <div class="head">
+                   Новости компании
+               </div>
+               <div class="slide-news-tablet js-news-slide-tablet owl-carousel owl-theme">
+
+
+                <?php $posts = get_posts( array(
+                       'numberposts' => 10,
+                       'category'    => 0,
+                       'orderby'     => 'date',
+                       'order'       => 'DESC',
+                       'include'     => array(),
+                       'exclude'     => array(),
+                       'meta_key'    => '',
+                       'meta_value'  =>'',
+                       'post_type'   => 'new',
+                       'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
+                   ) );
+                   ?>
+                   <?php foreach( $posts as $post ):
+
+                        ?>
+                            <a href="<?php the_permalink(); ?>">
+                                <div class="new-cart-medium">
+                                    <div class="img-data" style="background-image: url(<?php the_post_thumbnail_url('medium'); ?>)">
+                                        <div class="data">
+                                            <?php echo get_the_date(); ?>
+                                        </div>
+                                    </div>
+                                    <div class="title">
+                                        <?php the_title();?>
+                                    </div>
+                                    <div class="text">
+                                        <?php the_excerpt(); ?>
+                                    </div>
+                                </div>
+                            </a>
+                        <?php
+                        endforeach; ?>
+               </div>
+           </div>
+       </secttion>
    </main>
-
-
-
-
-
 <?php
 
 get_footer(); ?>

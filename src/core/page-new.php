@@ -12,7 +12,10 @@ get_header();
     <div class="wrapper">
         <?php get_template_part('templates/mini-menu-news'); ?>
         <div class="find_block">
-            <div class="button">Поиск по тегам</div>
+            <div class="button">
+                <div class="help">Поиск по тегам</div>
+                <div class="quarat"></div>
+            </div>
         </div>
         <?php wp_tag_cloud( array(
             'smallest'  => 14,

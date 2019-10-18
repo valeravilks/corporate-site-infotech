@@ -65,6 +65,10 @@
       display: none;
     }
 
+    &-tag {
+      justify-content: space-between;
+    }
+
     .button {
       font-style: normal;
       font-weight: 500;
@@ -74,16 +78,57 @@
       cursor: pointer;
       margin-top: 30px;
       margin-bottom: 30px;
-    }
+      display: flex;
+      align-items: center;
 
-    .button:after {
-      display: inline-block;
-      margin-left: 15px;
-      content: url('~/img/main/arrow-menu.svg');
-      position: relative;
-      bottom: 1px;
-      transform: rotate(0deg) translateY(0px);
-      transition: all .2s ease;
+
+      .help{
+        margin-right: 20px;
+      }
+      &:hover {
+        color: $color-black-blue-100;
+
+        .quarat {
+          border-right: 2px solid $color-black-blue-100;
+          border-bottom: 2px solid $color-black-blue-100;
+
+        }
+      }
+
+      &-active {
+        color: $color-dark-90;
+
+        &:hover{
+          color: $color-dark-90;
+        }
+      }
+    }
+  }
+}
+
+.current-tag {
+  align-self: center;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+  color: #15254B;
+  padding: 4px 37px 4px 10px;
+  background-color: $color-tertiary-text-2;
+  border-radius: 2px;
+  position: relative;
+  cursor: pointer;
+
+  span{
+    transform: rotate(45deg);
+    display: inline-block;
+    font-size: 23px;
+    color: #86939B;
+    right: 11px;
+    position: absolute;
+
+    &:hover {
+      color: $color-dark-90;
     }
   }
 }
@@ -94,11 +139,18 @@
 
   li {
     margin-right: 10px;
+    border-radius: 2px;
     margin-bottom: 10px;
-    background-color: #F2F5F9;
+    background-color: $color-blue-light;
     min-height: 30px;
+    padding: 10px 0;
     display: flex;
     align-items: center;
+    transform: background-color .2s ease;
+
+    &:hover {
+      background-color: $color-tertiary-text-3;
+    }
 
     a {
       font-style: normal;
@@ -108,5 +160,24 @@
       color: #15254B;
       padding: 0 10px;
     }
+  }
+}
+
+.quarat {
+  display: inline-block;
+  border-right: 2px solid $color-black-blue-50;
+  border-bottom: 2px solid $color-black-blue-50;
+  height: 7px;
+  width: 7px;
+  max-width: 7px;
+  max-height: 7px;
+  transform: rotateZ(45deg);
+  transition: all .3s ease;
+  transform-origin: 5px 5px;
+
+  &.active {
+    transform: rotateZ(225deg);
+    border-right: 2px solid $color-dark-90;
+    border-bottom: 2px solid $color-dark-90;
   }
 }

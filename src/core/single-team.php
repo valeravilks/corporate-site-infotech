@@ -37,6 +37,8 @@ get_header();
         $next_post = get_next_post();
         $prev_post = get_previous_post();
 
+        $justify = '';
+
         if(empty($next_post))
         $justify = 'style="justify-content: flex-end;"'
         ?>
