@@ -192,3 +192,18 @@
   line-height: 160%;
   color: $color-black-blue-50;
 }
+
+
+
+
+.h2 {
+  font-family: Gordita, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 120%;
+
+  @include sm-block {
+    font-size: 30px;
+  }
+}

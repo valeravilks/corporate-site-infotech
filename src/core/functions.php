@@ -56,6 +56,15 @@ function register_acf_options_pages() {
         'capability'    => 'edit_posts',
         'redirect'      => true
     ));
+
+    acf_add_options_sub_page(array(
+        'page_title' 	=> 'Estate',
+        'menu_title'	=> 'Estate',
+        'parent_slug'	=> 'site-settings',
+        'menu_slug'     => 'estate',
+        'capability'    => 'edit_posts',
+        'redirect'      => true
+    ));
 }
 
 // Hook into acf initialization.

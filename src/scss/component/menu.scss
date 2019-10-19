@@ -37,7 +37,7 @@
             & > a:not(:only-child):after{
                 display: inline-block;
                 margin-left: 5px;
-                content: url('~/img/main/arrow-menu.svg');
+                content: url('./img/main/arrow-menu.svg');
                 position: relative;
                 bottom: 1px;
 
@@ -257,6 +257,7 @@
         &:nth-child(2) {
             position: absolute;
             top: 200px;
+            left: 15px;
         }
 
         &:hover {

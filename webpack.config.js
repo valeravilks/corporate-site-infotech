@@ -100,7 +100,7 @@ let conf = {
                         loader: 'url-loader',
                         options: {
                             outputPath: 'images',
-                            name: '[name][hash].[ext]',
+                            name: '[name].[ext]',
                             limit: 8192
                         },
                     },
