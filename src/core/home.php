@@ -276,6 +276,9 @@
                     endforeach; ?>
                    <?php wp_reset_postdata(); // сsброс ?>
                </div>
+               <a href="<?php echo pll_home_url(); ?>news/" class="btn">
+                   Перейти ко всем новостям
+               </a>
            </div>
        </section>
        <secttion class="main-news-tablet">
@@ -284,8 +287,6 @@
                    Новости компании
                </div>
                <div class="slide-news-tablet js-news-slide-tablet owl-carousel owl-theme">
-
-
                 <?php $posts = get_posts( array(
                        'numberposts' => 10,
                        'category'    => 0,
@@ -320,6 +321,9 @@
                         <?php
                         endforeach; ?>
                </div>
+               <a href="<?php echo pll_home_url(); ?>news/" class="btn">
+                   Перейти ко всем новостям
+               </a>
            </div>
        </secttion>
    </main>

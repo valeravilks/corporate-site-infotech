@@ -693,6 +693,14 @@ a {
 
 }
 
+.main-news-tablet {
+  .btn {
+    @include btn;
+    @include btn-second;
+    @include btn-large;
+  }
+}
+
 .owl-count {
   align-self: center;
   width: 100px;
@@ -701,7 +709,8 @@ a {
 }
 .main-news-tablet {
   display: none;
-  @extend .section-padding;
+
+  padding-top: 100px;
   
   @include md-block{
     display: block;
@@ -711,12 +720,26 @@ a {
     @extend .font-section-title;
     margin-bottom: 50px;
   }
+
+  .slide-news-tablet {
+    margin-bottom: 70px;
+  }
+
+
 }
 .main-news {
   @include md-block{
     display: none;
   }
-  @extend .section-padding;
+
+  .btn {
+    @include btn;
+    @include btn-second;
+    @include btn-large;
+  }
+
+  padding-top: 100px;
+
   .row{
     @include row-flex;
 
@@ -737,6 +760,8 @@ a {
     }
 
     &.row-2 {
+      margin-bottom: 100px;
+
       .col {
         @include size(3);
       }
