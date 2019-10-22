@@ -16,7 +16,7 @@
                        </div>
                        <div class="hp1__row">
                            <div class="hp1__btn-row">
-                                <a href="<?php the_field('sl-1-link', 'option'); ?>" class="hp1__btn">
+                                <a href="<?php the_field('sl-1-link', 'option'); ?>" target="_blank" class="hp1__btn">
                                     <?php the_field('sl-1-text-link', 'option'); ?>
                                 </a>
                            </div>

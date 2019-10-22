@@ -20,7 +20,7 @@ get_header(); ?>
                 <div class="text-1">
                     <?php the_field('about_text1', 'option'); ?>
                 </div>
-                <a href="<?php the_field('about_link', 'option'); ?>" class="link">
+                <a target="_blank" href="<?php the_field('about_link', 'option'); ?>" class="link">
                     <?php the_field('about_text-link', 'option'); ?>
                 </a>
             </div>

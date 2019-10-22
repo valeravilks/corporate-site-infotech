@@ -45,6 +45,11 @@
         @include menu-16-medium;
         margin-bottom: 10px;
         color: $color-dark-90;
+        display: block;
+
+        &:hover {
+            color: $color-blue;
+        }
     }
 
     &__work {
@@ -193,7 +198,12 @@
     &__mail {
         @include menu-16-medium;
         margin-bottom: 10px;
+        display: block;
         color: $color-dark-90;
+
+        &:hover {
+            color: $color-blue;
+        }
     }
 
     &__text2 {

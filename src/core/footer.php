@@ -30,9 +30,9 @@ wp_footer();
                    class="footer__phone">
                     <?php the_field('phone', 'option'); ?>
                 </a>
-                <div class="footer__mail">
+                <a target="_blank" href="mailto:<?php the_field('email', 'option'); ?>" class="footer__mail">
                     <?php the_field('email', 'option'); ?>
-                </div>
+                </a>
                 <div class="footer__work">
                     <?php the_field('time-work', 'option'); ?>
                 </div>
@@ -59,7 +59,7 @@ wp_footer();
             </div>
         </div>
         <div class="footer__row2">
-            <a href="<?php the_field('logo-link-1', 'option')['url']; ?>" class="footer__company1 f-comp">
+            <a target="_blank" href="<?php the_field('logo-link-1', 'option')['url']; ?>" class="footer__company1 f-comp">
                 <div class="f-comp__img">
                     <img src="<?php the_field('logo1', 'option')['url']; ?>"
                          alt=""
@@ -69,7 +69,7 @@ wp_footer();
                     <?php the_field('logo-text1', 'option'); ?>
                 </div>
             </a>
-            <a href="<?php esc_url(the_field('logo-link-2', 'option')); ?>" class="footer__company2 f-comp">
+            <a target="_blank" href="<?php esc_url(the_field('logo-link-2', 'option')); ?>" class="footer__company2 f-comp">
                 <div class="f-comp__img">
                     <img src="<?php the_field('logo2', 'option')['url']; ?>"
                          alt=""
@@ -92,23 +92,22 @@ wp_footer();
                 </p>
             </div>
             <div class="footer__col-32">
-                <?php wp_nav_menu( [
-                    'theme_location'  => 'footer-menu2',
-                    'menu'            => 'footer-menu2',
-                    'container'       => 'nav',
-                    'container_class' => 'footer__menu2 menu-f2',
-                    'container_id'    => '',
-                    'menu_class'      => 'menu-f',
-                    'menu_id'         => '',
-                    'echo'            => true,
-                    'fallback_cb'     => 'wp_page_menu',
-                    'before'          => '',
-                    'after'           => '',
-                    'link_before'     => '',
-                    'link_after'      => '',
-                    'items_wrap'      => '<ul class="menu-f2__list">%3$s</ul>',
-                    'depth'           => 0,
-                ] ); ?>
+                <ul class="menu-f2__list"><li class="menu-f2__item menu-f2__item_lvl_1 col">
+                        <a target="_blank" href="<?php the_field('foot-1-c', 'option'); ?>" class="menu-f2__link menu-f2__link_lvl_1">
+                            <?php the_field('foot-1-t', 'option'); ?>
+                        </a>
+                    </li>
+                    <li class="menu-f2__item menu-f2__item_lvl_1 col">
+                        <a target="_blank" href="<?php the_field('foot-2-c', 'option'); ?>" class="menu-f2__link menu-f2__link_lvl_1">
+                            <?php the_field('foot-2-t', 'option'); ?>
+                        </a>
+                    </li>
+                    <li class="menu-f2__item menu-f2__item_lvl_1 col">
+                        <a target="_blank" href="<?php the_field('foot-3-c', 'option'); ?>" class="menu-f2__link menu-f2__link_lvl_1">
+                            <?php the_field('foot-3-t', 'option'); ?>
+                        </a>
+                    </li>
+                </ul>
             </div>
             <div class="footer__col-33">
                 <div class="footer__help f-help">
@@ -118,9 +117,9 @@ wp_footer();
                     <div class="f-help__phone">
                         <?php the_field('tech-phone', 'option'); ?>
                     </div>
-                    <div class="f-help__mail">
+                    <a target="_blank" href="mailto:<?php the_field('email-tech', 'option'); ?>" class="f-help__mail">
                         <?php the_field('email-tech', 'option'); ?>
-                    </div>
+                    </a>
                     <div class="f-help__text2">
                         <?php the_field('tech-text', 'option'); ?>
                     </div>

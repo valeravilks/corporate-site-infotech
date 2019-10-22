@@ -34,6 +34,7 @@ function counterS(event) {
 
 $('.sl-next').click(function(){
     mainSlider.trigger('next.owl.carousel');
+    mainSlider.trigger('stop.owl.autoplay');
 });
 
 mainSlider.on('drag.owl.carousel', function(){
@@ -48,16 +49,50 @@ let slider2 = $(".js-main-slider-2").owlCarousel({
     loop: false,
 });
 
-$('.slider-ul').owlCarousel({
+$('.slider-ul').addClass("owl-carousel").addClass('owl-theme-news');
+
+let newSlid = $('.slider-ul').owlCarousel({
     items: 1,
     margin:30,
     merge:true,
     dots:false,
     loop: false,
-    nav: true
+    nav: true,
+    onInitialized  : insertItemNew, //When the plugin has initialized.
+    onTranslated : counterNew
+
 });
 
-$('.slider-ul').addClass("owl-carousel").addClass('owl-theme-slide');
+// if(!$('div').is('slider-ul')){
+//     $('.slider-ul .owl-prev').after('<div class="owl-count-new"></div>');
+//     console.log(1);
+// }
+
+function insertItemNew(e){
+
+    counterNew(e);
+}
+
+function counterNew(event) {
+
+    var element   = event.target;         // DOM element, in this example .owl-carousel
+    var items     = event.item.count;     // Number of items
+    var item      = event.item.index + 1;     // Position of the current item
+
+    // it loop is true then reset counter from 1
+    if(item > items) {
+        item = item - items
+    }
+
+    if(!$(element).find('.owl-count-new').length){
+        $(element).find('.owl-prev').after('<div class="owl-count-new"></div>');
+    }
+
+    $(element).parent().find('.owl-count-new').html(item+"/"+items)
+
+
+}
+
 
 $('.js-news-slide-tablet').owlCarousel({
     autoWidth:true,
@@ -80,14 +115,6 @@ for(let i = 0; i < slides.length; i++){
     });
     slideMass.push({slide: slid, count: i });
 }
-
-// if($('*').is('.js-main-slider-2')) {
-//     $(window).resize(function(){
-//         $('.js-main-slider-2 > .owl-stage-outer').css("padding-left", $('.hp4__head').offset().left);
-//         $('.js-main-slider-2 > .owl-dots').css("margin-left", $('.hp4__head').offset().left);
-//         $('.js-main-slider-2 > .owl-dots').css("margin-right", $('.hp4__head').offset().left);
-//     });
-// }
 
 //Carousel team
 $('.js-team-owl').owlCarousel({

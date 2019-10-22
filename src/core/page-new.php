@@ -55,7 +55,7 @@ get_header();
             <?php foreach( $posts as $post ):
                 ?>
                 <a class="col" href="<?php the_permalink(); ?>">
-                    <div class="img" style="background-image: url(<?php the_post_thumbnail_url('medium'); ?>)"></div>
+                    <div class="img" style="background-image: url(<?php the_post_thumbnail_url('large'); ?>)"></div>
                     <div class="date">
                         <?php echo get_the_date(); ?>
                     </div>
