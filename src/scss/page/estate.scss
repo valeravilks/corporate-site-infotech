@@ -1,36 +1,34 @@
 .estate-page {
   padding-top: 110px;
 
-  .title {
-    font-style: normal;
-    font-weight: bold;
-    font-size: 40px;
-    line-height: 120%;
-    color: #15254B;
-    margin: 75px 0 55px;
+  .row {
+    margin-bottom: -50px;
 
-    @include sm-block {
-      margin: 45px  0 20px;
-      font-size: 30px;
+    & > * {
+      margin-bottom: 50px;
     }
   }
 
-  .prom {
+  .title {
+    @extend .f-40-bold-dark;
+    @extend .mb-50;
+  }
+
+  .industry {
+    @extend .section-padding;
+
     .img {
+      @extend .bg-help;
+      @extend .mb-50;
       height: 300px;
-      background-color: red;
-      margin-bottom: 50px;
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
 
       @include md-block {
         height: 200px;
       }
 
       @include sm-block {
-        height: 250px;
         margin-bottom: 30px;
+        height: 250px;
       }
     }
   }
@@ -47,16 +45,17 @@
     @include size-sm(12);
 
     .help {
+      @extend .mb-20;
       display: flex;
       align-items: center;
-      margin-bottom: 20px;
+
       @include sm-block {
         margin-bottom: 50px;
       }
     }
 
     .logo {
-      margin-bottom: 30px;
+      @extend .mb-30;
       margin-top: 10px;
 
       @include md-block {
@@ -72,11 +71,7 @@
     }
 
     .text {
-      font-style: normal;
-      font-weight: normal;
-      font-size: 16px;
-      line-height: 150%;
-      color: rgba(81, 100, 112, 0.7);
+     @extend .f-16-reg-bb50;
       margin-left: 20px;
       max-width: 230px;
 
@@ -102,6 +97,7 @@
     @include size-md(5);
     @include shift-sm(0);
     @include size-sm(12);
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -151,20 +147,17 @@
   }
 
   .head {
-    font-style: normal;
-    font-weight: bold;
-    font-size: 40px;
-    line-height: 120%;
-    color: #15254B;
+    @extend .f-40-bold-dark;
     margin: 95px 0 50px;
 
     @include sm-block {
       margin: 100px  0 20px;
-      font-size: 30px;
     }
   }
 
   .voz {
+    @extend .section-padding;
+
     .col {
       @include col();
       @include size(3);
@@ -194,6 +187,7 @@
   }
   
   .preim {
+    @extend .section-padding;
     .col {
       @include col();
       @include size(4);
@@ -229,20 +223,47 @@
   }
 
   .polz {
+    @extend .section-padding;
     .col-1 {
+      @include col();
+      @include size(4);
 
+      @include md-block {
+        display: none;
+      }
+
+      div {
+        @extend .bg-help;
+        max-width: 300px;
+        height: 300px;
+        background-color: red;
+      }
     }
+    .col-2{
+      @include col();
+      @include size(8);
+      @include size-md(12);
+    }
+  }
+
+  .system-comp {
+
   }
 }
 
+.section-padding {
+  padding-bottom: 100px;
+}
 
-
-
-
-
-
+.bg-help {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
 .bread-crumb-e {
+  margin-bottom: 75px;
+
   @include md-block {
 
     margin-bottom: 50px;

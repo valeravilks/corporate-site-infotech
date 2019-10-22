@@ -18,7 +18,7 @@ get_header(); ?>
                 <?php the_field('estate-bread', 'option'); ?>
             </span>
         </div>
-        <div class="prom">
+        <div class="industry">
             <h1 class="title">
                 <?php the_field('estate-title', 'option'); ?>
             </h1>
@@ -50,7 +50,7 @@ get_header(); ?>
             </div>
         </div>
         <div class="voz">
-            <div class="head">
+            <div class="title">
                 <?php the_field('estate-812', 'option'); ?>
             </div>
             <div class="row">
@@ -64,13 +64,11 @@ get_header(); ?>
                                 </div>
                             </div>
                         <?php endwhile; ?>
-
-
                 <?php endif; ?>
             </div>
         </div>
         <div class="preim">
-            <div class="head">
+            <div class="title">
                 <?php the_field('estate-9', 'option'); ?>
             </div>
             <div class="row">
@@ -90,12 +88,49 @@ get_header(); ?>
             </div>
         </div>
         <div class="polz">
-            <div class="head">
+            <div class="title">
                 <?php the_field('estate-9-1', 'option'); ?>
             </div>
             <div class="row">
-                <img src="" alt="" class="col-1">
-                c.col-2dd
+                <div class="col-1">
+                    <div style="background-image: url(<?php the_field('estate-9-2', 'option')['url']; ?>"></div>
+                </div>
+                <div class="col-2">
+                    <div class="row">
+                        <?php if( have_rows('estate-11', 'option') ): ?>
+                            <?php while( have_rows('estate-11', 'option') ): the_row();
+                                ?>
+                                <div class="col-3">
+                                    <img src="<?php the_sub_field('estate-pov3-logo'); ?>" alt="">
+                                    <div class="text">
+                                        <?php the_sub_field('estate-pov3-text'); ?>
+                                    </div>
+                                </div>
+                            <?php endwhile; ?>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="system-comp">
+            <div class="wrapper">
+                <div class="title">
+                    <?php the_field('estate-12', 'option'); ?>
+                </div>
+                <div class="slider js-estate-slider">
+                    <?php if( have_rows('estate-10', 'option') ): ?>
+                        <?php while( have_rows('estate-10', 'option') ): the_row();
+                            ?>
+                            <div class="img">
+                                <img src="<?php the_sub_field('estate-images'); ?>" alt="">
+                                <div class="i-text">
+                                    <?php the_sub_field('estate-text-mini'); ?>
+                                </div>
+                            </div>
+                        <?php endwhile; ?>
+                    <?php endif; ?>
+
+                </div>
             </div>
         </div>
 

@@ -6,7 +6,6 @@ Theme Name: Info tech
 @import './scss/smart-grid';
 @import "./scss/component/variable";
 @import './scss/component/font-text';
-@import './scss/component/class';
 @import "./scss/component/owl-carousel/core";
 @import "./scss/component/owl-carousel/theme";
 @import './scss/component/select';
@@ -17,6 +16,7 @@ Theme Name: Info tech
 @import "./scss/component/mini-menu";
 @import './scss/component/header';
 @import './scss/component/footer';
+@import './scss/component/class';
 @import "./scss/page/team";
 @import "./scss/page/license";
 @import "./scss/page/about";
@@ -45,7 +45,7 @@ Theme Name: Info tech
 
 body {
   font-family: "Gordita", sans-serif;
-  font-weight: 500;
+  font-weight: normal;
 }
 
 a {
@@ -63,6 +63,11 @@ a {
 
 .hp1 {
   padding-top: 80px;
+
+  &__slider {
+    position: relative;
+  }
+
   &__item {
     background-size: cover;
     background-repeat: no-repeat;
@@ -866,4 +871,76 @@ a {
 
 .hp4__slider > .owl-stage-outer > .owl-stage {
   display: flex;
+}
+
+.main-slider-count {
+  color: white;
+  bottom: 45px;
+  position: absolute;
+  left: 30px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  font-weight: normal!important;
+
+  &:hover .sl-next{
+    display: block;
+  }
+
+  div {
+    font-weight: normal;
+  }
+}
+
+.main-slider-count-2 {
+  margin-left: 27px;
+}
+
+.sl-next {
+  display: none;
+  cursor: pointer;
+  padding-left: 20px;
+}
+
+.circle {
+  display: inline-flex;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  margin-bottom: 13px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  margin: 6px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #fff transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
