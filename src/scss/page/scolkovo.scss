@@ -359,6 +359,7 @@
       &:hover {
         .image {
           transform: scale(1.1);
+
         }
 
         .text-1 {
@@ -410,7 +411,7 @@
       background-color: red;
       background-repeat: no-repeat;
       background-size: cover;
-      background-position: center;
+      background-position: bottom;
       height: 100%;
       transition: all .3s ease;
 

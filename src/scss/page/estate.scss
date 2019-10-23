@@ -244,6 +244,22 @@
       @include size(8);
       @include size-md(12);
     }
+
+    .col-3 {
+      @include col();
+      @include size(6);
+      @include size-sm(12);
+
+      img {
+        height: 60px;
+        width: auto;
+        margin-bottom: 20px;
+      }
+
+      .text-2 {
+        @extend .f-18-reg-bb100;
+      }
+    }
   }
 
   .system-comp {

@@ -102,7 +102,7 @@ get_header(); ?>
                                 ?>
                                 <div class="col-3">
                                     <img src="<?php the_sub_field('estate-pov3-logo'); ?>" alt="">
-                                    <div class="text">
+                                    <div class="text-2">
                                         <?php the_sub_field('estate-pov3-text'); ?>
                                     </div>
                                 </div>
@@ -129,11 +129,9 @@ get_header(); ?>
                             </div>
                         <?php endwhile; ?>
                     <?php endif; ?>
-
                 </div>
             </div>
         </div>
-
     </div>
 </section>
 

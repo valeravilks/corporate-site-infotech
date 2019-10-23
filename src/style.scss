@@ -1,13 +1,14 @@
 /*
 Theme Name: Info tech
 */
-
+//@import '~animate.css';
 @import './scss/component/reset';
 @import './scss/smart-grid';
 @import "./scss/component/variable";
 @import './scss/component/font-text';
 @import "./scss/component/owl-carousel/core";
 @import "./scss/component/owl-carousel/theme";
+@import "./scss/component/owl-carousel/animate";
 @import './scss/component/select';
 @import './scss/component/button.scss';
 @import "./scss/component/components";
@@ -97,7 +98,7 @@ a {
   &__head {
     @include col();
     @include shift-left(2);
-    @include size(6);
+    @include size(8);
     @include shift-sm-left(0);
     @include size-sm(12);
 
@@ -248,6 +249,12 @@ a {
     }
   }
 
+  &__btn-2 {
+    @include btn;
+    @include btn-large;
+    @include btn-second;
+  }
+
   &__head{
     @include head-40-bold;
     color: $color-dark-90;
@@ -261,6 +268,7 @@ a {
 
   &__row {
     @include row-flex;
+    margin-bottom: 70px;
   }
 
   &__col {

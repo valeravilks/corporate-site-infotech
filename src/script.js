@@ -11,35 +11,23 @@ let mainSlider = $(".js-main-slider").owlCarousel({
     margin:10,
     autoplay:true,
     autoplayTimeout:5000,
-    onInitialized  : insertItems, //When the plugin has initialized.
-    onTranslated : counterS
+    nav:true,
+    animateOut: 'fadeOut',
+    animateIn: 'fadeIn',
+    dots:true,
 });
 
-function insertItems(e){
-    $('.js-main-slider .owl-stage-outer').after('<div class="main-slider-count"><div class="lds-ring"><div></div><div></div><div></div><div></div></div><div class="main-slider-count-2"></div><div class="sl-next">Следующий</div></div>');
-    counterS(e);
-}
-
-function counterS(event) {
-    var element   = event.target;         // DOM element, in this example .owl-carousel
-    var items     = event.item.count;     // Number of items
-    var item      = event.item.index - 1;     // Position of the current item
-
-    // it loop is true then reset counter from 1
-    if(item > items) {
-        item = item - items
-    }
-    $('.main-slider-count-2').html(item+"/"+items);
-}
-
-$('.sl-next').click(function(){
-    mainSlider.trigger('next.owl.carousel');
+$(".js-main-slider").click(function () {
     mainSlider.trigger('stop.owl.autoplay');
 });
 
 mainSlider.on('drag.owl.carousel', function(){
     mainSlider.trigger('stop.owl.autoplay');
 });
+
+
+
+console.log(1);
 
 let slider2 = $(".js-main-slider-2").owlCarousel({
     margin:30,
