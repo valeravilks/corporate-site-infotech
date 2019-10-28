@@ -25,6 +25,14 @@ mainSlider.on('drag.owl.carousel', function(){
     mainSlider.trigger('stop.owl.autoplay');
 });
 
+// Estate slider
+
+let sliderEstate = $(".js-estate-slider").owlCarousel({
+    items: 1,
+    margin:10,
+    nav:true,
+    dots:false,
+});
 
 
 console.log(1);
@@ -288,6 +296,23 @@ $(document).ready(function(){
     $('.callback__close').click(function () {
         $('.callback-bg').fadeOut();
         $('.callback').removeClass('callback-show');
+    });
+
+    // Tabs script
+
+    $('.tabs li').click(function(event){
+        $(this).parents('ul').find('li').removeClass('active');
+        $(this).addClass('active');
+        let elem = $(this).parents('ul').find('li');
+        elem.each(function(i){
+           if( this == event.target) {
+               $(this).parents('.tabs').find('.col-2 .content').removeClass('active');
+               $(this).parents('.tabs').find('.col-2 .content').eq(i).addClass('active');
+           }
+
+        });
+
+
     });
 
 });

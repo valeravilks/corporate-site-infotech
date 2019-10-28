@@ -1,0 +1,137 @@
+.advantages {
+  padding-top: 110px;
+  margin-bottom: -30px;
+
+  .title {
+    @extend .f-40-bold-dark;
+    @extend .mb-50;
+  }
+
+  .help {
+    padding-bottom: 100px;
+  }
+
+  .col {
+    bottom: 10px;
+  }
+
+  .row {
+    margin-bottom: -50px;
+
+    & > * {
+      margin-bottom: 50px;
+    }
+  }
+
+  .col {
+    @include col();
+    @include size(4);
+    @include size-sm(12);
+
+    .image {
+      @extend .bg-help;
+      height: 150px;
+      max-width: 300px;
+      margin-bottom: 20px;
+
+      @include sm-block {
+        max-width: 100%;
+      }
+    }
+
+    .text {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 150%;
+      color: #3C5D72;
+    }
+  }
+
+
+}
+.ad-works {
+  margin-top: 100px;
+  background-color: #2953D7;
+  padding: 100px 0;
+
+  .text-1 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 43px;
+    color: #FFFFFF;
+
+    @include sm-block {
+      margin-bottom: 30px;
+    }
+
+  }
+
+  .list {
+    @include col;
+    @include size(6);
+    @include size-md(12);
+    margin-bottom: 1px;
+    list-style: disc;
+    padding-left: 30px;
+
+    li {
+      color: white;
+      margin-bottom: 31px;
+      line-height: 150%;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+    }
+  }
+
+  .rows {
+    @include row-flex;
+    margin-bottom: 1px;
+  }
+
+  .col-1 {
+    @include col;
+    @include size(6);
+    @include size-sm(12);
+  }
+}
+
+.adv-instrum {
+  padding-top: 100px;
+
+  .title {
+    @extend .f-40-bold-dark;
+    @extend .mb-50;
+  }
+
+  .row {
+    margin-bottom: -50px;
+
+    & > * {
+      margin-bottom: 50px;
+    }
+  }
+
+  .col-2 {
+    @include col;
+    @include size(2);
+    @include size-md(3);
+    @include size-sm(4);
+
+    img{
+      height: 80px;
+      max: 100%;
+      margin-bottom: 20px;
+    }
+
+    .text-3 {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 160%;
+      color: #15254B;
+    }
+  }
+}

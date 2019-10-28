@@ -1,4 +1,4 @@
-.estate-page {
+.garnizon-page {
   padding-top: 110px;
 
   .row {
@@ -71,7 +71,7 @@
     }
 
     .text {
-     @extend .f-16-reg-bb50;
+      @extend .f-16-reg-bb50;
       margin-left: 20px;
       max-width: 230px;
 
@@ -185,7 +185,7 @@
       }
     }
   }
-  
+
   .preim {
     @extend .section-padding;
     .col {
@@ -308,6 +308,7 @@
     padding-top: 100px;
     @extend .section-padding;
     background-color: $color-blue-light;
+    margin-bottom: 100px;
 
     .col {
       @include col();
@@ -599,5 +600,145 @@
   @include md-block {
 
     margin-bottom: 50px;
+  }
+}
+
+.tabs {
+  .title {
+    @extend .f-40-bold-dark;
+    @extend .mb-50;
+  }
+  .text {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 31px;
+    color: #3C5D72;
+    max-width: 630px;
+    margin-bottom: 50px;
+  }
+  .col-1 {
+    @include col;
+    @include size(4);
+
+    li {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 150%;
+      color: rgba(81, 100, 112, 0.7);
+      padding-left: 10px;
+      box-sizing: border-box;
+      position: relative;
+      cursor: pointer;
+
+      &:not(:last-child) {
+        margin-bottom: 40px;
+      }
+
+      &.active{
+        color: $color-dark-90;
+        font-weight: 500;
+      }
+
+      &.active:before {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 4px;
+        background-color: $color-blue;
+      }
+    }
+  }
+  .col-2 {
+    @include col;
+    @include shift-left(1);
+    @include size(7);
+
+    position: relative;
+
+    .content {
+      position: absolute;
+      top: 0;
+      display: none;
+
+      &.active {
+        display: block;
+      }
+
+      .roll {
+        & > img {
+          margin-bottom: 30px;
+        }
+      }
+      p {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 170%;
+        color: #3C5D72;
+        margin-bottom: 30px;
+      }
+
+      h2, h3, h4, h5, h6{
+        @extend .f-18-reg-bb100;
+        margin-bottom: 10px;
+        font-weight: bold;
+      }
+
+      h2{
+        font-style: normal;
+        margin-bottom: 20px;
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 43px;
+        color: #15254B;
+      }
+
+      slider {
+        ul {
+          padding-left: 0px;
+          list-style: none;
+        }
+      }
+
+      ul.labels {
+        display: none;
+
+      }
+
+      ul {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 170%;
+        color: #3C5D72;
+        margin-bottom: 30px;
+        list-style: disc;
+
+      }
+
+      li:not(:last-child) {
+        margin-bottom: 10px;
+      }
+
+      img {
+        width: 100%;
+      }
+
+      p img {
+        margin-bottom: 30px;
+      }
+
+      strong {
+        font-weight: bold;
+      }
+
+      em {
+        font-style: italic;
+      }
+    }
   }
 }

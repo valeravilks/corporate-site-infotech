@@ -195,13 +195,52 @@
     font-size: 30px;
   }
 }
+.f-30-bold-white {
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 120%;
+  color: $color-white;
+
+  @include sm-block {
+    font-size: 30px;
+  }
+}
+.f-20-med-white {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 150%;
+  color: #FFFFFF;
+}
 .f-16-reg-bb50 {
   font-size: 16px;
   line-height: 150%;
   color: $color-black-blue-50;
 }
+.f-16-reg-bb100 {
+  font-size: 16px;
+  line-height: 150%;
+  color: $color-black-blue-100;
+}
 .f-18-reg-bb100 {
   font-size: 18px;
   line-height: 160%;
   color: $color-black-blue-100;
+}
+.f-18-reg-dark {
+  font-size: 18px;
+  line-height: 160%;
+  color: $color-dark-90;
+}
+.f-18-med-dark {
+  font-size: 18px;
+  line-height: 160%;
+  font-weight: 500;
+  color: $color-dark-90;
+}
+.f-12-med-dark {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 160%;
+  color: $color-dark-90;
 }

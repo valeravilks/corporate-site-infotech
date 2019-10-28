@@ -58,6 +58,15 @@ function register_acf_options_pages() {
     ));
 
     acf_add_options_sub_page(array(
+        'page_title' 	=> 'Преимущества',
+        'menu_title'	=> 'Преимущества',
+        'parent_slug'	=> 'site-settings',
+        'menu_slug'     => 'advantages',
+        'capability'    => 'edit_posts',
+        'redirect'      => true
+    ));
+
+    acf_add_options_sub_page(array(
         'page_title' 	=> 'Estate',
         'menu_title'	=> 'Estate',
         'parent_slug'	=> 'site-settings',
@@ -65,6 +74,17 @@ function register_acf_options_pages() {
         'capability'    => 'edit_posts',
         'redirect'      => true
     ));
+
+    acf_add_options_sub_page(array(
+        'page_title' 	=> 'Garnizon',
+        'menu_title'	=> 'Garnizon',
+        'parent_slug'	=> 'site-settings',
+        'menu_slug'     => 'garnizon',
+        'capability'    => 'edit_posts',
+        'redirect'      => true
+    ));
+
+
 }
 
 // Hook into acf initialization.
