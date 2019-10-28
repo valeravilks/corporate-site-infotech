@@ -309,10 +309,44 @@ $(document).ready(function(){
                $(this).parents('.tabs').find('.col-2 .content').removeClass('active');
                $(this).parents('.tabs').find('.col-2 .content').eq(i).addClass('active');
            }
-
         });
-
-
     });
 
+    $('.js-tabs').addClass('owl-carousel owl-theme-main');
+    let tabSlider = $('.js-tabs').owlCarousel({
+        items: 1,
+        margin:10,
+        nav:true,
+        dots:false,
+        onInitialized  : tabsStart,
+        onTranslated : tabsCounter
+    });
+
+    function tabsStart(e){
+        tabsCounter(e);
+    }
+
+    function tabsCounter(event) {
+
+        var element   = event.target;         // DOM element, in this example .owl-carousel
+        var items     = event.item.count;     // Number of items
+        var item      = event.item.index + 1;     // Position of the current item
+
+        // it loop is true then reset counter from 1
+        if(item > items) {
+            item = item - items
+        }
+
+        $('.tabs .count').html(item+"/"+items);
+    }
+
+    $('.tabs .owl-prev').click(function(){
+        tabSlider.trigger('prev.owl.carousel');
+    });
+
+    $('.tabs .owl-next').click(function(){
+        tabSlider.trigger('next.owl.carousel');
+    });
+
+    // End Tabs script
 });

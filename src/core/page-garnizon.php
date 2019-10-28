@@ -123,10 +123,36 @@ get_header(); ?>
                         echo 'active';
                         $bool = false;
                     } ?>">
+                                <h2>
+                                    <?php the_sub_field('gar-14-3'); ?>
+                                </h2>
                                 <?php the_sub_field('gar-14-2'); ?>
                             </div>
                         <?php endwhile; ?>
                     <?php endif; ?>
+                </div>
+                <div class="col-3">
+                    <div class="owl-nav">
+                        <button class="owl-prev">
+                            <span><</span>
+                        </button>
+                        <span class="count">
+
+                        </span>
+                        <button class="owl-next">
+                            <span>></span>
+                        </button>
+                    </div>
+                    <div class="slider js-tabs">
+                        <?php if( have_rows('gar-14', 'option') ): ?>
+                            <?php while( have_rows('gar-14', 'option') ): the_row(); ?>
+                                <div class="content">
+                                    <h2><?php the_sub_field('gar-14-3'); ?></h2>
+                                    <?php the_sub_field('gar-14-2'); ?>
+                                </div>
+                            <?php endwhile; ?>
+                        <?php endif; ?>
+                    </div>
                 </div>
             </div>
         </div>
