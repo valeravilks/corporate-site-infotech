@@ -1,0 +1,45 @@
+.cta {
+  background-color: blue;
+  background-size: cover;
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  .col-1 {
+    @include col();
+    @include size(4);
+    @include shift-right(1);
+    @include size-md(6);
+    @include shift-md-right(0);
+    @include size-sm(12);
+
+    @include sm-block{
+      margin-bottom: 25px;
+    }
+
+    @include head-30-bold;
+    color: $color-white;
+  }
+
+  .col-2 {
+    @include col();
+    @include size(5);
+    @include size-md(6);
+    @include size-sm(12);
+  }
+
+  .text {
+    @include desc-18-regular;
+    color: $color-blue-light;
+    margin-bottom: 70px;
+
+    @include sm-block{
+      margin-bottom: 50px;
+    }
+  }
+
+  .button {
+    @include btn;
+    @include btn-magenta;
+    @include btn-large;
+  }
+}

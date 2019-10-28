@@ -184,5 +184,42 @@ get_header(); ?>
             </div>
         </div>
     </section>
+    <section class="items-1">
+        <div class="wrapper">
+            <div class="title">
+                <?php the_field('gar-17', 'option'); ?>
+            </div>
+            <div class="row">
+                <?php if( have_rows('gar-18', 'option') ): ?>
+                    <?php while( have_rows('gar-18', 'option') ): the_row();
+                        ?>
+                        <div class="col">
+                            <img src="<?php the_sub_field('gar-18-1'); ?>" alt="">
+                            <div>
+                                <?php the_sub_field('gar-18-2'); ?>
+                            </div>
+                        </div>
+                    <?php endwhile; ?>
+                <?php endif; ?>
+            </div>
+        </div>
+    </section>
+    <section class="cta">
+        <div class="wrapper">
+            <div class="row">
+                <div class="col-1">
+                    <?php the_field('gar-19', 'option'); ?>
+                </div>
+                <div class="col-2">
+                    <div class="text">
+                        <?php the_field('gar-20', 'option'); ?>
+                    </div>
+                    <button class="button js-callback">
+                        Задать вопрос
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
 </main>
 <?php get_footer(); ?>
