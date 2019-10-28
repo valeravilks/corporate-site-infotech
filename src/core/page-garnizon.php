@@ -157,5 +157,24 @@ get_header(); ?>
             </div>
         </div>
     </section>
+    <section class="image-cart">
+        <div class="wrapper">
+            <div class="title">
+                <?php the_field('gar-15', 'option')?>
+            </div>
+            <div class="x-row">
+                <?php if( have_rows('gar-16', 'option') ): ?>
+                    <?php while( have_rows('gar-16', 'option') ): the_row();
+                        ?>
+                        <div class="col" style="background-image: url(<?php the_sub_field('gar-16-1'); ?>)">
+                            <div class="i-text">
+                                <?php the_sub_field('gar-16-2'); ?>
+                            </div>
+                        </div>
+                    <?php endwhile; ?>
+                <?php endif; ?>
+            </div>
+        </div>
+    </section>
 
 <?php get_footer(); ?>

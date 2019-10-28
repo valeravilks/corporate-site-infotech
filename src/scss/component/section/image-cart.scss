@@ -1,0 +1,36 @@
+.image-cart {
+  @extend .section-padding;
+
+  .title {
+    @extend .f-40-bold-dark;
+    @extend .mb-50;
+  }
+
+  .x-row {
+    @include row-flex();
+    margin-bottom: -30px;
+
+    .col {
+      @include col();
+      @include size(4);
+      @include size-sm(12);
+      @extend .bg-help;
+      border-radius: 4px;
+      height: 200px;
+      margin-bottom: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      overflow: hidden;
+
+      .img {
+        background-color: #fff;
+      }
+
+      .i-text {
+        @extend .f-20-med-white;
+      }
+    }
+  }
+}
