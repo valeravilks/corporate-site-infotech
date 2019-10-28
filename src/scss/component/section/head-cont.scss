@@ -1,0 +1,104 @@
+.head-cont {
+  padding-bottom: 100px;
+  .col-1 {
+    @include col();
+    @include size(4);
+    @include size-md(5);
+    @include size-sm(12);
+
+    .help {
+      @extend .mb-20;
+      display: flex;
+      align-items: center;
+
+      @include sm-block {
+        margin-bottom: 50px;
+      }
+    }
+    .logo {
+      @extend .mb-30;
+      margin-top: 10px;
+
+      @include md-block {
+        margin-bottom: 0;
+      }
+
+      @include sm-block {
+        margin-bottom: 10px;
+      }
+    }
+    .logo-2 {
+      max-height: 40px;
+    }
+    .text {
+      @extend .f-16-reg-bb50;
+      margin-left: 20px;
+      max-width: 230px;
+
+      @include sm-block {
+        max-width: 1000px;
+      }
+    }
+    .button {
+      @include btn;
+      @include btn-large;
+      @include btn-magenta;
+      @include sm-block {
+        display: none;
+      }
+    }
+  }
+  .col-2 {
+    @include col();
+    @include size(7);
+    @include shift-md-left(1);
+    @include size-md(5);
+    @include shift-sm(0);
+    @include size-sm(12);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    .text {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 30px;
+      line-height: 150%;
+      color: #15254B;
+      margin-bottom: 20px;
+      max-width: 650px;
+
+      @include md-block {
+        font-size: 20px;
+      }
+
+      @include sm-block {
+        font-size: 30px;
+        margin-bottom: 50px;
+      }
+    }
+    .button-2 {
+      display: none;
+      @include btn;
+      @include btn-large;
+      @include btn-magenta;
+
+      @include sm-block {
+        display: block;
+        width: 280px;
+      }
+    }
+    .button {
+      @include btn;
+      @include btn-large;
+      @include btn-second;
+
+      @include sm-block {
+        margin-bottom: 20px;
+        width: 280px;
+      }
+    }
+  }
+}

@@ -5,7 +5,8 @@
  */
 
 get_header(); ?>
-    <section class="garnizon-page">
+<main class="garnizon">
+    <section class="breadcrumb">
         <div class="wrapper">
             <div class="bread-crumb bread-crumb-e">
                 <a href="<?php echo pll_home_url(); ?>products/" class="home">
@@ -18,78 +19,85 @@ get_header(); ?>
                 <?php the_field('gar-0', 'option'); ?>
             </span>
             </div>
-            <div class="industry">
-                <h1 class="title">
-                    <?php the_field('gar-1', 'option'); ?>
-                </h1>
-                <div class="img" style="background-image: url(<?php the_field('gar-2', 'option')['url']; ?>)"></div>
-                <div class="row">
-                    <div class="col-1">
-                        <img src="<?php the_field('gar-3', 'option')['url']; ?>" alt="" class="logo">
-                        <div class="help">
-                            <img src="<?php the_field('gar-4', 'option')['url']; ?>" class="logo-2">
-                            <div class="text">
-                                <?php the_field('gar-5', 'option'); ?>
-                            </div>
-                        </div>
-                        <button class="button js-callback">
-                            <?php the_field('estate-5', 'option'); ?>
-                        </button>
-                    </div>
-                    <div class="col-2">
-                        <div class="text">
-                            <?php the_field('gar-6', 'option'); ?>
-                        </div>
-                        <a target="_blank" href="<?php the_field('gar-7', 'option'); ?>" class="button">
-                            <?php the_field('estate-7', 'option'); ?>
-                        </a>
-                        <button class="button-2 js-callback">
-                            <?php the_field('estate-5', 'option'); ?>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="voz">
-                <div class="title">
-                    <?php the_field('gar-8', 'option'); ?>
-                </div>
-                <div class="row">
-                    <?php if( have_rows('gar-9', 'option') ): ?>
-                        <?php while( have_rows('gar-9', 'option') ): the_row();
-                            ?>
-                            <div class="col">
-                                <img src="<?php the_sub_field('gar-9-1'); ?>" alt="">
-                                <div>
-                                    <?php the_sub_field('gar-9-2'); ?>
-                                </div>
-                            </div>
-                        <?php endwhile; ?>
-                    <?php endif; ?>
-                </div>
-            </div>
         </div>
-        <div class="real-project">
-            <div class="wrapper">
-                <div class="title">
-                    <?php the_field('gar-10', 'option');?>
+    </section>
+    <section class="head-img">
+        <div class="wrapper">
+            <h1 class="title">
+                <?php the_field('gar-1', 'option'); ?>
+            </h1>
+            <div class="img" style="background-image: url(<?php the_field('gar-2', 'option')['url']; ?>)"></div>
+        </div>
+    </section>
+    <section class="head-cont">
+        <div class="wrapper">
+            <div class="row">
+                <div class="col-1">
+                    <img src="<?php the_field('gar-3', 'option')['url']; ?>" alt="" class="logo">
+                    <div class="help">
+                        <img src="<?php the_field('gar-4', 'option')['url']; ?>" class="logo-2">
+                        <div class="text">
+                            <?php the_field('gar-5', 'option'); ?>
+                        </div>
+                    </div>
+                    <button class="button js-callback">
+                        <?php the_field('estate-5', 'option'); ?>
+                    </button>
                 </div>
-                <div class="row">
-                    <?php if( have_rows('gar-11', 'option') ): ?>
-                        <?php while( have_rows('gar-11', 'option') ): the_row();
-                            ?>
-                            <div class="col">
-                                <img src="<?php the_sub_field('gar-11-1'); ?>" alt="" class="img">
-                                <div class="text-c">
-                                    <?php the_sub_field('gar-11-2'); ?>
-                                </div>
-                            </div>
-                        <?php endwhile; ?>
-                    <?php endif; ?>
+                <div class="col-2">
+                    <div class="text">
+                        <?php the_field('gar-6', 'option'); ?>
+                    </div>
+                    <a target="_blank" href="<?php the_field('gar-7', 'option'); ?>" class="button">
+                        <?php the_field('estate-7', 'option'); ?>
+                    </a>
+                    <button class="button-2 js-callback">
+                        <?php the_field('estate-5', 'option'); ?>
+                    </button>
                 </div>
             </div>
         </div>
     </section>
-
+    <section class="items-1">
+        <div class="wrapper">
+            <div class="title">
+                <?php the_field('gar-8', 'option'); ?>
+            </div>
+            <div class="row">
+                <?php if( have_rows('gar-9', 'option') ): ?>
+                    <?php while( have_rows('gar-9', 'option') ): the_row();
+                        ?>
+                        <div class="col">
+                            <img src="<?php the_sub_field('gar-9-1'); ?>" alt="">
+                            <div>
+                                <?php the_sub_field('gar-9-2'); ?>
+                            </div>
+                        </div>
+                    <?php endwhile; ?>
+                <?php endif; ?>
+            </div>
+        </div>
+    </section>
+    <section class="items-bg">
+        <div class="wrapper">
+            <div class="title">
+                <?php the_field('gar-10', 'option');?>
+            </div>
+            <div class="row">
+                <?php if( have_rows('gar-11', 'option') ): ?>
+                    <?php while( have_rows('gar-11', 'option') ): the_row();
+                        ?>
+                        <div class="col">
+                            <img src="<?php the_sub_field('gar-11-1'); ?>" alt="" class="img">
+                            <div class="text-c">
+                                <?php the_sub_field('gar-11-2'); ?>
+                            </div>
+                        </div>
+                    <?php endwhile; ?>
+                <?php endif; ?>
+            </div>
+        </div>
+    </section>
     <section class="tabs">
         <div class="wrapper">
             <div class="title">
@@ -120,9 +128,9 @@ get_header(); ?>
                         <?php while( have_rows('gar-14', 'option') ): the_row();
                             ?>
                             <div class="content <?php if($bool){
-                        echo 'active';
-                        $bool = false;
-                    } ?>">
+                                echo 'active';
+                                $bool = false;
+                            } ?>">
                                 <h2>
                                     <?php the_sub_field('gar-14-3'); ?>
                                 </h2>
@@ -176,5 +184,5 @@ get_header(); ?>
             </div>
         </div>
     </section>
-
+</main>
 <?php get_footer(); ?>

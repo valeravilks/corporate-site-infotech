@@ -1,0 +1,38 @@
+.items-bg{
+  padding-top: 100px;
+  @extend .section-padding;
+  margin-bottom: 100px;
+  background-color: $color-blue-light;
+
+  .title {
+    @extend .f-40-bold-dark;
+    @extend .mb-50;
+  }
+
+  .col {
+    @include col();
+    @include size(4);
+    @include size-md(6);
+    @include size-sm(12);
+
+    @include sm-block {
+      display: flex;
+      align-items: flex-start;
+    }
+  }
+
+  .img {
+    height: 80px;
+    width: auto;
+    margin-bottom: 30px;
+
+    @include sm-block {
+      margin-bottom: 0;
+      margin-right: 30px;
+    }
+  }
+
+  .text-c {
+    @extend .f-18-reg-dark;
+  }
+}

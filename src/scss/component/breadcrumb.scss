@@ -1,0 +1,23 @@
+.breadcrumb {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+  margin-bottom: 110px;
+
+  .home, .arrow, .all_news {
+    color: rgba(81, 100, 112, 0.7);
+  }
+
+  a:hover {
+    color: #3C5D72;
+  }
+
+  .current-news {
+    color: #15254B;
+  }
+
+  .arrow {
+    margin: 0 5px;
+  }
+}

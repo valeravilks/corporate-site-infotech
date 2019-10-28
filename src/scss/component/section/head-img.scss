@@ -1,0 +1,22 @@
+.head-img {
+
+  .title {
+    @extend .f-40-bold-dark;
+    @extend .mb-50;
+  }
+
+  .img {
+    @extend .bg-help;
+    @extend .mb-50;
+    height: 300px;
+
+    @include md-block {
+      height: 200px;
+    }
+
+    @include sm-block {
+      margin-bottom: 30px;
+      height: 250px;
+    }
+  }
+}

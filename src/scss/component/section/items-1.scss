@@ -1,0 +1,35 @@
+.items-1 {
+  @extend .section-padding;
+
+  .title {
+    @extend .f-40-bold-dark;
+    @extend .mb-50;
+  }
+
+  .col {
+    @include col();
+    @include size(3);
+    @include size-md(4);
+    @include size-sm(6);
+    @include size-xs(12);
+
+    margin-bottom: 30px;
+
+    @include sm-block {
+      margin-bottom: 50px;
+    }
+
+    img {
+      max-height: 60px;
+      margin-bottom: 20px;
+    }
+
+    div {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 150%;
+      color: #3C5D72;
+    }
+  }
+}
