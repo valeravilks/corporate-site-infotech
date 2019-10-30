@@ -201,7 +201,23 @@ get_header(); ?>
                 </div>
             </div>
         </section>
-
+        <section class="cta">
+            <div class="wrapper">
+                <div class="row">
+                    <div class="col-1">
+                        <?php the_field('rez-23', 'option'); ?>
+                    </div>
+                    <div class="col-2">
+                        <div class="text">
+                            <?php the_field('rez-24', 'option'); ?>
+                        </div>
+                        <button class="button js-callback">
+                            <?php the_field('rez-25', 'option'); ?>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
 <?php get_footer(); ?><?php

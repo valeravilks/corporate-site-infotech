@@ -83,12 +83,14 @@ get_header(); ?>
             <div class="title">
                 <?php the_field('gar-10', 'option');?>
             </div>
-            <div class="row">
+            <div class="x-row">
                 <?php if( have_rows('gar-11', 'option') ): ?>
                     <?php while( have_rows('gar-11', 'option') ): the_row();
                         ?>
                         <div class="col">
-                            <img src="<?php the_sub_field('gar-11-1'); ?>" alt="" class="img">
+                            <div class="help">
+                                <img src="<?php the_sub_field('gar-11-1'); ?>" alt="" class="img">
+                            </div>
                             <div class="text-c">
                                 <?php the_sub_field('gar-11-2'); ?>
                             </div>

@@ -9,15 +9,21 @@
     @extend .mb-50;
   }
 
+  .x-row {
+    @include row-flex();
+    margin-bottom: -30px;
+  }
+
   .col {
     @include col();
     @include size(4);
     @include size-md(6);
     @include size-sm(12);
+    margin-bottom: 30px;
 
     @include sm-block {
       display: flex;
-      align-items: flex-start;
+      align-items: center;
     }
   }
 
@@ -29,6 +35,17 @@
     @include sm-block {
       margin-bottom: 0;
       margin-right: 30px;
+      max-width: 120px;
+    }
+  }
+
+  .help {
+    width: 155px;
+
+    @include sm-block{
+      margin-right: 30px;
+      display: flex;
+      justify-content: center;
     }
   }
 

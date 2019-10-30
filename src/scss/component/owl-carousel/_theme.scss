@@ -213,6 +213,9 @@ $dot-background-active:	$color-base !default;
 		left: 30px;
 		opacity: 0;
 		transition: opacity .2s ease;
+		@include sm-block {
+			display: none;
+		}
 
 		.owl-dot {
 			display: inline-block;

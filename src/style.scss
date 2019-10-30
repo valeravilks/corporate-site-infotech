@@ -86,6 +86,9 @@ a {
 
   &__container {
     @include wrapper;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
     min-height: 600px;
 
@@ -109,6 +112,7 @@ a {
     @include col();
     @include shift-left(2);
     @include size(8);
+    @include size-md(6);
     @include shift-sm-left(0);
     @include size-sm(12);
 
@@ -118,10 +122,14 @@ a {
     font-size: 70px;
     line-height: 67px;
     color: $color-white;
-    padding-top: 100px;
 
     @include lg-block{
       font-size: 50px;
+    }
+
+    @include md-block {
+      font-size: 40px;
+      line-height: 140%;
     }
   }
 
@@ -137,6 +145,11 @@ a {
     color: $color-blue-light;
     @include md-block {
       @include desc-18-bold;
+      margin-top: -30px;
+    }
+
+    @include sm-block {
+      margin-top: 0;
     }
     margin-bottom: 50px;
   }
@@ -202,7 +215,7 @@ a {
   }
 
   .text {
-    flex-grow: 1;
+    margin-bottom: 60px;
     font-weight: 500;
     font-size: 18px;
     line-height: 150%;
@@ -243,8 +256,15 @@ a {
 }
 .hp1__row-1 {
   min-height: 600px;
-  padding: 115px 0 140px;
   box-sizing: border-box;
+  align-items: center;
+
+  @include md-block {
+    min-height: 400px;
+  }
+  @include sm-block {
+    margin-bottom: 30px;
+  }
 }
 
 
@@ -730,7 +750,7 @@ a {
   display: none;
 
   padding-top: 100px;
-  
+
   @include md-block{
     display: block;
   }

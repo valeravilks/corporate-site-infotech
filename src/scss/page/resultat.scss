@@ -1,5 +1,6 @@
 .resultat {
   padding-top: 110px;
+  margin-bottom: -150px;
 }
 
 .cta-1 {
@@ -37,6 +38,12 @@
   }
 }
 .items-3 {
+
+  margin-bottom: 150px;
+  @include md-block {
+    margin-bottom: 100 px;
+  }
+
   .col {
     @include col;
     @include size(4);
@@ -136,6 +143,10 @@
   }
 }
 .resultat-add {
+  margin-bottom: 150px;
+  @include md-block {
+    margin-bottom: 100 px;
+  }
   .wrapper-c {
     @include wrapper;
     border-radius: 4px;
