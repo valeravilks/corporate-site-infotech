@@ -160,6 +160,48 @@ get_header(); ?>
                 <div class="img" style="background-image: url(<?php the_field('rez-17', 'option')['url']; ?>)"></div>
             </div>
         </section>
+        <section class="items-3">
+            <div class="wrapper">
+                <div class="row">
+                    <?php if( have_rows('rez-18', 'option') ): ?>
+                        <?php while( have_rows('rez-18', 'option') ): the_row();
+                            ?>
+                            <div class="col">
+                                <div class="title">
+                                    <?php the_sub_field('rez-18-1', 'option'); ?>
+                                </div>
+                                <div class="content">
+                                    <?php the_sub_field('rez-18-2'); ?>
+                                </div>
+                            </div>
+                        <?php endwhile; ?>
+                    <?php endif; ?>
+                </div>
+            </div>
+        </section>
+        <section class="resultat-add">
+            <div class="wrapper-c">
+                <div class="row">
+                    <div class="col-1">
+                        <img src="<?php the_field('rez-19', 'option')['url']; ?>" alt="">
+                        <div class="help">
+                            <div class="text-1">
+                                <?php the_field('rez-20', 'option'); ?>
+                            </div>
+                            <div class="text-2">
+                                <?php the_field('rez-21', 'option'); ?>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="text-3">
+                        <?php the_field('rez-22', 'option'); ?>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
 <?php get_footer(); ?><?php
