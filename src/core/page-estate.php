@@ -5,24 +5,32 @@
  */
 
 get_header(); ?>
-<section class="estate-page">
-    <div class="wrapper">
-        <div class="bread-crumb bread-crumb-e">
-            <a href="<?php echo pll_home_url(); ?>products/" class="home">
-                Направления
-            </a>
-            <span class="arrow">
+<main class="estate">
+    <section class="breadcrumb">
+        <div class="wrapper">
+            <div class="bread-crumb bread-crumb-e">
+                <a href="<?php echo pll_home_url(); ?>products/" class="home">
+                    Направления
+                </a>
+                <span class="arrow">
                 >
             </span>
-            <span class="current-news">
+                <span class="current-news">
                 <?php the_field('estate-bread', 'option'); ?>
             </span>
+            </div>
         </div>
-        <div class="industry">
+    </section>
+    <section class="head-img">
+        <div class="wrapper">
             <h1 class="title">
                 <?php the_field('estate-title', 'option'); ?>
             </h1>
             <div class="img" style="background-image: url(<?php the_field('estate-img', 'option')['url']; ?>)"></div>
+        </div>
+    </section>
+    <section class="head-cont">
+        <div class="wrapper">
             <div class="row">
                 <div class="col-1">
                     <img src="<?php the_field('estate-2', 'option')['url']; ?>" alt="" class="logo">
@@ -49,6 +57,10 @@ get_header(); ?>
                 </div>
             </div>
         </div>
+    </section>
+</main>
+<section class="estate-page">
+    <div class="wrapper">
         <div class="voz">
             <div class="title">
                 <?php the_field('estate-812', 'option'); ?>
@@ -116,20 +128,9 @@ get_header(); ?>
             <div class="title">
                 <?php the_field('estate-12', 'option'); ?>
             </div>
-            <div class="slider">
-                <div class="sl owl-carousel owl-theme-estate js-estate-slider">
-                    <?php if( have_rows('estate-13', 'option') ): ?>
-                        <?php while( have_rows('estate-13', 'option') ): the_row();
-                            ?>
-                            <div class="img">
-                                <img src="<?php the_sub_field('estate-images'); ?>" alt="">
-                                <div class="i-text">
-                                    <?php the_sub_field('estate-text-mini'); ?>
-                                </div>
-                            </div>
-                        <?php endwhile; ?>
-                    <?php endif; ?>
-                </div>
+            <img src="<?php the_field('estate-13', 'option')['url']; ?>" alt="" class="image">
+            <div class="text-p">
+                <?php the_field('estate-13-2', 'option'); ?>
             </div>
         </div>
         <div class="scope">

@@ -590,7 +590,11 @@
 
 
 .section-padding {
-  padding-bottom: 100px;
+  padding-bottom: 150px;
+
+  @include md-block {
+    padding-bottom: 100px;
+  }
 }
 
 .bg-help {

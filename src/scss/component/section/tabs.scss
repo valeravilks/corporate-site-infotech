@@ -1,5 +1,5 @@
 .tabs {
-  padding-bottom: 100px;
+  @extend .section-padding;
 
   .title {
     @extend .f-40-bold-dark;
@@ -31,6 +31,10 @@
       box-sizing: border-box;
       position: relative;
       cursor: pointer;
+
+      &:hover {
+        color: #3C5D72;
+      }
 
       &:not(:last-child) {
         margin-bottom: 40px;
@@ -171,6 +175,7 @@
       color: #3C5D72;
       margin-bottom: 30px;
       list-style: disc;
+      padding-left: 20px;
 
     }
 

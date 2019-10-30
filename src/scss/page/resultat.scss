@@ -1,0 +1,39 @@
+.resultat {
+  padding-top: 110px;
+}
+
+.cta-1 {
+  padding: 130px 0;
+  margin-bottom: 150px;
+  @include md-block {
+    margin-bottom: 100 px;
+  }
+
+  background-color: $color-energy-dark-blue;
+  .text-1 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    line-height: 120%;
+    color: #FFFFFF;
+    margin-bottom: 50px;
+
+    @include sm-block {
+      text-align: left;
+    }
+
+  }
+  .btn {
+    @include btn;
+    @include btn-large;
+    @include btn-magenta;
+    margin: 0 auto;
+    display: block;
+
+    @include sm-block {
+      margin: 0;
+    }
+
+  }
+}

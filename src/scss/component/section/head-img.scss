@@ -3,12 +3,18 @@
   .title {
     @extend .f-40-bold-dark;
     @extend .mb-50;
+    font-size: 52px;
+
+    @include md-block {
+      font-size: 40px;
+    }
   }
 
   .img {
     @extend .bg-help;
     @extend .mb-50;
     height: 300px;
+    border-radius: 4px;
 
     @include md-block {
       height: 200px;
@@ -18,5 +24,16 @@
       margin-bottom: 30px;
       height: 250px;
     }
+  }
+}
+
+.head-img.head-img-240{
+  .title {
+    @extend .f-40-bold-dark;
+    @extend .mb-50;
+  }
+
+  .img {
+    height: 240px;
   }
 }

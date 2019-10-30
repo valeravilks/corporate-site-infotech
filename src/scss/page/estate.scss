@@ -1,5 +1,8 @@
-.estate-page {
+.estate {
   padding-top: 110px;
+}
+
+.estate-page {
 
   .row {
     margin-bottom: -50px;
@@ -165,7 +168,7 @@
       @include size-sm(6);
       @include size-xs(12);
 
-      margin-bottom: 30px;
+      margin-bottom: 50px;
 
       @include sm-block {
         margin-bottom: 50px;
@@ -264,11 +267,24 @@
 
   .system-comp {
     @extend .section-padding;
-    .slider {
-      .sl {
-        width: 80%;
-        margin: 0 auto;
-      }
+
+    img {
+      max-width: 1130px;
+      display: block;
+      margin: 0 auto;
+      margin-bottom: 30px;
+      width: 100%;
+      box-shadow: 0px 14px 25px rgba(0, 0, 0, 0.05);
+    }
+
+    .text-p {
+      max-width: 1130px;
+      margin: 0 auto;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 160%;
+      color: rgba(81, 100, 112, 0.7);
     }
   }
 
@@ -372,7 +388,12 @@
   }
 
   .example {
-    padding-top: 100px;
+    padding-top: 150px;
+
+    @include md-block {
+      padding-top: 100px;
+    }
+
     @extend .section-padding;
 
     .img {
@@ -398,7 +419,7 @@
 
     .head-2 {
       @extend .f-12-med-dark;
-
+      font-weight: bold;
       margin-bottom: 20px;
       text-transform: uppercase;
     }

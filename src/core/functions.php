@@ -84,6 +84,15 @@ function register_acf_options_pages() {
         'redirect'      => true
     ));
 
+    acf_add_options_sub_page(array(
+        'page_title' 	=> 'Resultat',
+        'menu_title'	=> 'Resultat',
+        'parent_slug'	=> 'site-settings',
+        'menu_slug'     => 'resultat',
+        'capability'    => 'edit_posts',
+        'redirect'      => true
+    ));
+
 
 }
 

@@ -1,31 +1,31 @@
 .head-cont {
-  padding-bottom: 100px;
+  @extend .section-padding;
+
   .col-1 {
     @include col();
     @include size(4);
     @include size-md(5);
     @include size-sm(12);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 
     .help {
-      @extend .mb-20;
+      margin-bottom: auto;
       display: flex;
       align-items: center;
+      padding-bottom: 50px;
 
       @include sm-block {
         margin-bottom: 50px;
+        padding-bottom: 0;
       }
     }
     .logo {
-      @extend .mb-30;
+      align-self: flex-start;
+      margin-bottom: 15px;
       margin-top: 10px;
-
-      @include md-block {
-        margin-bottom: 0;
-      }
-
-      @include sm-block {
-        margin-bottom: 10px;
-      }
+      max-width: 100%;
     }
     .logo-2 {
       max-height: 40px;
@@ -40,6 +40,7 @@
       }
     }
     .button {
+      align-self: flex-start;
       @include btn;
       @include btn-large;
       @include btn-magenta;
@@ -101,4 +102,7 @@
       }
     }
   }
+}
+.sdf{
+  background-color: #fff;
 }

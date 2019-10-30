@@ -6,6 +6,11 @@
     @extend .mb-50;
   }
 
+  .row {
+    @include row-flex;
+    margin-bottom: -50px;
+  }
+
   .col {
     @include col();
     @include size(3);
@@ -13,7 +18,7 @@
     @include size-sm(6);
     @include size-xs(12);
 
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 
     @include sm-block {
       margin-bottom: 50px;

@@ -33,6 +33,7 @@ Theme Name: Info tech
 @import "./scss/page/single-new";
 @import "./scss/page/estate";
 @import "./scss/page/garnizon";
+@import "./scss/page/resultat";
 @import "./scss/page/advantages";
 
 
@@ -555,10 +556,6 @@ a {
   height: 100%;
   display: flex;
   flex-direction: column;
-
-  &:hover {
-    box-shadow: 0 4px 20px #BECFD9;
-  }
 
   @media screen and (max-width: 550px){
     width: calc(100% - 30px);
