@@ -35,6 +35,10 @@ Theme Name: Info tech
 @import "./scss/page/garnizon";
 @import "./scss/page/resultat";
 @import "./scss/page/advantages";
+@import "./scss/page/products";
+@import "./scss/page/platform";
+@import "./scss/page/inlellect";
+@import "./scss/page/reference";
 
 
 
@@ -348,6 +352,7 @@ a {
 
   &__head {
     @include head-30-bold;
+    font-size: 20px;
     color: $color-white;
     margin-bottom: 20px;
 
@@ -392,7 +397,6 @@ a {
 
   &__text {
     @include head-40-bold;
-    padding-right: 90px;
     padding-bottom: 40px;
     color: $color-dark-90;
 
@@ -627,13 +631,38 @@ a {
     flex: 0 0 50%;
   }
 
+  &__text-3 {
+    flex: 0 0 50%;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 150%;
+    color: #15254B;
+
+  }
+
   &__col-1 {
     display: flex;
+    @include md-block {
+      display: none;
+    }
   }
 
   &__col-2 {
     display: flex;
     height: 120px;
+    @include md-block {
+      display: none;
+    }
+  }
+
+  &__col-3{
+    display: none;
+    height: 120px;
+
+    @include md-block{
+      display: flex;
+    }
   }
 
   &__col {
@@ -976,5 +1005,13 @@ a {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+.mt-100{
+  margin-top: 100px;
+
+  @include md-block{
+    margin-top: 50px;
   }
 }

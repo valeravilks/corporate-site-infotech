@@ -2,7 +2,7 @@
    <main class="home-page">
        <section class="home-page__1 hp1">
            <div class="hp1__slider owl-carousel owl-theme-main js-main-slider">
-               <div class="item hp1__item" style="background-image: url(<?php the_field('sl-1-img', 'option'); ?>">
+               <div class="item hp1__item" style="background-image: url(<?php the_field('sl-1-img', 'option'); ?>)">
                    <div class="hp1__container">
                        <div class="hp1__row">
                            <h1 class="hp1__head">
@@ -110,7 +110,6 @@
                    endfor;
                    ?>
                </div>
-               <a href="<?php echo pll_home_url(); ?>products/" class="hp2__btn-2">Все продукты</a>
                <div class="row all-product">
                    <div class="all-product__col1">
                        <div class="all-product__text">

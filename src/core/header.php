@@ -2,7 +2,8 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta id="vp" name="viewport" content="width=device-width">
+<!--    <meta id="vp" name="viewport" content="width=device-width">-->
+    <meta id="vp" name="viewport" content="width=1200px">
     <title>Info-tech</title>
     <?php wp_head(); ?>
 </head>

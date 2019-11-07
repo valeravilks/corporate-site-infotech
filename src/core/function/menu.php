@@ -276,3 +276,8 @@ add_action( 'after_setup_theme', 'theme_register_nav_menu2333' );
 function theme_register_nav_menu2333() {
     register_nav_menu( 'news', 'Меню Новости' );
 }
+
+add_action( 'after_setup_theme', 'theme_register_nav_menu23333' );
+function theme_register_nav_menu23333() {
+    register_nav_menu( 'products', 'Меню продукты' );
+}

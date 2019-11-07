@@ -1,0 +1,32 @@
+.reference {
+  padding-top: 110px;
+  margin-bottom: -150px;
+}
+
+.h-text{
+  @extend .section-padding;
+  .row {
+    @include row-flex;
+  }
+  .col-1{
+    @include size(4);
+    @include size-md(6);
+    @include size-sm(12);
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 120%;
+    color: #15254B;
+
+    @include sm-block{
+      margin-bottom: 50px;
+      font-size: 30px;
+    }
+  }
+  .col-2{
+    @extend .content;
+    @include size(6);
+    @include size-md(6);
+    @include size-sm(12);
+  }
+}

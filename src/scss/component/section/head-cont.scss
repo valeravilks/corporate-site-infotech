@@ -80,6 +80,16 @@
         margin-bottom: 50px;
       }
     }
+    .text-2{
+      max-width: 415px;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 160%;
+      color: #3C5D72;
+      margin-top: -9px;
+      margin-bottom: 20px;
+    }
     .button-2 {
       display: none;
       @include btn;

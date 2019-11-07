@@ -60,8 +60,14 @@ foreach( $posts as $post ):
                                 <?php echo get_sub_field('project_text_4'); ?>
                             </div>
                         </div>
-
-
+                        <div class="project-item__col-3">
+                            <div class="project-item__text-3">
+                                <?php echo get_sub_field('project_text_1'); ?> <?php echo get_sub_field('project_text_2'); ?>
+                            </div>
+                            <div class="project-item__text-3">
+                                <?php echo get_sub_field('project_text_3'); ?> <?php echo get_sub_field('project_text_4'); ?>
+                            </div>
+                        </div>
                     </div>
                     <?php endif;
                 endwhile; ?>

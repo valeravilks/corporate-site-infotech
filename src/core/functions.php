@@ -93,6 +93,51 @@ function register_acf_options_pages() {
         'redirect'      => true
     ));
 
+    acf_add_options_sub_page(array(
+        'page_title' 	=> 'Продукты',
+        'menu_title'	=> 'Продукты',
+        'parent_slug'	=> 'site-settings',
+        'menu_slug'     => 'products',
+        'capability'    => 'edit_posts',
+        'redirect'      => true
+    ));
+
+    acf_add_options_sub_page(array(
+        'page_title' 	=> 'Платформа Infotech',
+        'menu_title'	=> 'Платформа Infotech',
+        'parent_slug'	=> 'site-settings',
+        'menu_slug'     => 'platform',
+        'capability'    => 'edit_posts',
+        'redirect'      => true
+    ));
+
+    acf_add_options_sub_page(array(
+        'page_title' 	=> 'Intellect',
+        'menu_title'	=> 'Intellect',
+        'parent_slug'	=> 'site-settings',
+        'menu_slug'     => 'intellect',
+        'capability'    => 'edit_posts',
+        'redirect'      => true
+    ));
+
+    acf_add_options_sub_page(array(
+        'page_title' 	=> 'Reference',
+        'menu_title'	=> 'Reference',
+        'parent_slug'	=> 'site-settings',
+        'menu_slug'     => 'reference',
+        'capability'    => 'edit_posts',
+        'redirect'      => true
+    ));
+
+    acf_add_options_sub_page(array(
+        'page_title' 	=> '4sides',
+        'menu_title'	=> '4sides',
+        'parent_slug'	=> 'site-settings',
+        'menu_slug'     => '4sides',
+        'capability'    => 'edit_posts',
+        'redirect'      => true
+    ));
+
 
 }
 

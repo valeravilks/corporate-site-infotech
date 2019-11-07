@@ -11,17 +11,33 @@ var settings = {
         fields: '30px' /* side fields */
     },
     breakPoints: {
+        // lg: {
+        //     width: '1100px', /* -> @media (max-width: 1100px) */
+        // },
+        // md: {
+        //     width: '960px'
+        // },
+        // sm: {
+        //     width: '780px',
+        //     fields: '15px' /* set fields only if you want to change container.fields */
+        // },
+        // xs: {
+        //     width: '560px'
+        // }
         lg: {
-            width: '1100px', /* -> @media (max-width: 1100px) */
+            width: '1400px', /* -> @media (max-width: 1100px) */
         },
         md: {
-            width: '960px'
+            width: '1024px', /* -> @media (max-width: 1100px) */
         },
         sm: {
+            width: '960px'
+        },
+        xs: {
             width: '780px',
             fields: '15px' /* set fields only if you want to change container.fields */
         },
-        xs: {
+        xss: {
             width: '560px'
         }
         /*

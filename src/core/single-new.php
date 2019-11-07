@@ -5,12 +5,6 @@ get_header();
 <section class="single-new">
     <div class="wrapper">
         <div class="bread-crumb">
-            <a href="<?php echo pll_home_url(); ?>" class="home">
-                Главная
-            </a>
-            <span class="arrow">
-                >
-            </span>
             <a href="<?php echo pll_home_url(); ?>news/" class="all_news">
                 Все новости
             </a>

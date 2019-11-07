@@ -1,0 +1,90 @@
+.intellect {
+  padding-top: 110px;
+  margin-bottom: -150px;
+}
+
+.message{
+  background-color: $color-blue;
+  padding: 100px 0 120px;
+  margin-bottom: 150px;
+  @include md-block {
+    margin-bottom: 100px;
+  }
+  .text{
+    margin: 0 10%;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 150%;
+    color: #FFFFFF;
+    @include md-block {
+      margin: 0 10%;
+    }
+    @include sm-block{
+      margin: 0;
+    }
+  }
+}
+
+.head-text {
+  .title {
+    @extend .f-40-bold-dark;
+    margin-bottom: 10px;
+  }
+  .text {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 160%;
+    color: #3C5D72;
+    margin-bottom: 50px;
+  }
+}
+.content-1 {
+  padding-bottom: 50px;
+  .row {
+    margin-bottom: -30px;
+
+    & > * {
+      margin-bottom: 30px;
+    }
+  }
+  .title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 120%;
+    color: #0169FF;
+    margin-bottom: 20px;
+  }
+  .img {
+    @extend .bg-help;
+    @extend .mb-50;
+    height: 300px;
+    border-radius: 4px;
+
+    @include md-block {
+      height: 200px;
+    }
+
+    @include sm-block {
+      margin-bottom: 30px;
+      height: 250px;
+    }
+  }
+  .col{
+    @include col;
+    @include size(4);
+    @include size-md(12);
+
+    .text-1{
+      font-style: normal;
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 171%;
+      text-transform: uppercase;
+      color: #15254B;
+      margin-bottom: 20px;
+    }
+  }
+}
