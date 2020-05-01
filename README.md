@@ -49,3 +49,4 @@ The result is a website where you can easily and intuitively change information,
 ![](doc/5.jpg)
 
 ![](doc/6.jpg)
+
