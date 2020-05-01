@@ -10,7 +10,7 @@ The solution to this issue was the use of CMS Wordpress, and it was with this re
 
  ![](doc/1.jpg)
 
-## Архитектура проекта
+## Project architecture
 
 The project required to leave the architecture unchanged. In the diagram you can see it in detail.
 
