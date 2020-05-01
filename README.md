@@ -22,7 +22,7 @@ The project required to leave the architecture unchanged. In the diagram you can
 
  ![](doc/2.jpg)
 
- ## Development Process and Tools
+## Development Process and Tools
  
 To manage content, the company chose CMS Wordpress. On it I developed the product. In turn, I used the following tools:
  * Html
